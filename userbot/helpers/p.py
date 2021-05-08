@@ -3,6 +3,7 @@ def e_(fayl_adi, name, slep, siyahi):
 	f.write(f"""from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from time import sleep
+from userbot import CYBER_VERSION
 from telethon import events
 
 a={siyahi}
@@ -24,6 +25,7 @@ def a_(fayl_adi, name, siyahi, slep):
 	f.write(f"""from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from time import sleep
+from userbot import CYBER_VERSION
 from telethon import events
 
 a={siyahi}
@@ -47,6 +49,7 @@ def r_(fayl_adi, name, siyahi):
 	f.write(f"""from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from telethon import events
+from usertbot import CYBER_VERSION
 from random import choice
 
 a={siyahi}
@@ -68,6 +71,7 @@ def m_(fayl_adi, name, siyahi):
 	f.write("""from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from telethon import events
+from userbot import CYBER_VERSION
 import random
 import os
 
