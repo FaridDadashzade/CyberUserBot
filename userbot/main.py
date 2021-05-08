@@ -152,7 +152,7 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    cyberbl = requests.get('https://gitlab.com/FaridDadashzade/cyber/-/raw/master/blacklist.json').json()
+    cyberbl = requests.get('https://raw.githubusercontent.com/FaridDadashzade/CyberUserBot/master/cyberbl.json').json()
     if idim in cyberbl:
         bot.disconnect()
 
