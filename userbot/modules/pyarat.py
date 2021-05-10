@@ -98,6 +98,6 @@ async def _(pyarat):
 		await pyarat.edit("**Bir mesaja yanıt verməlisən!**")
 		return
 
-Help = CmdHelp("pyarat")
-Help.add_command("pyarat", "<pluginin_əmri> <plugin_sürəti> <edit/alt/foto/musiqi> ")
+Help = CmdHelp("cyberuserbot{fayl_adi}")
+Help.add_command("{name}", None, "@TheCyberUserBot sizin üçün plugin yaradar...")
 Help.add()
