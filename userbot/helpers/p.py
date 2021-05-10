@@ -106,7 +106,7 @@ async def _(cyber):
         cyber.edit("Musiqini tapa bilmədim!")
         return
 
-Help = CmdHelp("cyberuserbot{dosya_name}")
+Help = CmdHelp("cyberuserbot{fayl_adi}")
 Help.add_command("{name}", None, "Bu Plugin @TheCyberUserBot Tərəfindən Hazırlanmışdır..")
 Help.add()
 
