@@ -97,7 +97,7 @@ async def _(cyber):
                 await cyber.edit("`Musiqi yüklənir! Biraz gözləyin...`")
                 indir = await rast.download_media()
                 await cyber.edit("`Yüklənmə tamamlandı! Fayl göndərilir...`")
-                await cyber.client.send_file(cyber.chat_id, indir, caption="@TheCyberUserbot Senin İçin `"+rast.description+" - "+rast.title+"` Seçdi\\n\\nXoş dinləmələr :)")
+                await cyber.client.send_file(cyber.chat_id, indir, caption="@TheCyberUserbot Sənin üçün `"+rast.description+" - "+rast.title+"` Seçdi\\n\\nXoş dinləmələr :)")
                 await event.delete()
                 os.remove(indir)
                 true_but_false=False
@@ -106,8 +106,8 @@ async def _(cyber):
         cyber.edit("Musiqini tapa bilmədim!")
         return
 
-Help = CmdHelp("cyberuserbot{fayl_adi}")
-Help.add_command("{name}", None, "Bu Plugin @TheCyberUserbot ilə hazırlanmışdır.")
+Help = CmdHelp("cyberuserbot{dosya_name}")
+Help.add_command("{name}", None, "Bu Plugin @TheCyberUserBot Tərəfindən Hazırlanmışdır..")
 Help.add()
 
 		""".format(
