@@ -512,11 +512,11 @@
 
         "snips": {
             "NO_SQL": "`SQL olmayan rejimdə işləyir!`",
-            "NEED_BOTLOG": "`Snipləri mediada saxlamaq üçün BOTLOG_CHATID ayarlanmalıdır.`",
-            "USAGE": "İstifadəsi",
+            "NEED_BOTLOG": "`XƏTA: Snipləri saxlamaq üçün BOTLOG_CHATID ayarlanmalıdır.`",
+            "USAGE": "\nİstifadəsi",
             "UPDATED": "yeniləndi",
             "SAVED": "yaddaşa verildi",
-            "NO_SNIP": "`Hazırda heçbir snip yoxdur.`",
+            "NO_SNIP": "`Hal-hazırda heçbir snip yoxdur.`",
             "SNIPS": "Mövcud sniplər",
             "DELETED": "Uğurla silindi",
             "NOT_FOUND": "Tapılmadı"
