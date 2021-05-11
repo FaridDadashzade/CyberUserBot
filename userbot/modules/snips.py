@@ -60,7 +60,7 @@ async def on_snip_save(event):
             await event.client.send_message(
                 BOTLOG_CHATID, f"#SNIP\
             \nSÖZ: {keyword}\
-            \n\nAşağıdakI mesaj snip üçün veri olaraq qeyd edilir, xaiş silməyin !!"
+            \n\nAşağıdakI mesaj snip üçün qeyd edilir, xaiş edirəm silməyin !!"
             )
             msg_o = await event.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -89,7 +89,7 @@ async def on_snip_list(event):
     try:
         from userbot.modules.sql_helper.snips_sql import get_snips
     except AttributeError:
-        await event.edit("`SQL dışı modda işləyir!`")
+        await event.edit("`SQL xarici modda işləyir!`")
         return
 
     message = LANG['NO_SNIP']
@@ -110,7 +110,7 @@ async def on_snip_delete(event):
     try:
         from userbot.modules.sql_helper.snips_sql import remove_snip
     except AttributeError:
-        await event.edit("`SQL dışı modda işləyir!`")
+        await event.edit("`SQL xarici odda işləyir!`")
         return
     name = event.pattern_match.group(1)
     if remove_snip(name) is True:
