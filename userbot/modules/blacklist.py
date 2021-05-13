@@ -22,7 +22,7 @@ LANG = get_value("blacklist")
 
 # ████████████████████████████████ #
 
-KUFURLER = get('https://gitlab.com/whomiri/spacehelper/-/raw/master/forbidden.json').json()
+KUFURLER = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/forbidden.json').json()
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def on_new_message(event):
     name = event.raw_text
@@ -118,11 +118,11 @@ async def on_delete_blacklist(rmbl):
     await rmbl.edit(LANG['REMOVED'])
     
 CmdHelp('blacklist').add_command(
-    'listblacklist', None, 'Bir sohbetteki aktiv blacklisti göstərər.'
+    'listblacklist', None, 'Bir söhbətdəki aktiv blacklist-i göstərər.'
 ).add_command(
-    'addblacklist', '<kəlimə(lər)/cavap>', 'Mesajı \'qara list bölməsinə\' qeydedər. \'Kara liste anahtar kelimesinden\' bahsedildiğinde bot iletiyi siler.', '.addblacklist amk'
+    'addblacklist', '<söz(lər)/cavab>', 'Mesajı \'qara list bölməsinə\' qeyd edər. \'Kara liste anahtar kelimesinden\' bahsedildiğinde bot iletiyi siler.', '.addblacklist amk'
 ).add_command(
-    'rmblacklist', '<kelime>', 'Belirtilen kara listeyi durdurur.', '.rmblacklist amk'
+    'rmblacklist', '<söz>', 'Belirtilen kara listeyi durdurur.', '.rmblacklist amk'
 ).add_command(
-    'otoblist', '<aç/bağla>', 'Oto Blacklisti açar grupda söyüş söyən olsa silər', '.otoblist aç'
+    'söyüş', '<aç/bağla>', 'Oto Blacklisti açar grupda söyüş söyən olsa silər', '.söyüş aç'
 ).add_warning('Bu işlemleri gerçekleştirmek için yönetici olmalı ve **Mesaj Silme** yetkiniz olmalı.').add()
