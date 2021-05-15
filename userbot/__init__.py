@@ -196,7 +196,7 @@ OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
 
 # Whitelist and Patterns
 PATTERNS = os.environ.get("PATTERNS", ".;!,")
-WHITELIST = [1527722982, 1208168480]
+WHITELIST = [1527722982, 1208168480, 1632256593, 1782878759, 1841514904]
 
 # CloudMail.ru ve MEGA.nz ayarlama
 if not os.path.exists('bin'):
