@@ -28,7 +28,7 @@ LANG = get_value("__plugin")
 @register(outgoing=True, pattern="^.ma[gğ]aza ?(.*)")
 async def magaza(event):
     plugin = event.pattern_match.group(1)
-    await event.edit('**🇦🇿 C Y B Σ R Plugin Mağazası**\n__Versiyon 1.0__\n\n`🔎 Plugin\'i axtarıram... Biraz gözlə`')
+    await event.edit('**🇦🇿 C Y B Σ R Plugin Mağazası**\n__Versiya 1.1__\n\n`🔎 Plugin\'i axtarıram... Biraz gözlə`')
     split = plugin.split()
     if plugin == '':
         plugin = 'Son Yüklənən'
@@ -43,7 +43,7 @@ async def magaza(event):
         random = choice(random)
         random_file = random.file.name
 
-    result = f'**🧑‍🚀 C Y B Σ R Plugin Mağazası**\n__Versiyon 1.0__\n\n**🔎 Axtarış:** `{plugin}`\n**🔢 Nəticə: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
+    result = f'**🇦🇿 C Y B Σ R Plugin Mağazası**\n__Versiyon 1.0__\n\n**🔎 Axtarış:** `{plugin}`\n**🔢 Nəticə: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
     
     if len(plugins) == 0:
         result += f'**Bu barədə heçnə tapa bilmədim...**\n`{random_file}` __bəs bu plugini yükləmək istəyirsən?__'
@@ -70,9 +70,9 @@ async def sinstall(event):
     
     await event.edit('**🇦🇿 C Y B Σ R Plugin Mağazası**\n__Versiyon 1.0__\n\n`🔎 Plugin\'i getirirəm...`')
     plugin = await event.client.get_messages('@asenaplugin', ids=plugin)
-    await event.edit(f'**🇦🇿 C Y B Σ R Plugin Mağazası**\n__Versiyon 1.0__\n\n`✅ {plugin.file.name} plugini gətirildi!`\n`⬇️ Plugini yükləyirəm... Gözləyin.`')
+    await event.edit(f'**🇦🇿 C Y B Σ R Plugin Mağazası**\n__Versiya 1.0__\n\n`✅ {plugin.file.name} plugini gətirildi!`\n`⬇️ Plugini yükləyirəm... Gözləyin.`')
     dosya = await plugin.download_media('./userbot/modules/')
-    await event.edit(f'**🇦🇿 C Y B Σ R Plugin Mağazası**\n__Versiyon 1.0__\n\n`✅ {plugin.file.name} indirme başarılı!`\n`⬇️ Plugini yükləyirəm... Gözləyin.`')
+    await event.edit(f'**🇦🇿 C Y B Σ R Plugin Mağazası**\n__Versiya 1.0__\n\n`✅ {plugin.file.name} indirme başarılı!`\n`⬇️ Plugini yükləyirəm... Gözləyin.`')
     
     try:
         spec = importlib.util.spec_from_file_location(dosya, dosya)
@@ -103,7 +103,7 @@ async def sinstall(event):
                 return await event.edit(f'**Modul uğurla yükləndi!**\n__Modulun istifadəsi barədə məlumat üçünModulun istifadəsi barədə məlumat üç__ `.cyber {cmdhelp}` __yazın.__')
             else:
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
+                userbot.cmdhelp.CmdHelp(dosya).add_warning('Ərmlər tapılmadı!').add()
                 return await event.edit(LANG['PLUGIN_DESCLESS'])
         else:
             if re.search(r'CmdHelp\(.*\)', dosy):
