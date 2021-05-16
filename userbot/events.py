@@ -18,7 +18,7 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, LOGSPAMMER, PATTERNS
+from userbot import bot, BOTLOG_CHATID, CYBER_VERSION, LOGSPAMMER, PATTERNS
 
 
 def register(**args):
@@ -79,34 +79,39 @@ def register(**args):
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-                    text = "**⚠️ USERBOT XƏTA BİLDİRİŞİ ⚠️**\n"
+                    eventtext = str(check.text)
+                    text = "**C Y B Σ R XƏTA BİLDİRİŞİ**\n"
                     link = "[C Y B Σ R Dəstək Qrupuna](https://t.me/TheCyberSupport)"
-                    text += "İstəsəniz, bunu bizə bildirə bilərsiniz."
-                    text += f" Sadəcə bu mesajı {link} göndərin.\n"
-                    text += "Xəta və Tarix xaricində heç bir şey qeyd edilmir.\n"
+                    if len(eventtext)<10:
+                        text += f"\n**⚙ Əmr:** {eventtext}\n"
+                    text += "\n⚠️ İstəsəniz bunu bizə bildirə bilərsiniz."
+                    text += f"- sadəcə bu mesajı {link} göndərin.\n"
+                    text += "Xəta və tarix xaricində heç bir şey qeyd edilmir.\n"
 
-                    ftext = "========== XƏBƏRDARLIQ =========="
+                    ftext = "========== XEBERDARLIQ =========="
                     ftext += "\nBu fayl sadəcə bura yüklənib,"
-                    ftext += "\nsadəcə xəta və tarixi qeyd etdik,"
-                    ftext += "\ngizliliğinize saygı duyuyoruz,"
-                    ftext += "\nburada herhangi bir gizli veri varsa"
-                    ftext += "\nbu hata raporu olmayabilir, kimse verilerinize ulaşamaz.\n"
-                    ftext += "================================\n\n"
-                    ftext += "--------USERBOT XƏTA LOGU--------\n"
+                    ftext += "\nSadəcə xəta və tarixi qeyd edirik,"
+                    ftext += "\nGizliliyiniz bizim üçün önəmlidir,"
+                    ftext += "\nBurada hər hansı bir gizli məlumat olarsa"
+                    ftext += "\nBu xəta bildirişi olmaz, heç kəs sizin məlumatlarınızı oğurlaya bilməz.\n"
+                    ftext += "--------USERBOT XƏTA LOG--------\n"
                     ftext += "\nTarix: " + date
                     ftext += "\nQrup ID: " + str(check.chat_id)
                     ftext += "\nGöndərən adamın ID: " + str(check.sender_id)
-                    ftext += "\n\nTrigger:\n"
+                    ftext += "\n\nƏmr:\n"
                     ftext += str(check.text)
-                    ftext += "\n\nMəlumat:\n"
-                    ftext += str(format_exc())
                     ftext += "\n\nXəta mətni:\n"
                     ftext += str(sys.exc_info()[1])
-                    ftext += "\n\n--------USERBOT XƏTA LOGU SON--------"
+                    ftext += "\n\n\nƏtraflı:\n"
+                    ftext += str(format_exc())
+                    ftext += "\n\n--------USERBOT XETA LOGU SON--------"
+                    ftext += "\n\n================================\n"
+                    ftext += f"====== BOT VERSIYASI : {CYBER_VERSION} ======\n"
+                    ftext += "================================"
 
-                    command = "git log --pretty=format:\"%an: %s\" -10"
+                    command = "git log --pretty=format:\"%an: %s\" -5"
 
-                    ftext += "\n\n\nSon 10 hərəkət:\n"
+                    ftext += "\n\n\nSon 5 dəyişiklik:\n"
 
                     process = await asyncsubshell(command,
                                                   stdout=asyncsub.PIPE,
@@ -122,12 +127,14 @@ def register(**args):
                     file.close()
 
                     if LOGSPAMMER:
-                        await check.client.respond("`Bağışlayın, UserBot'um xəta verdi.\
-                        \nXəta logları UserBot Log qrupundadır.`")
-
+                        try:
+                            await check.edit("`Bağışlayın,\n ℹ️ Hata günlükleri UserBot günlük grubunda saklanır.`")
+                        except:
+                            pass
                     await check.client.send_file(send_to,
                                                  "cyber.log",
                                                  caption=text)
+
                     remove("cyber.log")
             else:
                 pass
