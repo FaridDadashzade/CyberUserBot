@@ -34,6 +34,7 @@ ALIVE_STR = [
     "**{cybersahib}** üçün aktivəm!",
     "**{cybersahib}** üçün fəaliyyət göstərirəm...",
     "Məni axtarırdın?\nQorxma mən buradayam 🙂 ",
+    "**{cybersahib}** C Y B Σ R daima aktivdir",
 ]
 
 KICKME_STR = [
