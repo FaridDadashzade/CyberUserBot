@@ -84,6 +84,11 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 # Hey! Bu bir bot. Endişelenme ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
+# Tezliklə :)
+ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+ALIVE_ID_USER = os.environ.get("ALIVE_ID_USER", None)
+
 # Güncelleyici için Heroku hesap bilgileri.
 HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
 HEROKU_APPNAME = os.environ.get("HEROKU_APPNAME", None)
