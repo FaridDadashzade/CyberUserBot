@@ -1,12 +1,11 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2021 Farid Dadashzade
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
 
-# CyberUserBot - Luciferxz
+# CyberUserBot
 
-""" UserBot başlangıç noktası """
 import importlib
 from importlib import import_module
 from sqlite3 import connect
@@ -29,10 +28,19 @@ import re
 import userbot.cmdhelp
 
 ALIVE_STR = [
-    "C Y B Σ R {cybersahip} aktivdir!",
-    "C Y B Σ R {cybersahip}xidmətinizdədir!",
-    "C Y B Σ R {cybersahip} aktivdir...",
-    "C Y B Σ R {cybersahip} işləyir....",
+    "C Y B Σ R {cybersahib} aktivdir!",
+    "C Y B Σ R {cybersahib} üçün fəaliyyət göstərir!",
+    "C Y B Σ R {cybersahib} üçün aktivdir...",
+    "{cybersahib} üçün aktivəm!",
+    "{cybersahib} üçün fəaliyyət göstərirəm...",
+    "Məni axtarırdın?/nQorxma mən buradayam 🙂 ",
+]
+
+KICKME_STR = [
+    "Bye bye mən gedirəm! 🦦",
+    "Qrupu tərk edirəm! 😒",
+    "Qrupdan çıxıram..\nBir daha dönməmək şərti ilə!",
+    "Qrupdan ayrılıram... 🦦",
 ]
 
 DIZCILIK_STR = [
@@ -56,7 +64,7 @@ AFKSTR = [
     "Hey, sahibim hal-hazırda burada deyil!",
     "Bəzən həyatdakı ən yaxşı şeylər gözləməyə dəyər…\nGələcəm.",
     "Gələcəm,\namma əgər gəlməsəm,\ndaha sonra gələrəm.",
-    "Hey, sahibim hal-hazırda burada deyil!",
+    "Hal-hazırda sahibim burada deyil.\nXahiş edirəm biraz sonra əlaqə saxlayın.",
     "Hey, sahibim hal-hazırda burada deyil!",
     "Hey, sahibim hal-hazırda burada deyil!",
     "Hey, sahibim hal-hazırda burada deyil!",
@@ -73,7 +81,7 @@ AFKSTR = [
     "Hey, sahibim hal-hazırda burada deyil!",
 ]
 
-UNAPPROVED_MSG = ("`Salam,` {mention} `! Mənim adım CyberUserBot-dur. Narahat olma.\n\n`"
+UNAPPROVED_MSG = ("`Salam,` {mention} `! Bu bir avtomatik mesajdır. Narahat olma.\n\n`"
                   "`Sahibim sənə PM yazma icazəsi verməyib. `"
                   "`Zəhmət olmasa sahibimin aktiv olmasını gözləyin, o bəzən PM yazmağa icazə verər.\n\n`"
                   "`Bildiyim qədəri ilə o beynini itirib insanlara PM icazəsi vermir.`")
@@ -82,9 +90,9 @@ DB = connect("learning-data-root.check")
 CURSOR = DB.cursor()
 CURSOR.execute("""SELECT * FROM BRAIN1""")
 ALL_ROWS = CURSOR.fetchall()
-INVALID_PH = '\nHATA: Girilen telefon numarası geçersiz' \
-             '\n  Ipucu: Ülke kodunu kullanarak numaranı gir' \
-             '\n       Telefon numaranızı tekrar kontrol edin'
+INVALID_PH = '\nXƏTA: Yazılan telefon nömrəsi yanlışdır' \
+             '\n  Tips: Ölkə kodunu istifadə edərək yenidən yaz' \
+             '\n       Telefon nömrənizi kontrol edin.'
 
 for i in ALL_ROWS:
     BRAIN_CHECKER.append(i[0])
@@ -105,7 +113,7 @@ def extractCommands(file):
         dosyaAdi = file.replace('.py', '')
         CmdHelp = userbot.cmdhelp.CmdHelp(dosyaAdi, False)
 
-        # Komutları Alıyoruz #
+       
         for Command in Pattern:
             Command = Command[1]
             if Command == '' or len(Command) <= 1:
@@ -127,7 +135,7 @@ def extractCommands(file):
                             KomutStr = Command
                         Komutlar.append(KomutStr)
 
-            # CYBER
+           
             Cyberpy = re.search('\"\"\"CYBERPY(.*)\"\"\"', FileRead, re.DOTALL)
             if not Cyberpy == None:
                 Cyberpy = Cyberpy.group(0)
@@ -156,18 +164,18 @@ try:
     if idim in cyberbl:
         bot.disconnect()
 
-    # ChromeDriver'ı Ayarlayalım #
+    
     try:
         chromedriver_autoinstaller.install()
     except:
         pass
     
-    # Galeri için değerler
+    
     GALERI = {}
 
-    # PLUGIN MESAJLARI AYARLIYORUZ
+    
     PLUGIN_MESAJLAR = {}
-    ORJ_PLUGIN_MESAJLAR = {"alive": f"{str(choice(ALIVE_STR))}", "afk": f"`{str(choice(AFKSTR))}`", "kickme": "`Bye Bye mən gedirəm `🚪", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, Banlandı!!`", "mute": "{mention}`, səssizə alındı!`", "approve": "{mention}`, hey sən artığ mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artığ mənə mesaj göndərə bilmərsən!`", "block": "{mention}`, səni əngəllədim!`"}
+    ORJ_PLUGIN_MESAJLAR = {"alive": f"{str(choice(ALIVE_STR))}", "afk": f"`{str(choice(AFKSTR))}`", "kickme": f"{str(choice(KICKME_STR))}", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, Banlandı!!`", "mute": "{mention}`, səssizə alındı!`", "approve": "{mention}`, hey sən artığ mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artığ mənə mesaj göndərə bilmərsən!`", "block": "{mention}`, səni əngəllədim!`"}
 
     PLUGIN_MESAJLAR_TURLER = ["alive", "afk", "kickme", "pm", "dızcı", "ban", "mute", "approve", "disapprove", "block"]
     for mesaj in PLUGIN_MESAJLAR_TURLER:
@@ -183,7 +191,7 @@ try:
             else:
                 PLUGIN_MESAJLAR[mesaj] = dmsj
     if not PLUGIN_CHANNEL_ID == None:
-        LOGS.info("Pluginler Yüklenir")
+        LOGS.info("Pluginlər yüklənir...")
         try:
             KanalId = bot.get_entity(PLUGIN_CHANNEL_ID)
         except:
