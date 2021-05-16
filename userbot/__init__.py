@@ -1,11 +1,12 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2021 Farid Dadashzade
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
 
 # Thanks github.com/spechide for creating inline bot support.
-# CyberUserBot - Luciferxz
+# CyberUserBot - faridxz
+
 """ UserBot hazırlanışı. """
 
 import os
@@ -25,7 +26,6 @@ from math import ceil
 
 load_dotenv("config.env")
 
-# Bot günlükleri kurulumu:
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
 ASYNC_POOL = []
@@ -45,8 +45,7 @@ if version_info[0] < 3 or version_info[1] < 6:
               "Birden fazla özellik buna bağlıdır. Bot kapatılıyor.")
     quit(1)
 
-# Yapılandırmanın önceden kullanılan değişkeni kullanarak düzenlenip düzenlenmediğini kontrol edin.
-# Temel olarak, yapılandırma dosyası için kontrol.
+
 CONFIG_CHECK = os.environ.get(
     "___________LUTFEN_______BU_____SATIRI_____SILIN__________", None)
 
@@ -63,7 +62,7 @@ if not LANGUAGE in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
     LOGS.info("Bilinmeyen bir dil yazdınız. Bundan dolayı DEFAULT kullanılıyor.")
     LANGUAGE = "DEFAULT"
     
-# Cyber Versiyası
+# CYBER VERSION
 CYBER_VERSION = "v1.4"
 
 # Telegram API KEY ve HASH
@@ -89,6 +88,9 @@ ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 ALIVE_ID_USER = os.environ.get("ALIVE_ID_USER", None)
 
+# Alive mesajı ad daxil etmə
+DEFAULT_NAME = os.environ.get("DEFAULT_NAME", ".set var DEFAULT_NAME <ad>")
+
 # Güncelleyici için Heroku hesap bilgileri.
 HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
 HEROKU_APPNAME = os.environ.get("HEROKU_APPNAME", None)
@@ -97,13 +99,13 @@ HEROKU_APIKEY = os.environ.get("HEROKU_APIKEY", None)
 # Güncelleyici için özel (fork) repo linki.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/FaridDadashzade/CyberUserBot.git")
+    "https://github.com/FaridDadashzade/CyberTest.git")
 
 # Ayrıntılı konsol günlügü
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
 # SQL Veritabanı
-DB_URI = os.environ.get("DATABASE_URL", "sqlite:///asena.db")
+DB_URI = os.environ.get("DATABASE_URL", "sqlite:///cyber.db")
 
 # OCR API key
 OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
