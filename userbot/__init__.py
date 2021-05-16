@@ -89,7 +89,7 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 ALIVE_ID_USER = os.environ.get("ALIVE_ID_USER", None)
 
 # Alive mesajı ad daxil etmə
-DEFAULT_NAME = os.environ.get("DEFAULT_NAME", ".set var DEFAULT_NAME <ad>")
+DEFAULT_NAME = os.environ.get("DEFAULT_NAME", None)
 
 # Güncelleyici için Heroku hesap bilgileri.
 HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
