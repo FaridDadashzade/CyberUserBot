@@ -63,7 +63,7 @@ if not LANGUAGE in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
     LANGUAGE = "DEFAULT"
     
 # CYBER VERSION
-CYBER_VERSION = "v1.4"
+CYBER_VERSION = "v1.5"
 
 # Telegram API KEY ve HASH
 API_KEY = os.environ.get("API_KEY", None)
@@ -89,7 +89,7 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 ALIVE_ID_USER = os.environ.get("ALIVE_ID_USER", None)
 
 # Alive mesajı ad daxil etmə
-DEFAULT_NAME = os.environ.get("DEFAULT_NAME", ".set var DEFAULT_NAME <ad>")
+DEFAULT_NAME = os.environ.get("DEFAULT_NAME", None)
 
 # Güncelleyici için Heroku hesap bilgileri.
 HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
@@ -99,7 +99,7 @@ HEROKU_APIKEY = os.environ.get("HEROKU_APIKEY", None)
 # Güncelleyici için özel (fork) repo linki.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/FaridDadashzade/CyberTest.git")
+    "https://github.com/FaridDadashzade/CyberUserBot.git")
 
 # Ayrıntılı konsol günlügü
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
