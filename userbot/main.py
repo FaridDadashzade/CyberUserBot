@@ -28,7 +28,7 @@ import re
 import userbot.cmdhelp
 
 ALIVE_STR = [
-    "C Y B Σ R {cybersahib} aktivdir!",
+    "C Y B Σ R {cybersahib} üçün aktivdir!",
     "C Y B Σ R {cybersahib} üçün fəaliyyət göstərir!",
     "C Y B Σ R {cybersahib} üçün aktivdir...",
     "{cybersahib} üçün aktivəm!",
