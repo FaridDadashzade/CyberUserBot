@@ -1,20 +1,17 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2021 FaridDadashzade
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
 
-# C Y B Σ R UserBot - Luciferxz
-
-
-""" Sunucu hakkında bilgi veren UserBot modülüdür. """
+# C Y B Σ R
 
 from asyncio import create_subprocess_shell as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 from platform import uname
 from shutil import which
 from os import remove
-from userbot import CMD_HELP, CYBER_VERSION
+from userbot import (CMD_HELP, CYBER_VERSION, DEFAULT_NAME)
 from userbot.events import register
 from userbot.main import PLUGIN_MESAJLAR
 from telethon import version
@@ -131,23 +128,10 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern="^.alive$")
 async def amialive(e):
-    me = await e.client.get_me()
-    if type(PLUGIN_MESAJLAR['alive']) == str:
-        await e.edit(PLUGIN_MESAJLAR['alive'].format(
-            telethon=version.__version__,
-            python=python_version(),
-            cyber=CYBER_VERSION,
-            plugin=len(CMD_HELP),
-            id=me.id,
-            username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
-            first_name=me.first_name,
-            last_name=me.last_name if me.last_name else '',
-            mention=f'[{me.first_name}](tg://user?id={me.id})'
-        ))
-    else:
-        await e.delete()
-        if not PLUGIN_MESAJLAR['alive'].text == '':
-            PLUGIN_MESAJLAR['alive'].text = PLUGIN_MESAJLAR['alive'].text.format(
+        sahibb = f"{DEFAULT_NAME}"
+        me = await e.client.get_me()
+        if type(PLUGIN_MESAJLAR['alive']) == str:
+            await e.edit(PLUGIN_MESAJLAR['alive'].format(
                 telethon=version.__version__,
                 python=python_version(),
                 cyber=CYBER_VERSION,
@@ -156,14 +140,30 @@ async def amialive(e):
                 username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
                 first_name=me.first_name,
                 last_name=me.last_name if me.last_name else '',
-                mention=f'[{me.first_name}](tg://user?id={me.id})'
-            )
-        if e.is_reply:
-            await e.respond(PLUGIN_MESAJLAR['alive'], reply_to=e.message.reply_to_msg_id)
+                mention=f'[{me.first_name}](tg://user?id={me.id})',
+                cybersahib = sahibb
+            ))
         else:
-            await e.respond(PLUGIN_MESAJLAR['alive'])
-
-
+            await e.delete()
+            if not PLUGIN_MESAJLAR['alive'].text == '':
+                PLUGIN_MESAJLAR['alive'].text = PLUGIN_MESAJLAR['alive'].text.format(
+                    telethon=version.__version__,
+                    python=python_version(),
+                    cyber=CYBER_VERSION,
+                    plugin=len(CMD_HELP),
+                    id=me.id,
+                    username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
+                    first_name=me.first_name,
+                    last_name=me.last_name if me.last_name else '',
+                    mention=f'[{me.first_name}](tg://user?id={me.id})',
+                    cybersahib = sahibb
+                )
+            if e.is_reply:
+                await e.respond(PLUGIN_MESAJLAR['alive'], reply_to=e.message.reply_to_msg_id)
+            else:
+                await e.respond(PLUGIN_MESAJLAR['alive'])
+                     
+                           
 CmdHelp('system_stats').add_command(
     'sysd', None, 'Neofetch modulunu istifadə edərək sistem məlumatını göstərər.'
 ).add_command(
