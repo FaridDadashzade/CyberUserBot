@@ -1,10 +1,10 @@
-# Copyright (C) 2020 Yusuf Usta.
+# Copyright (C) 2021 Farid Dadashzade.
 #
 # Licensed under the  GPL-3.0 License;
 # you may not use this file except in compliance with the License.
 #
 
-# TheCyberUserBot - Luciferxz
+# CyberUserBot
 
 
 
@@ -27,7 +27,7 @@ LANG = get_value("auto")
 async def auto(event):
     metod = event.pattern_match.group(1).lower()
     
-    if str(metod) != "isim" and str(metod) != "bio":
+    if str(metod) != "ad" and str(metod) != "bio":
         await event.edit(LANG['INVALID_TYPE'])
         return
 
@@ -36,7 +36,7 @@ async def auto(event):
         return
 
     await event.edit(LANG['SETTING'] % metod)
-    if metod == "isim":
+    if metod == "ad":
         HM = time.strftime("%H:%M")
 
         await event.client(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
@@ -58,7 +58,7 @@ async def auto(event):
 
     while metod in ASYNC_POOL:
         try:
-            if metod == "isim":
+            if metod == "ad":
                 HM = time.strftime("%H:%M")
 
                 await event.client(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
