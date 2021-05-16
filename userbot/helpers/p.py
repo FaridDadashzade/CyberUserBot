@@ -49,7 +49,7 @@ def r_(fayl_adi, name, siyahi):
 	f.write(f"""from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from telethon import events
-from usertbot import CYBER_VERSION
+from userbot import CYBER_VERSION
 from random import choice
 
 a={siyahi}
