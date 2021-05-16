@@ -29,10 +29,10 @@ import re
 import userbot.cmdhelp
 
 ALIVE_STR = [
-    "`C Y B Σ R aktivdir!`",
-    "C Y B Σ R xidmətinizdədir!",
-    "C Y B Σ R aktivdir...",
-    "C Y B Σ R işləyir....",
+    "C Y B Σ R {cybersahip} aktivdir!",
+    "C Y B Σ R {cybersahip}xidmətinizdədir!",
+    "C Y B Σ R {cybersahip} aktivdir...",
+    "C Y B Σ R {cybersahip} işləyir....",
 ]
 
 DIZCILIK_STR = [
