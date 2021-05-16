@@ -23,7 +23,7 @@ LANG = get_value("ezanvakti")
 # ████████████████████████████████ #
 
 
-@register(outgoing=True, pattern="^.ezanvakti ?(\w*)")
+@register(outgoing=True, pattern="^.azan ?(\w*)")
 async def ezanvakti(event):
     konum = event.pattern_match.group(1).lower()
     if not event.text.partition(konum)[2] == '':
@@ -67,6 +67,6 @@ async def ezanvakti(event):
 
     await event.edit(vakitler)
 
-CmdHelp('ezanvakti').add_command(
-    'ezanvakti', '<Şəhər> <ilçe>', 'Seçdiyiniz əhər üçün namaz vaxtlarını göstərər.', 'ezanvakti ankara etimesgut'
+CmdHelp('azan').add_command(
+    'azan', '<Şəhər>', 'Seçdiyiniz əhər üçün namaz vaxtlarını göstərər.', 'ezanvakti ankara etimesgut'
 ).add()
