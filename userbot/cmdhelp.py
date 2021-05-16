@@ -59,11 +59,11 @@ class CmdHelp:
         Sonuç getirir.
         """
 
-        result = f"**📁 Fayl adı:** `{self.FILE}`\n"
+        result = f"**▶️ Fayl adı:** `{self.FILE}`\n"
         if self.WARNING == '' and self.INFO == '':
-            result += f"**⚡ Rəsmi:** {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
+            result += f"**⬇️ Rəsmi:** {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
         else:
-            result += f"**⚡ Rəsmi:** {'✅' if self.IS_OFFICIAL else '❌'}\n"
+            result += f"**⬇️ Rəsmi:** {'✅' if self.IS_OFFICIAL else '❌'}\n"
             
             if self.INFO == '':
                 if not self.WARNING == '':
