@@ -33,7 +33,7 @@ ALIVE_STR = [
     "C Y B Σ R **{cybersahib}** üçün aktivdir...",
     "**{cybersahib}** üçün aktivəm!",
     "**{cybersahib}** üçün fəaliyyət göstərirəm...",
-    "Məni axtarırdın?/nQorxma mən buradayam 🙂 ",
+    "Məni axtarırdın?\nQorxma mən buradayam 🙂 ",
 ]
 
 KICKME_STR = [
@@ -59,7 +59,7 @@ DIZCILIK_STR = [
 AFKSTR = [
     "İndi vacib işim var, daha sonra mesaj atsan olmaz? Onsuzda yenə gələcəm.",
     "Hörmətli istifadəçi zəng etdiyiniz şəxs hazırda telefona cavab verə bilmir.",
-    "Birkaç dakika içinde geleceğim. Fakat gelmezsem...\ndaha fazla bekle.",
+    "Bir neçə dəqiqə içində geləcəm lakin gəlməsəm...\nbiraz daha gözlə.",
     "İndi burada deyiləm, Yəqin ki, başqa bir yerdəyəm..",
     "Hey, sahibim hal-hazırda burada deyil!",
     "Bəzən həyatdakı ən yaxşı şeylər gözləməyə dəyər…\nGələcəm.",
