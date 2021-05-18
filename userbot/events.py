@@ -18,7 +18,7 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, CYBER_VERSION, LOGSPAMMER, PATTERNS
+from userbot import bot, BOTLOG_CHATID, LOGSPAMMER, PATTERNS
 
 
 def register(**args):
@@ -106,7 +106,7 @@ def register(**args):
                     ftext += str(format_exc())
                     ftext += "\n\n--------USERBOT XETA LOGU SON--------"
                     ftext += "\n\n================================\n"
-                    ftext += f"====== BOT VERSIYASI : {CYBER_VERSION} ======\n"
+                    ftext += f"====== @TheCyberUserBot ======\n"
                     ftext += "================================"
 
                     command = "git log --pretty=format:\"%an: %s\" -5"
@@ -128,7 +128,7 @@ def register(**args):
 
                     if LOGSPAMMER:
                         try:
-                            await check.edit("`Bağışlayın,\n ℹ️ Hata günlükleri UserBot günlük grubunda saklanır.`")
+                            await check.edit("`Bağışlayın,\n Xəta logları UserBot log qrupunda saxlanılır.`")
                         except:
                             pass
                     await check.client.send_file(send_to,
