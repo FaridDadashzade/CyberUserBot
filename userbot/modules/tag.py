@@ -23,7 +23,7 @@ async def tagger(cyber):
 	a_=0
 	await cyber.delete()
 	async for i in bot.iter_participants(chat):
-		if a_ == 5000:
+		if a_ == 500:
 			break
 		a_+=1
 		await cyber.client.send_message(cyber.chat_id, "[{}](tg://user?id={}) {}".format(i.first_name, i.id, seasons))
@@ -45,7 +45,7 @@ async def _(cyber):
 	a_=0
 	await cyber.delete()
 	async for i in bot.iter_participants(chat, filter=cp):
-		if a_ == 5000:
+		if a_ == 500:
 			break
 		a_+=1
 		await cyber.client.send_message(cyber.chat_id, "[{}](tg://user?id={}) {}".format(i.first_name, i.id, seasons))
@@ -55,5 +55,5 @@ Help = CmdHelp('tag')
 Help.add_command('tag <səbəb>', None, 'Qrupdakı istifadəçiləri tag edər. ')
 Help.add_command('alladmin <səbəb>', None, 'Bütün adminləri tag edər.')
 Help.add_command('restart', None, 'Tag etməni dayandırar.')
-Help.add_info('@Luciferxz tərəfindən @TheCyberUserBot üçün hazırlanıb.')
+Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanıb.')
 Help.add()	
