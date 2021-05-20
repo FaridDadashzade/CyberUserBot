@@ -85,8 +85,6 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
 # Yeni alive mesajı üçün dəyər
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 
-ALIVE_ID_USER = os.environ.get("ALIVE_ID_USER", None)
-
 # Alive mesajı ad daxil etmə
 DEFAULT_NAME = os.environ.get("DEFAULT_NAME", None)
 
