@@ -1,11 +1,7 @@
 # Copyright (C) 2021 Farid Dadashzade
-#
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
-# Thanks github.com/spechide for creating inline bot support.
+# 
 # CyberUserBot - faridxz
+#
 
 """ UserBot hazırlanışı. """
 
@@ -86,9 +82,9 @@ PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
 
-# Tezliklə :)
-ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+# Yeni alive mesajı üçün dəyər
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+
 ALIVE_ID_USER = os.environ.get("ALIVE_ID_USER", None)
 
 # Alive mesajı ad daxil etmə
