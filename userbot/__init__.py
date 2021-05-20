@@ -82,10 +82,7 @@ PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
 
-# Yeni alive mesajı üçün dəyər
-ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
-
-# Alive mesajı ad daxil etmə
+# Alive mesajı üçün ".set var DEFAULT_NAME Adınız"
 DEFAULT_NAME = os.environ.get("DEFAULT_NAME", None)
 
 # Güncelleyici için Heroku hesap bilgileri.
