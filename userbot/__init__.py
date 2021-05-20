@@ -79,6 +79,9 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 # Hey! Bu bir bot. Endişelenme ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
+# ALIVE_NAME
+ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
 
