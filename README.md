@@ -13,7 +13,7 @@
 ## Qurulum
 ### Avtomatik Qurulum
 
-**Android:** Termuxu açın ve bu kodu yapışdırın: `bash <(curl -L https://git.io/JYZdq)`
+**Android:** Termuxu açın ve bu kodu yapışdırın: `bash <(curl -L https://bit.ly/2SuGkcA)`
 
 **Alternativ:** `bash <(curl -L https://t.ly/1TJk)`
 
