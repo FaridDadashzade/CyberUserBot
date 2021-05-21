@@ -596,9 +596,9 @@
             "UPDATING": "`🔄 C Y B Σ R yenilənir...`",
 	    "INVALID_APPNAME": "**C Y B Σ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🛠️**Xəta:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
 	    "INVALID_HEROKU": "{}\n`Heroku dəyişənləri səhv və ya müəyyənləşdirilmişdir.`",
-            "HEROKU_UPDATING": "**C Y B Σ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n⚡**Status:** __Güncəllənir...\n Bu müddət maksimum 10 dəqiqə çəkir.__",
+            "HEROKU_UPDATING": "**C Y B Σ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇦🇿**Status:** __Güncəllənir...\n Bu müddət maksimum 10 dəqiqə çəkir.__",
             "ERRORS": "Qarşılaşdığımız səhflər bunlardır",
-            "SUCCESSFULLY": "**C Y B Σ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n⚡**Status:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
+            "SUCCESSFULLY": "**C Y B Σ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇦🇿**Status:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
         },
 
         "upload_download": {
