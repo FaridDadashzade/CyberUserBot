@@ -439,6 +439,7 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsiniz
 SON_GORULME = 0
 COUNT_MSG = 0
 USERS = {}
+JRVS = uid
 BRAIN_CHECKER = []
 COUNT_PM = {}
 LASTMSG = {}
