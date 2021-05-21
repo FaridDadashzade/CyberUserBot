@@ -1,10 +1,6 @@
 # Copyright (C) 2021 Farid Dadashzade
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
-# CyberUserBot
+# Telegram: @faridxz
 
 import importlib
 from importlib import import_module
@@ -28,6 +24,8 @@ import re
 import userbot.cmdhelp
 
 ALIVE_STR = [
+    "C Y B Σ R **{cybersahib}** üçün aktivdir!",
+    "**{cybersahib}** məni axtarırdın?\nQorxma mən buradayam 😌",
     "C Y B Σ R **{cybersahib}** üçün aktivdir!",
     "C Y B Σ R **{cybersahib}** üçün fəaliyyət göstərir!",
     "C Y B Σ R **{cybersahib}** üçün aktivdir...",
@@ -60,26 +58,18 @@ DIZCILIK_STR = [
 AFKSTR = [
     "İndi vacib işim var, daha sonra mesaj atsan olmaz? Onsuzda yenə gələcəm.",
     "Hörmətli istifadəçi zəng etdiyiniz şəxs hazırda telefona cavab verə bilmir.",
-    "Bir neçə dəqiqə içində geləcəm lakin gəlməsəm...\nbiraz daha gözlə.",
-    "İndi burada deyiləm, Yəqin ki, başqa bir yerdəyəm..",
-    "Hey, sahibim hal-hazırda burada deyil!",
+    "Bir neçə dəqiqə içində gələcəm lakin gəlməsəm...\nbiraz daha gözlə.",
+    "İndi burada deyiləm..\nYəqin ki, başqa bir yerdəyəm..",
+    "Sahibim hal-hazırda AFK-dır!",
     "Bəzən həyatdakı ən yaxşı şeylər gözləməyə dəyər…\nGələcəm.",
     "Gələcəm,\namma əgər gəlməsəm,\ndaha sonra gələrəm.",
     "Hal-hazırda sahibim burada deyil.\nXahiş edirəm biraz sonra əlaqə saxlayın.",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
-    "Hey, sahibim hal-hazırda burada deyil!",
+    "Çox heyif ki sahibim burada deyil..",
+    "İndi burada deyiləm..\nTezliklə qayıdacağam..",
+    "Sahibim burada deyil..\nqayıdanda sizinlə əlaqə saxlayacaqdır.",
+    "Gələcəm,\namma əgər gəlməsəm,\ndaha sonra gələrəm.",
+    "Bir neçə dəqiqə içində gələcəm lakin gəlməsəm..\nbiraz daha gözlə.",
+    "Hey, sahibim hal-hazırda burada deyil..\nqayıtdığında sizinlə əlaqə saxlayacaqdır.",
 ]
 
 UNAPPROVED_MSG = ("`Salam,` {mention} `! Bu bir avtomatik mesajdır. Narahat olma.\n\n`"
@@ -176,7 +166,7 @@ try:
 
     
     PLUGIN_MESAJLAR = {}
-    ORJ_PLUGIN_MESAJLAR = {"alive": f"{str(choice(ALIVE_STR))}", "afk": f"`{str(choice(AFKSTR))}`", "kickme": f"{str(choice(KICKME_STR))}", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, Banlandı!!`", "mute": "{mention}`, səssizə alındı!`", "approve": "{mention}`, hey sən artığ mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artığ mənə mesaj göndərə bilmərsən!`", "block": "{mention}`, səni əngəllədim!`"}
+    ORJ_PLUGIN_MESAJLAR = {"alive": f"{str(choice(ALIVE_STR))}", "afk": f"`{str(choice(AFKSTR))}`", "kickme": f"{str(choice(KICKME_STR))}", "pm": UNAPPROVED_MSG, "dızcı": str(choice(DIZCILIK_STR)), "ban": "{mention}`, Banlandı!`", "mute": "{mention}`, səssizə alındı!`", "approve": "{mention}`, artıq mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artıq mənə mesaj göndərə bilməzsən!`", "block": "{mention}`, səni əngəllədim!`"}
 
     PLUGIN_MESAJLAR_TURLER = ["alive", "afk", "kickme", "pm", "dızcı", "ban", "mute", "approve", "disapprove", "block"]
     for mesaj in PLUGIN_MESAJLAR_TURLER:
@@ -206,7 +196,7 @@ try:
                 if not os.path.exists("./userbot/modules/" + plugin.file.name):
                     dosya = bot.download_media(plugin, "./userbot/modules/")
                 else:
-                    LOGS.info("Bu Plugin Onsuzda Yüklüdür " + plugin.file.name)
+                    LOGS.info("Bu plugin onsuzda yüklüdür " + plugin.file.name)
                     extractCommands('./userbot/modules/' + plugin.file.name)
                     dosya = plugin.file.name
                     continue 
@@ -229,7 +219,7 @@ try:
                     continue
                 extractCommands('./userbot/modules/' + plugin.file.name)
     else:
-        bot.send_message("me", f"`Lütfen pluginlerin kalıcı olması için PLUGIN_CHANNEL_ID'i ayarlayın.`")
+        bot.send_message("me", f"`Xahiş edirəm pluginlerin qalıcı olması üçün PLUGIN_CHANNEL_ID'i ayarlayın.`")
 except PhoneNumberInvalidError:
     print(INVALID_PH)
     exit(1)
@@ -252,9 +242,9 @@ async def FotoDegistir (foto):
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
-LOGS.info("Botunuz işləyir! Herhansısa bir söhbete .alive yazarağ test edin."
-          " Köməyə ehtiyacınız varsa, Destek qrupumuza gelin t.me/TheCyberSupport")
-LOGS.info(f"Bot versiyanız: CYBER {CYBER_VERSION}")
+LOGS.info("Botunuz işləyir! Hər-hansısa bir söhbətə .alive yazaeaq test edin."
+          " Köməyə ehtiyacınız olarsa, dəstək qrupumuza gəlin t.me/TheCyberSupport")
+LOGS.info(f"Version: C Y B Σ R {CYBER_VERSION}")
 
 """
 if len(argv) not in (1, 3, 4):
