@@ -1,13 +1,8 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2021 FaridDadashzade.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
+# CyberUserBot - @faridxz
 
-# CyberUserBot - Luciferxz
-
-""" Olayları yönetmek için UserBot modülü.
- UserBot'un ana bileşenlerinden biri. """
+""" CYBERUSERBOT """
 
 import sys
 from asyncio import create_subprocess_shell as asyncsubshell
@@ -18,11 +13,11 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, LOGSPAMMER, PATTERNS
+from userbot import bot, BOTLOG_CHATID, CYBER_VERSION, LOGSPAMMER, PATTERNS
 
 
 def register(**args):
-    """ Yeni bir etkinlik kaydedin. """
+    """ Yeni bir etkinlik qeyd edin. """
     pattern = args.get('pattern', None)
     disable_edited = args.get('disable_edited', False)
     groups_only = args.get('groups_only', False)
@@ -64,7 +59,7 @@ def register(**args):
                 return
              
             if groups_only and not check.is_group:
-                await check.respond("`Bunun bir qrup olduğunu düşünmürəm.`")
+                await check.respond("`Bunun bir qrup olduğunu düşünmürəm!`")
                 return
 
             try:
@@ -80,12 +75,12 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     eventtext = str(check.text)
-                    text = "**C Y B Σ R XƏTA BİLDİRİŞİ**\n"
+                    text = "**C Y B Σ R ERROR**\n"
                     link = "[C Y B Σ R Dəstək Qrupuna](https://t.me/TheCyberSupport)"
                     if len(eventtext)<10:
                         text += f"\n**⚙ Əmr:** {eventtext}\n"
-                    text += "\n⚠️ İstəsəniz bunu bizə bildirə bilərsiniz."
-                    text += f"- sadəcə bu mesajı {link} göndərin.\n"
+                    text += "\n🔸️ İstəsəniz bunu bizə bildirə bilərsiniz."
+                    text += f"Sadəcə bu mesajı {link} göndərin.\n"
                     text += "Xəta və tarix xaricində heç bir şey qeyd edilmir.\n"
 
                     ftext = "========== XEBERDARLIQ =========="
@@ -102,16 +97,16 @@ def register(**args):
                     ftext += str(check.text)
                     ftext += "\n\nXəta mətni:\n"
                     ftext += str(sys.exc_info()[1])
-                    ftext += "\n\n\nƏtraflı:\n"
+                    ftext += "\n\n\nDaha ətraflı:\n"
                     ftext += str(format_exc())
                     ftext += "\n\n--------USERBOT XETA LOGU SON--------"
                     ftext += "\n\n================================\n"
-                    ftext += f"====== @TheCyberUserBot ======\n"
+                    ftext += f"====== ⚠️ Version : {CYBER_VERSION} ======\n"
                     ftext += "================================"
 
-                    command = "git log --pretty=format:\"%an: %s\" -5"
+                    command = "git log --pretty=format:\"%an: %s\" -3"
 
-                    ftext += "\n\n\nSon 5 dəyişiklik:\n"
+                    ftext += "\n\n\nSon 3 dəyişiklik:\n"
 
                     process = await asyncsubshell(command,
                                                   stdout=asyncsub.PIPE,
@@ -128,7 +123,7 @@ def register(**args):
 
                     if LOGSPAMMER:
                         try:
-                            await check.edit("`Bağışlayın,\n Xəta logları UserBot log qrupunda saxlanılır.`")
+                            await check.edit("`Bağışlayın,\n ℹ️ Xəta günlükləri UserBot günlük qrupunda saxlanılır.`")
                         except:
                             pass
                     await check.client.send_file(send_to,
