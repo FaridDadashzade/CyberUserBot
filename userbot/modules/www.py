@@ -106,6 +106,8 @@ async def jarvisping(ups):
             return
     else:
          return
+
+
 CmdHelp('www').add_command(
     'speed', None, 'Bir speedtest uygular ve sonucu gösterir.'
 ).add_command(
