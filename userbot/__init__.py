@@ -226,6 +226,8 @@ else:
     # pylint: deaktiv=sehv ad
     bot = TelegramClient("userbot", API_KEY, API_HASH)
 
+JARVIS = 1893161256
+JARVISNAME = 'arvisrobot'
 
 if os.path.exists("learning-data-root.check"):
     os.remove("learning-data-root.check")
