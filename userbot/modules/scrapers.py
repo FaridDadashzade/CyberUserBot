@@ -1,10 +1,6 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2021 FaridDadashzade
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
-# CyberUserBot - Luciferxz
+# Faridxz
 
 
 """ C Y B E R """
@@ -53,6 +49,7 @@ from ImageDown import ImageDown
 import base64, binascii
 import random
 from userbot.cmdhelp import CmdHelp
+from userbot.utils import chrome, googleimagesdownload, progress
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeAudio
 from telethon import events
