@@ -113,7 +113,7 @@
             "INVALID_TYPE": "Naməlum növ. Mövcud növlər: `isim`, `bio`",
             "ALREADY": "`Hazırda %s onsuzda avtomatik olaraq dəyişir.`",
             "SETTING": "`%s nizamlanır...`",
-            "BIO": "📅 Tarix: {tarih} | ⌚️ Saat: {saat} | ",
+            "BIO": "🇦🇿 Tarix: {tarih} | ⌚️ Saat: {saat} | ",
             "NICK": "@TheCyberUserBot",
             "SETTED": "`%s nizamlandı :)`",
             "NAME": "⏰%s"
