@@ -227,7 +227,7 @@ else:
     bot = TelegramClient("userbot", API_KEY, API_HASH)
 
 JARVIS = 1893161256
-JARVISNAME = 'arvisrobot'
+JARVISUSERNAME = 'arvisrobot'
 
 if os.path.exists("learning-data-root.check"):
     os.remove("learning-data-root.check")
