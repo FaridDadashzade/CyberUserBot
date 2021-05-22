@@ -1,6 +1,6 @@
 ----
 
-<p align="center"><a href="https://t.me/TheCyberUserBot"><img src="https://telegra.ph/file/2320e91974ecc80a5c121.jpg" width="400"></a></p> 
+<p align="center"><a href="https://t.me/TheCyberUserBot"><img src="https://telegra.ph/file/dd1a82e8454f7fe3c04d8.jpg" width="400"></a></p> 
 <h1 align="center"><b>C Y B Σ R USΣRBOT 🇦🇿</b></h1>
 </div>
 <p align="center">
