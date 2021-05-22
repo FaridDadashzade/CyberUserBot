@@ -72,6 +72,9 @@ STRING_SESSION = os.environ.get("STRING_SESSION", None)
 # Kanal / Grup ID günlüyə qeyd etmə
 BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", None))
 
+# JARVIS
+AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
+
 # UserBot log özəlliyi
 BOTLOG = sb(os.environ.get("BOTLOG", "False"))
 LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
