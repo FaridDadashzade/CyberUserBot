@@ -1,4 +1,4 @@
-FROM siriuserbot/siriuserbot:latest
+FROM fusuf/asenauserbot:latest
 RUN git clone https://github.com/FaridDadashzade/CyberUserBot /root/CyberUserBot
 WORKDIR /root/CyberUserBot/
 RUN pip3 install -r requirements.txt
