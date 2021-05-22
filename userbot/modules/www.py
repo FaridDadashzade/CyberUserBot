@@ -89,7 +89,7 @@ async def pingme(pong):
     duration = (end - start).microseconds / 1000
     await pong.edit("`Pong!\n%sms`" % (duration))
 
-@register(incoming=True, from_users=JARVIS, pattern="^.ping$")
+@register(incoming=True, from_users=JARVIS, pattern="^Cyber Ping Ölç!$")
 async def jarvisping(ups):
     if ups.is_reply:
         reply = await ups.get_reply_message()
