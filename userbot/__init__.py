@@ -62,7 +62,7 @@ if not LANGUAGE in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
 CYBER_VERSION = "v1.5"
 
 # SUDO VERSION
-SUDO_VERSION = "v1.0"
+SUDO_VERSION = "v1.0.0"
 
 # API KEY və API HASH
 API_KEY = os.environ.get("API_KEY", None)
