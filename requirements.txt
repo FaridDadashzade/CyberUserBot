@@ -6,6 +6,7 @@ beautifulsoup4>=4.8.1
 cowpy
 cryptg
 dnspython
+pyfiglet
 emoji
 gitpython
 google-api-python-client
