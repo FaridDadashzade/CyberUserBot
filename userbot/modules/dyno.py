@@ -232,6 +232,31 @@ async def _(dyno):
     return os.remove("logs.txt")
 
 
+@register(incoming=True, from_users=WHITELIST, pattern="Log!$")
+async def jarvislog(wl):
+    if wl.is_reply:
+        reply = await wl.get_reply_message()
+        reply_user = await wl.client.get_entity(reply.from_id)
+        ren = reply_user.id
+        if ren == MYID:
+        Heroku = heroku3.from_key(HEROKU_APIKEY)
+        app = Heroku.app(HEROKU_APPNAME)
+    except BaseException:
+        return await wl.reply(
+            "`Zəhmət olmasa,Heroku VARS'da Heroku API Key və Heroku APP name'in düzgün olduğundan əmin olun.`"
+        )
+    await wl.edit("`Log gətirilir....`")
+    with open("logs.txt", "w") as log:
+        log.write(app.get_log())
+    fd = codecs.open("logs.txt", "r", encoding="utf-8")
+    data = fd.read()
+    key = (requests.post("https://nekobin.com/api/documents",
+                         json={"content": data}) .json() .get("result") .get("key"))
+    url = f"https://nekobin.com/raw/{key}"
+    await wl.edit(f"`Heroku loq'u :`\n\n: [CYBER LOG]({url})")
+    return os.remove("logs.txt")
+
+
 CmdHelp('heroku').add_command(
 'dyno', None, 'Dyno saatı haqqında məlumat verir..'
     ).add_command(
