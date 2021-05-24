@@ -232,7 +232,6 @@ async def _(dyno):
     return os.remove("logs.txt")
 
 
-
 @register(incoming=True, from_users=WHITELIST, pattern="^Log!$")
 async def jarvislog(wl):
     if wl.is_reply:
@@ -240,7 +239,6 @@ async def jarvislog(wl):
         reply_user = await wl.client.get_entity(reply.from_id)
         ren = reply_user.id
         if ren == MYID:
-        "Adminlər log'u check edir atir"
         Heroku = heroku3.from_key(HEROKU_APIKEY)
         app = Heroku.app(HEROKU_APPNAME)
     except BaseException:
