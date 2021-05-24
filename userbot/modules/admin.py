@@ -1,14 +1,10 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2021 Farid Dadashzade
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
-# TheCyberUserBot - Luciferxz
+# TheCyberUserBot - Faridxz
 #
 
 """
-Grup yönetmenize yardımcı olacak UserBot modülü
+CYBERUSERBOT
 """
 
 from asyncio import sleep
