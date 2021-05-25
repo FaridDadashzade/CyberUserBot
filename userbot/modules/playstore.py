@@ -2,7 +2,7 @@
 
 import bs4
 import requests
-
+from userbot.cmdhelp import CmdHelp
 from userbot.events import register
 
 
@@ -40,3 +40,9 @@ async def play_store(message):
         await message.edit(app_details, parse_mode='html')
     except IndexError:
         await message.edit("`Axtardığınız proqramı tapa bilmədim.`")
+        
+        
+Help = CmdHelp('playstore')
+Help.add_command('playstore', '<proqram adı>', 'Qeyd etdiyiniz proqram haqqında məlumat verər.')
+Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanmışdır.')
+Help.add()                  
