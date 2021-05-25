@@ -59,7 +59,7 @@ if not LANGUAGE in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
     LANGUAGE = "DEFAULT"
     
 # CYBER VERSION
-CYBER_VERSION = "v1.5"
+CYBER_VERSION = "v1.6.0"
 
 # SUDO VERSION
 SUDO_VERSION = "v1.0.0"
@@ -91,7 +91,14 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
 # ALIVE_NAME
-ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+ALIVE_NAME = str(os.environ.get("ALIVE_NAME")) or None
+
+# ALIVE
+ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
+
+# Logo
+ALIVE_LOGO = os.environ.get(
+    "ALIVE_LOGO") or "https://telegra.ph/file/eaf3ac9f56c00d5826eb8.jpg"
 
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
