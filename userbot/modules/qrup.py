@@ -9,8 +9,8 @@ from telethon.tl.functions.channels import GetFullChannelRequest, GetParticipant
 from telethon.utils import get_input_location
 from userbot.cmdhelp import CmdHelp
 
-# FORKED FROM https://github.com/alcyper/alcyper #
-@register(outgoing=True, pattern="^.grupbilgisi(?: |$)(.*)")
+ 
+@register(outgoing=True, pattern="^.qrupmelumati(?: |$)(.*)")
 async def info(event):
     await event.edit("`Qrup analiz edilir...`")
     chat = await get_chatinfo(event)
@@ -190,4 +190,4 @@ async def fetch_info(chat, event):
         caption += f"Açıqlama: \n<code>{description}</code>\n"
     return caption    
 
-CmdHelp('grupbilgisi').add_command('grupbilgisi', None, 'Qrup haqqında məlumat verər.').add()
+CmdHelp('qrup').add_command('qrupmelumati', None, 'Qrup haqqında məlumat verər.').add()
