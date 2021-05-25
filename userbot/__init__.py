@@ -98,7 +98,7 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
 
 # Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/eaf3ac9f56c00d5826eb8.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/acb268fbc0c2059a2c533.mp4"
 
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
