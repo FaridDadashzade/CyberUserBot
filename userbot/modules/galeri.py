@@ -24,7 +24,7 @@ URL_REGEX = re.compile(
     r'(?::\d+)?' # optional port
     r'(?:/?|[/?]\S+)$', re.IGNORECASE)
 
-@register(outgoing=True, pattern="^.galeri ?(.*)")
+@register(outgoing=True, pattern="^.qalareya ?(.*)")
 async def galeri(event):
     try:
         import userbot.modules.sql_helper.galeri_sql as sql
@@ -91,10 +91,10 @@ async def galeri(event):
     else:
         await event.edit(LANG['INVALID'])
 
-CmdHelp('galeri').add_command(
-    'galeri elave', '<url>', 'Qaleri sırasına foto əlavə edər', 'galeri elave https://i.hizliresim.com/cyber.jpg'
+CmdHelp('qalareya').add_command(
+    'qalareya elave', '<url>', 'Qaleri sırasına foto əlavə edər', 'galeri elave https://i.hizliresim.com/cyber.jpg'
 ).add_command(
-    'galeri list', None, 'Qaleri sırasını göstərir.'
+    'qalareya list', None, 'Qaleri sırasını göstərir.'
 ).add_command(
-    'galeri sil', '<sayı>', 'Qaleri sırasından bir fotonu silər.', 'galeri sil 4'
+    'qalareya sil', '<sayı>', 'Qaleri sırasından bir fotonu silər.', 'galeri sil 4'
 ).add()
