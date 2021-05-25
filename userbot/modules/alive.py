@@ -25,7 +25,7 @@ async def salive(alive):
              f"**✦ Python: 3.8.6** \n"
              f"**✦ Sahibim: {DEFAULTUSER}** \n"
              f"**✦ C Y B Σ R Version: {CYBER_VERSION}** \n"
-             f"**✦ Branch: Master")
+             f"**✦ Branch: Master**")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
