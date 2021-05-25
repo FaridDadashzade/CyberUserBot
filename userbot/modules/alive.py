@@ -32,7 +32,7 @@ async def salive(alive):
             await bot.send_file(alive.chat_id, logo, caption=output)
             await alive.delete()
         except BaseException:
-            await alive.edit(output + "\n\n *`Qeyd edilən logo yanlışdır."
+            await alive.edit(output + "\n\n `Qeyd edilən logo yanlışdır."
                              "\nXahiş edirəm düzgün bir link qeyd edin.`")
     else:
         await alive.edit(output)            
