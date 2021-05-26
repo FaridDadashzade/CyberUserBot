@@ -10,8 +10,9 @@ pyfiglet
 emoji
 gitpython
 pyrogram
-pytgcalls
-ffmpeg-python
+ffmpeg
+py-tgcalls
+TgCrypto
 google-api-python-client
 google-auth-oauthlib
 googletrans
@@ -21,6 +22,7 @@ google_images_download>=2.8.0
 gTTS>=2.1.1
 gTTS-token>=1.1.3
 hachoir
+geopy
 httplib2
 humanize
 heroku3
@@ -29,7 +31,6 @@ git+https://github.com/johnwmillr/LyricsGenius.git
 lyricsgenius
 oauth2client
 psycopg2
-geopy
 pybase64>=0.4.0
 pylast==4.1.0
 pySmartDL
