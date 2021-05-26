@@ -9,6 +9,9 @@ dnspython
 pyfiglet
 emoji
 gitpython
+pyrogram
+pytgcalls
+ffmpeg-python
 google-api-python-client
 google-auth-oauthlib
 googletrans
