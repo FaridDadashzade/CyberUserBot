@@ -75,7 +75,7 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     eventtext = str(check.text)
-                    text = "**C Y B Σ R ERROR**\n"
+                    text = "**C Y B Σ R XƏTA BİLDİRİŞİ**\n"
                     link = "[C Y B Σ R Dəstək Qrupuna](https://t.me/TheCyberSupport)"
                     if len(eventtext)<10:
                         text += f"\n**⚙ Əmr:** {eventtext}\n"
@@ -104,9 +104,9 @@ def register(**args):
                     ftext += f"====== ⚠️ Version : {CYBER_VERSION} ======\n"
                     ftext += "================================"
 
-                    command = "git log --pretty=format:\"%an: %s\" -3"
+                    command = "git log --pretty=format:\"%an: %s\" -5"
 
-                    ftext += "\n\n\nSon 3 dəyişiklik:\n"
+                    ftext += "\n\n\nSon 5 dəyişiklik:\n"
 
                     process = await asyncsubshell(command,
                                                   stdout=asyncsub.PIPE,
