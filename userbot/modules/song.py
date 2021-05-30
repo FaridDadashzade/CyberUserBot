@@ -1,20 +1,25 @@
-# Copyright (C) 2020 Yusuf Usta.
+# Copyright (C) 2021 FaridDadashzade.
 #
 # Licensed under the GPL-3.0 License;
 # you may not use this file except in compliance with the License.
 #
 
-# TheCyberUserBot - Luciferxz
+# TheCyberUserBot - Faridxz
 
 import datetime
 import asyncio
+import shutil
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from userbot import bot, CMD_HELP
 from userbot.events import register
+from asyncio.exceptions import TimeoutError
+from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
+
 import os
 import subprocess
+from userbot.utils import progress
 import glob
 from random import randint
 from userbot.cmdhelp import CmdHelp
@@ -69,39 +74,31 @@ async def deezl(event):
             await event.delete()
 
 @register(outgoing=True, pattern="^.song(?: |$)(.*)")
-async def port_song(event):
-    if event.fwd_from:
+async def WooMai(netase):
+    if netase.fwd_from:
         return
-    
-    cmd = event.pattern_match.group(1)
-    if len(cmd) < 1:
-        await event.edit(LANG['UPLOADED_WITH']) 
-
-    reply_to_id = event.message.id
-    if event.reply_to_msg_id:
-        reply_to_id = event.reply_to_msg_id
-        
-    await event.edit(LANG['SEARCHING_SPOT'])  
-    dosya = os.getcwd() 
-    os.system(f"spotdl --song {cmd} -f {dosya}")
-    await event.edit(LANG['DOWNLOADED'])    
-
-    l = glob.glob("*.mp3")
-    if len(l) >= 1:
-        await event.edit(LANG['UPLOADING'])
-        await event.client.send_file(
-            event.chat_id,
-            l[0],
-            force_document=True,
-            allow_cache=False,
-            reply_to=reply_to_id
-        )
-        await event.delete()
-    else:
-        await event.edit(LANG['NOT_FOUND'])   
-        return 
-    os.system("rm -rf *.mp3")
-    subprocess.check_output("rm -rf *.mp3",shell=True)
+    song = netase.pattern_match.group(1)
+    chat = "@WooMaiBot"
+    link = f"/netease {song}"
+    await netase.edit("```Musiqi axtarılır...```")
+    async with bot.conversation(chat) as conv:
+          await asyncio.sleep(2)
+          await netase.edit("`Musiqi yüklənir...\n Biraz gözləyin.`")
+          try:
+              msg = await conv.send_message(link)
+              response = await conv.get_response()
+              respond = await conv.get_response()
+              """ for @TheCyberUserBot """
+              await bot.send_read_acknowledge(conv.chat_id)
+          except YouBlockedUserError:
+              await netase.reply("```Xahiş edirəm @WooMaiBot-u blokdan çıxarın.```")
+              return
+          await netase.edit("`Musiqi göndərilir...`")
+          await asyncio.sleep(3)
+          await bot.send_file(netase.chat_id, respond)
+    await netase.client.delete_messages(conv.chat_id,
+                                       [msg.id, response.id, respond.id])
+    await netase.delete()
 
 @register(outgoing=True, pattern="^.songpl ?(.*)")
 async def songpl(event):
