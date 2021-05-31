@@ -4,7 +4,7 @@
 <h1 align="center"><b>C Y B Σ R USΣRBOT 🇦🇿</b></h1>
 </div>
 <p align="center">
-    C Y B Σ R UserBot, Telegram istifadəsini asanlaşdıran bir proyektdir. Müəllif hüquqları GNU Licence ilə qorunur.
+    C Y B Σ R UserBot, Telegram istifadəsini asanlaşdıran bir proyektdir. Müəllif hüquqları MIT Licence ilə qorunur.
     
 </p>
 
@@ -14,8 +14,6 @@
 ### Avtomatik Qurulum
 
 **Android:** Termuxu açın ve bu kodu yapışdırın: `bash <(curl -L https://bit.ly/2SuGkcA)`
-
-**Alternativ:** `bash <(curl -L https://t.ly/1TJk)`
 
 **iOS:** iSH açın ve bu kodu yapışdırın: `apk update && apk add bash && apk add curl && curl -L -o cyber_installer.sh https://git.io/JYKsg && chmod +x cyber_installer.sh && bash cyber_installer.sh`
 
@@ -59,17 +57,9 @@ Help.add() # Və Əlavə Edək.
 ```
 
 ## Qeyd
-```Bu UserBot yalnızca telegramda daha əyləncəli və yaxşı vaxt keçirin deyə yaradılıb pis yöndə istifadə ettiyiniz təqdirdə CYBER Səlahiyətliləri olaraq heç bir məsuliyyət qəbul etmirik.```
-
 ```
     UserBot ilə əlaqəli; Telegram hesabınız bağlana bilər.
     Bu bir açıq qaynaqlı proyektdir, CYBER Sahibləri və Adminləri olaraq heç bir cavabdehlik daşımırıq.
     CYBER quraraq bu cavabdehlikləri qəbul etmiş sayılırsınız.
 ```
-
-## Credits
-Thanks for;
-
-[Asena UserBot](https://github.com/yusufusta/AsenaUserBot)
-
 
