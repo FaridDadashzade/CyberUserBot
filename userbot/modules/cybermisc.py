@@ -14,6 +14,7 @@ from telethon import *
 from telethon import events
 from telethon.tl import functions
 from datetime import datetime
+from userbot.cmdhelp import CmdHelp
 from userbot import bot
 from telethon.tl.types import UserStatusEmpty, UserStatusLastMonth, UserStatusLastWeek, UserStatusOffline, UserStatusOnline, UserStatusRecently, ChatBannedRights
 from telethon.tl.functions.users import GetFullUserRequest
