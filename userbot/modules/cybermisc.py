@@ -68,7 +68,7 @@ async def ltgm(event):
 		
 
 
-@register(outgoing=True, pattern="^.undlt(?: |$)(.*)")
+@register(outgoing=True, pattern="^.undelete(?: |$)(.*)")
 async def undelete(event):
     if event.fwd_from:
         return
@@ -80,4 +80,10 @@ async def undelete(event):
     else:
         await event.edit("Bu əmri yerinə yetirmək üçün admin olmalısınız!")
         await asyncio.sleep(3)
-        await event.delete()	
+        await event.delete()
+	
+	
+Help = CmdHelp('undelete')
+Help.add_command('undelete', None, 'Silinmiş bir mesajı göndərər')
+Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanmışdır.')
+Help.add() 
