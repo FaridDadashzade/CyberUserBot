@@ -1,4 +1,3 @@
-
 # Copyright 2021 (C) Farid Dadashzade
 #
 # Thanks: https://github.com/gamerfuckerofficial/CheemsBot
@@ -39,6 +38,6 @@ async def salive(alive):
         
         
 Help = CmdHelp('salive')
-Help.add_command('salive', None, 'Yeni alive mesajı.')
+Help.add_command('salive', None, 'Gif-li alive mesajı')
 Help.add_info('@TheCyberUserBot üçün hazırlanmışdır.')
 Help.add()                
