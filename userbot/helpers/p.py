@@ -3,12 +3,13 @@ def e_(fayl_adi, name, slep, siyahi):
 	f.write(f"""from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from time import sleep
-from userbot import CYBER_VERSION
+from userbot import CYBER_VERSION, SUDO_ID, SUDO_VERSION
 from telethon import events
 
 a={siyahi}
 
 @register(outgoing=True, pattern="^.{name}$")
+@register(incoming=True, from_users=SUDO_ID, pattern="^.{name}$")
 async def _(cyber):
 	for i in a:
 		await cyber.edit(' '+str(i))
@@ -25,12 +26,13 @@ def a_(fayl_adi, name, siyahi, slep):
 	f.write(f"""from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from time import sleep
-from userbot import CYBER_VERSION
+from userbot import CYBER_VERSION, SUDO_ID, SUDO_VERSION
 from telethon import events
 
 a={siyahi}
 
 @register(outgoing=True, pattern="^.{name}$")
+@register(incoming=True, from_users=SUDO_ID, pattern="^.{name}$")
 async def _(cyber):
 	text= " "
 	for i in a:
@@ -49,12 +51,13 @@ def r_(fayl_adi, name, siyahi):
 	f.write(f"""from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from telethon import events
-from userbot import CYBER_VERSION
+from userbot import CYBER_VERSION, SUDO_ID, SUDO_VERSION
 from random import choice
 
 a={siyahi}
 
 @register(outgoing=True, pattern="^.{name}$")
+@register(incoming=True, from_users=SUDO_ID, pattern="^.{name}$")
 async def _(cyber):
 	random_ = choice(a)
 	await cyber.client.send_file(cyber.chat_id, random_)
@@ -71,7 +74,7 @@ def m_(fayl_adi, name, siyahi):
 	f.write("""from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from telethon import events
-from userbot import CYBER_VERSION
+from userbot import CYBER_VERSION, SUDO_ID, SUDO_VERSION
 import random
 import os
 
@@ -79,6 +82,7 @@ IFACILAR = [{siyahi}]
 IFACI = (IFACILAR[0])
 
 @register(outgoing=True, pattern="^.{name}$")
+@register(incoming=True, from_users=SUDO_ID, pattern="^.{name}$")
 async def _(cyber):
     musiqi = random.choice(IFACILAR)
     await cyber.edit("`"+IFACILAR+" axtarıram...`")
