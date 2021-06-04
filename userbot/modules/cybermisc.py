@@ -84,7 +84,21 @@ async def undelete(event):
         await event.delete()
 	
 	
+@register(outgoing=True, pattern=r"^\.(xo)$")
+async def xo(event):
+    if event.fwd_from:
+        return
+    istifadeciadi = "@xobot"
+    cyber = "play"
+    if event.reply_to_msg_id:
+        await event.get_reply_message()
+    tap = await bot.inline_query(istifadeciadi, cyber)
+    await tap[0].click(event.chat_id)
+    await event.delete()	
+	
+	
 Help = CmdHelp('undelete')
 Help.add_command('undelete', None, 'Bir qrupda silinmiş 5 mesajı göndərər')
 Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanmışdır.')
-Help.add() 
+Help.add()  
+
