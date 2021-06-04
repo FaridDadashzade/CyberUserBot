@@ -6,8 +6,6 @@ beautifulsoup4>=4.8.1
 cowpy
 cryptg
 dnspython
-pyfiglet
-geopy
 glitch_this
 emoji
 gitpython
@@ -15,6 +13,7 @@ pyrogram
 ffmpeg
 py-tgcalls
 TgCrypto
+wordcloud
 google-api-python-client
 google-auth-oauthlib
 googletrans
