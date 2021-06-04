@@ -75,7 +75,7 @@ async def undelete(event):
         return
     c = await event.get_chat()
     if c.admin_rights or c.creator:
-        a = await bot.get_admin_log(event.chat_id, limit=1, search="", edit=False, delete=True)
+        a = await bot.get_admin_log(event.chat_id, limit=5, search="", edit=False, delete=True)
         for i in a:
             await event.reply(i.original.action.message)
     else:
@@ -85,6 +85,6 @@ async def undelete(event):
 	
 	
 Help = CmdHelp('undelete')
-Help.add_command('undelete', None, 'Silinmiş bir mesajı göndərər')
+Help.add_command('undelete', None, 'Bir qrupda silinmiş 5 mesajı göndərər')
 Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanmışdır.')
 Help.add() 
