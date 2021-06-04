@@ -14,7 +14,8 @@ from userbot import (
     JARVIS,
     WHITELIST,
     MYID,
-    BOTLOG_CHATID
+    BOTLOG_CHATID,
+    CYBER_VERSION
 )
 
 from userbot.events import register
@@ -201,15 +202,20 @@ async def dyno_usage(dyno):
 
     await asyncio.sleep(1.5)
 
-    return await dyno.edit("**C Y B Σ R**:\n\n"
-                           f" ➤ `İstifadə etdiyiniz dyno saatı`  **({HEROKU_APPNAME})**:\n"
-                           f"     •  `{AppHours}` **saat**  `{AppMinutes}` **dəqiqə**  "
-                           f"**|**  [`{AppPercentage}` **%**]"
-                           "\n"
-                           " ➤ `Bu ay üçün qalan dyno saatı`:\n"
-                           f"     •  `{hours}` **saat**  `{minutes}` **dəqiqə**  "
-                           f"**|**  [`{percentage}` **%**]"
-                           )
+    return await dyno.edit(
+                "╭┈─╼━━━━━━━━━━━━━━╾─┈╮ \n"
+                "│           CYBΣRUSERBOT  \n"
+                "├┈─╼━━━━━━━━━━━━━━╾─┈╯ \n"
+                "│ Bu ay istifadə etdiyiniz dyno saatı: \n"
+                f"│  ▸ {AppHours} saat - {AppMinutes} dəqiqə. \n"
+                f"│  ▸ Faiz : {AppPercentage}% \n"
+                "├┈──────────────────┈╮ \n"
+                "│ Bu ay üçün qalan dyno saatı : \n"
+                f"│  ▸ {hours} saat - {minutes} dəqiqə. \n"
+                f"│  ▸ Faiz : {percentage}%. \n"
+                "╰┈──────────────────┈╯ \n"
+                f"• C Y B Σ R Versiyası  : {CYBER_VERSION} \n"
+            )
 
 @register(outgoing=True, pattern=r"^\.log")
 async def _(dyno):
