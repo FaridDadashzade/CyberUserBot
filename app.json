@@ -1,7 +1,7 @@
 {
   "name": "C Y B Σ R UserBot",
   "description": "CYBER UserBot is the most advantageous and fast UserBot with changeable language and permanent plugin system.",
-  "logo": "https://telegra.ph/file/dd1a82e8454f7fe3c04d8.jpg",
+  "logo": "https://telegra.ph/file/ec9e0d5efb84ee3cbf5ff.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -16,27 +16,27 @@
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "Bu dəyəri my.telegram.org saytından alın.",
       "required": true
     },
     "API_HASH": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "Bu dəyəri my.telegram.org saytından alın.",
       "required": true
     },
     "PLUGIN_CHANNEL_ID": {
-      "description": "İsteğe bağlıdır",
+      "description": "İstəyə bağlıdır",
       "required": false
     },
     "SPOTIFY_DC": {
-      "description": "Spotify bio için gerekli olan anahtar",
+      "description": "Spotify bio üçün lazım olan kod.",
       "required": false
     },
     "SPOTIFY_KEY": {
-      "description": "Spotify bio için gerekli olan anahtar",
+      "description": "Spotify bio üçün lazım olan kod",
       "required": false
     },
     "STRING_SESSION": {
-      "description": "python3 GenerateStringSession.py dosyasını yerel olarak çalıştırarak bu değeri alın.",
+      "description": "python3 GenerateStringSession.py faylını yerel olaraq çalışdıraraq bu dəyəri alın.",
       "required": true
     },
     "HEROKU_MEMEZ": {
@@ -45,45 +45,45 @@
       "required": true
     },
     "HEROKU_APIKEY": {
-      "description": "Heroku API Key, 'https://dashboard.heroku.com/account' adresinden alın.",
+      "description": "Heroku API Key, 'https://dashboard.heroku.com/account' adresindən alın.",
       "value": ""
     },
     "HEROKU_APPNAME": {
-      "description": "Heroku uygulama adını buraya ekleyin. UserBot güncellemelerine yardımcı olur.",
+      "description": "Heroku proqram adını buraya yazın. UserBot güncəlləmələrində yardım edər.",
       "required": true
     },
     "UPSTREAM_REPO_URL": {
-      "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
+      "description": "Repo Link",
       "value": "https://github.com/FaridDadashzade/CyberUserBot",
       "required": true
     },
     "COUNTRY": {
-      "description": "Ülkenizi .time ve .date komutlarında kullanılacak şekilde ayarlayın. Varsayılan olarak Türkiye ayarlanmıştır.",
+      "description": ".time və .date əmrləri üçün.",
       "value": "Azerbaijan",
       "required": false
     },
     "TZ_NUMBER": {
-      "description": "Ülkenizde birden fazla Saat Dilimi olması durumunda bu değeri değiştirin.",
+      "description": "Toxunmayın.",
       "value": "1",
       "required": false
     },
     "TZ": {
-      "description": "Bunun ne işe yaradığı hakkında fikrin yoksa kurcalama :)",
+      "description": "Toxunmayın.",
       "value": "Asia/Baku",
       "required": true  
     },
     "CHROME_DRIVER": {
-      "description": "Selenium tabanlı modüller için ChromeDriver konumu.",
+      "description": "Toxunmayın.",
       "value": "/usr/bin/chromedriver",
       "required": false
     },
     "GOOGLE_CHROME_BIN": {
-      "description": "Selenium tabanlı modüller için Google Chrome (veya) Chromium binary konumu.",
+      "description": "Toxunmayın.",
       "value": "/usr/bin/chromium-browser",
       "required": false
     },
     "OPEN_WEATHER_MAP_APPID": {
-      "description": "https://api.openweathermap.org/data/2.5/weather adresinden kendi APPID'inizi (API key) edinin.",
+      "description": "https://api.openweathermap.org/data/2.5/weather adresindən öz APPID'inizi (API key) alın.",
       "required": false
     },
     "BOTLOG": {
@@ -91,11 +91,11 @@
       "value": "False"
     },
     "BOT_USERNAME": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @TheMiriBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Bot username qeyd edin.",
       "required": false  
     },
     "BOT_TOKEN": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun tokenini yazmanız lazım. Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Bot tokeni qeyd edin.",
       "required": false    
     },
     "GENIUS": {
