@@ -9,8 +9,6 @@ dnspython
 glitch_this
 emoji
 gitpython
-TgCrypto
-wordcloud
 google-api-python-client
 google-auth-oauthlib
 googletrans
@@ -52,7 +50,6 @@ coffeehouse
 spotify_token
 twitter_scraper
 chromedriver-autoinstaller
-numpy
 Pillow
 telegraph
 lottie
