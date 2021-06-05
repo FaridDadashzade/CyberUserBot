@@ -62,7 +62,7 @@ if not LANGUAGE in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
 CYBER_VERSION = "v1.6.0"
 
 # SUDO VERSION
-SUDO_VERSION = "v1.0.0"
+SUDO_VERSION = "v1.0"
 
 # API KEY və API HASH
 API_KEY = os.environ.get("API_KEY", None)
@@ -111,10 +111,8 @@ HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
 HEROKU_APPNAME = os.environ.get("HEROKU_APPNAME", None)
 HEROKU_APIKEY = os.environ.get("HEROKU_APIKEY", None)
 
-# UPSTREAM REPO URL
-UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL",
-    "https://github.com/FaridDadashzade/CyberUserBot.git")
+# Guncelleme ucun
+UPSTREAM_REPO_URL = "https://github.com/FaridDadashzade/CyberUserBot.git"
 
 # CONSOLE LOGGER VERBOSE
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -218,7 +216,7 @@ OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
 
 # Whitelist and Patterns
 PATTERNS = os.environ.get("PATTERNS", ".;!,")
-WHITELIST = [1527722982, 979515849, 1841514904, 1410664613]
+WHITELIST = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/whitelist.json').json()
 SUPPORT = [1527722982, 979515849]
 
 # CloudMail.ru və MEGA.nz ayarlama
