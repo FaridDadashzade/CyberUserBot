@@ -205,7 +205,7 @@ async def igza(event):
         await event.edit("xəta")
 
 CmdHelp('misc').add_command(
-    'random', '<əşya1> <əşya2> ... <şyaN>', 'Əşya listindən təsadufi bir əşya seçər', 'random userator uniborg userge'
+    'random', '<əşya1> <əşya2> ... <əşya3>', 'Əşya listindən təsadufi bir əşya seçər', 'random uniborg userge'
 ).add_command(
     'sleep', '<vaxt>', 'Bot da bir insandır, o da yorulur. Ara bir biraz yatmağına icazə ver.', 'sleep 30'
 ).add_command(
@@ -227,5 +227,5 @@ CmdHelp('misc').add_command(
 ).add_command(
     'raw', '<cavab>', 'Cavab verilən mesaj haqqında məlumat verər.'
 ).add_command(
-    'instagram', None, ' Verdiyiniz Instagram hesabı haqqda məlumat verər ⌨️ İşlədilişi: .instagram "accountname"' 
+    'instagram', None, 'Verdiyiniz Instagram hesabı haqqda məlumat verər ⌨️ İstifadəsi: .instagram "accountname"' 
 ).add()
