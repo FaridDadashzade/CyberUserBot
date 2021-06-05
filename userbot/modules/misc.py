@@ -226,6 +226,6 @@ CmdHelp('misc').add_command(
     'resend', None, 'Bir medyayı yenidən göndərər.'
 ).add_command(
     'raw', '<cavab>', 'Cavab verilən mesaj haqqında məlumat verər.'
-).add()
+).add_command(
     'instagram', None, ' Verdiyiniz Instagram hesabı haqqda məlumat verər ⌨️ İşlədilişi: .instagram "accountname"' 
 ).add()
