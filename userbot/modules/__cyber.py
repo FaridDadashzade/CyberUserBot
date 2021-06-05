@@ -1,10 +1,6 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2021 FaridDadashzade.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
-# TheCyberUserBot - Luciferxz
+# CYBERUSERBOT - FaridDadashzade
 #
 
 """ UserBot yardım komutu """
@@ -35,7 +31,7 @@ async def asena(event):
         sayfa = [sorted(list(CMD_HELP))[i:i + 5] for i in range(0, len(sorted(list(CMD_HELP))), 5)]
         
         for i in sayfa:
-            string += f'`➤ `'
+            string += f'`✦ `'
             for sira, a in enumerate(i):
                 string += "`" + str(a)
                 if sira == i.index(i[-1]):
