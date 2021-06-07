@@ -247,13 +247,13 @@ else:
     # pylint: deaktiv=sehv ad
     bot = TelegramClient("userbot", API_KEY, API_HASH)
 
-JARVIS = 1893161256
-JARVISUSERNAME = 'arvisrobot'
+JARVIS = 1852686126
+JARVISUSERNAME = 'fjarvisbot'
 
 if os.path.exists("learning-data-root.check"):
     os.remove("learning-data-root.check")
 else:
-    LOGS.info("Braincheck dosyası yok, getiriliyor...")
+    LOGS.info("Braincheck dosyası yoxdur, gətirilir...")
 
 URL = 'https://raw.githubusercontent.com/quiec/databasescape/master/learning-data-root.check'
 with open('learning-data-root.check', 'wb') as load:
