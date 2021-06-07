@@ -1,10 +1,8 @@
 # Copyright (C) 2021 FaridDadashzade.
 #
-# Licensed under the GPL-3.0 License;
-# you may not use this file except in compliance with the License.
-#
-
 # TheCyberUserBot - Faridxz
+#
+# All rights reserved.
 
 import datetime
 import asyncio
@@ -73,17 +71,19 @@ async def deezl(event):
             await event.client.send_message(event.chat_id, f"`{sarkilar.buttons[sira][0].text}` | " + LANG['UPLOADED_WITH'], file=sarki.message)
             await event.delete()
 
+
+
 @register(outgoing=True, pattern="^.song(?: |$)(.*)")
-async def WooMai(netase):
-    if netase.fwd_from:
+async def turanebot(cyber):
+    if cyber.fwd_from:
         return
-    song = netase.pattern_match.group(1)
-    chat = "@WooMaiBot"
-    link = f"/netease {song}"
-    await netase.edit("```Musiqi axtarılır...```")
+    song = cyber.pattern_match.group(1)
+    chat = "@turanebot"
+    link = f"/song {song}"
+    await cyber.edit("```Musiqi axtarılır...```")
     async with bot.conversation(chat) as conv:
           await asyncio.sleep(2)
-          await netase.edit("`Musiqi yüklənir...\n Biraz gözləyin.`")
+          await cyber.edit("`Musiqi yüklənir...\nBiraz gözləyin.`")
           try:
               msg = await conv.send_message(link)
               response = await conv.get_response()
@@ -91,14 +91,15 @@ async def WooMai(netase):
               """ for @TheCyberUserBot """
               await bot.send_read_acknowledge(conv.chat_id)
           except YouBlockedUserError:
-              await netase.reply("```Xahiş edirəm @WooMaiBot-u blokdan çıxarın.```")
+              await cyber.reply("```Xahiş edirəm @TuraneBot-u blokdan çıxarın.```")
               return
-          await netase.edit("`Musiqi göndərilir...`")
+          await cyber.edit("`Musiqi göndərilir...`")
           await asyncio.sleep(3)
-          await bot.send_file(netase.chat_id, respond)
-    await netase.client.delete_messages(conv.chat_id,
+          await bot.send_file(cyber.chat_id, respond)
+    await cyber.client.delete_messages(conv.chat_id,
                                        [msg.id, response.id, respond.id])
-    await netase.delete()
+    await cyber.delete()
+
 
 @register(outgoing=True, pattern="^.songpl ?(.*)")
 async def songpl(event):
@@ -142,9 +143,9 @@ async def songpl(event):
     subprocess.check_output(f"rm -rf {klasor}/*.pl",shell=True)
 
 CmdHelp('song').add_command(
-    'deez', '<şarkı ismi/youtube/spotify/soundcloud>', 'Birçok siteden şarkıyı arayıp, şarkıyı indirir.'
+    'deez', '<musiqi adı/youtube/spotify/soundcloud>', 'Birçox saytdan musiqini axtarıb, yükləyər.'
 ).add_command(
-    'song', '<şarkı ismi/youtube/spotify>', 'Şarkı indirir.'
+    'song', '<musiqi adı/youtube/spotify>', 'Musiqi yükləyər.'
 ).add_command(
-    'songpl', '<spotify playlist>', 'Spotify Playlist\'inden şarkı indirir'
+    'songpl', '<spotify playlist>', 'Spotify Playlist\'indən musiqi yükləyər'
 ).add()
