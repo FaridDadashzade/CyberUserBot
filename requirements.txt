@@ -4,6 +4,7 @@ async_generator
 bs4
 beautifulsoup4>=4.8.1
 cowpy
+pyGithub
 cryptg
 dnspython
 glitch_this
