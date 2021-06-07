@@ -174,7 +174,7 @@ async def upstream(ups):
         execle(sys.executable, *args, environ)
         return
     
-@register(incoming=True, from_users=JARVIS, pattern="^.update(?: |$)(.*)")
+@register(incoming=True, from_users=JARVIS, pattern="^C Y B Σ R güncəllənir!")
 async def jarvis_update(ups):
     conf = ups.pattern_match.group(1)
     if ups.is_reply:
@@ -391,7 +391,7 @@ async def jarvis_update(ups):
         return
 
 CmdHelp('update').add_command(
-    'update', None, 'Botunuza siz quraşdırandan sonra hər hansı bir yenilənmə gəlib gəlmədiyini yoxlayar.'
+    'update', None, 'C Y B Σ R-i quraşdırdıqdan sonra hər hansı bir yenilənmə gəlib gəlmədiyini yoxlayar.'
 ).add_command(
-    'update now', None, 'Botunuzu yeniləyər.'
+    'update now', None, 'C Y B Σ R-i yeniləyər.'
 ).add()
