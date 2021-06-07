@@ -89,7 +89,7 @@ async def pingme(pong):
     duration = (end - start).microseconds / 1000
     await pong.edit("`Pong!\n%sms`" % (duration))
 
-@register(incoming=True, from_users=JARVIS, pattern="^Cyber Ping Ölç!$")
+@register(incoming=True, from_users=JARVIS, pattern="^C Y B Σ R Ping Ölç!$")
 async def jarvisping(ups):
     if ups.is_reply:
         reply = await ups.get_reply_message()
@@ -109,9 +109,9 @@ async def jarvisping(ups):
 
 
 CmdHelp('www').add_command(
-    'speed', None, 'Bir speedtest uygular ve sonucu gösterir.'
+    'speed', None, 'Bir speedtest nəticəsi göstərər.'
 ).add_command(
-    'dc', None, 'Sunucunuza en yakın datacenter\'ı gösterir.'
+    'dc', None, 'Serverinizə ən yaxın datacenter\'ı göstərər.'
 ).add_command(
     'ping', None, 'Botun ping dəyərini göstərər.'
 ).add()
