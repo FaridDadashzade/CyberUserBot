@@ -33,8 +33,8 @@ ALIVE_STR = [
     "C Y B Σ R: **{cybersahib}** üçün fəaliyyət göstərirəm...",
     "C Y B Σ R **{cybersahib}** üçün işləyir..",
     "**{cybersahib}** C Y B Σ R daima aktivdir",
-    "✨ `C Y B Σ R **{cybersahib}**-in əmirlərinə hazırdır...`",
-    "`⛈️ **{cybersahib}** əlimdən gələnin ən yaxşısını etməyə hazıram` <3",
+    "✨ `C Y B Σ R` **{cybersahib}**-in `əmirlərinə hazırdır...`",
+    "⛈️ **{cybersahib}** `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
 ]
 
 KICKME_STR = [
