@@ -3,10 +3,9 @@ aria2p
 async_generator
 bs4
 beautifulsoup4>=4.8.1
-cowpy
-cryptg
 dnspython
 glitch_this
+fontTools
 emoji
 gitpython
 google-api-python-client
