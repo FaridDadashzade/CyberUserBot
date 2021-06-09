@@ -1,4 +1,4 @@
-# # Copyright (C) 2021 Farid Dadashzade
+# Copyright (C) 2021 Farid Dadashzade
 # 
 # CyberUserBot - faridxz
 #
@@ -102,7 +102,7 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
 
 # Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/acb268fbc0c2059a2c533.mp4"
+    "ALIVE_LOGO") or "https://telegra.ph/file/74bcd15eee31dc2631b81.mp4"
 
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
