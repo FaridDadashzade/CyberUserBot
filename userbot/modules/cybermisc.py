@@ -16,7 +16,7 @@ from telethon.tl import functions
 from datetime import datetime
 from userbot.cmdhelp import CmdHelp
 from userbot import bot
-from telethon.tl.types import UserStatusEmpty, UserStatusLastMonth, UserStatusLastWeek, UserStatusOffline, UserStatusOnline, UserStatusRecently, ChatBannedRights
+from telethon.tl.types import UserStatusEmpty, UserStatusLastMonth, UserStatusLastWeek, UserStatusOffline, UserStatusOnline, UserStatusRecently, ChatBannedRights, ChannelParticipantsKicked
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
@@ -81,7 +81,27 @@ async def undelete(event):
     else:
         await event.edit("Bu əmri yerinə yetirmək üçün admin olmalısınız!")
         await asyncio.sleep(3)
-        await event.delete()		
+        await event.delete()
+	
+	
+
+@register(outgoing=True, groups_only=True, disable_errors=True, pattern=r"^\.allunban(?: |$)(.*)")
+async def _(cyber):
+    await cyber.edit("`Qadağan olunmuş istifadəçiləri axtarıram...`")
+    p = 0
+    (await cyber.get_chat()).title
+    async for i in cyber.client.iter_participants(
+        cyber.chat_id,
+        aggressive=True,
+    ):
+        try:
+            await cyber.client.edit_permissions(cyber.chat_id, i, view_messages=True)
+            p += 1
+        except BaseException:
+            pass
+    await cyber.edit("`Qadağan olunmuş istifadəçilər siyahıdan silindi...`")	
+	
+	
 
 	
 Help = CmdHelp('undelete')
