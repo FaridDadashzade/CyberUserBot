@@ -85,13 +85,14 @@ async def undelete(event):
 	
 	
 
-@register(outgoing=True, groups_only=True, disable_errors=True, pattern=r"^\.allunban(?: |$)(.*)")
+@register(outgoing=True, groups_only=True, disable_errors=True, pattern=r"^\.unbanall(?: |$)(.*)")
 async def _(cyber):
     await cyber.edit("`Qadağan olunmuş istifadəçiləri axtarıram...`")
     p = 0
     (await cyber.get_chat()).title
     async for i in cyber.client.iter_participants(
         cyber.chat_id,
+	filter=ChannelParticipantsKicked,
         aggressive=True,
     ):
         try:
@@ -102,10 +103,9 @@ async def _(cyber):
     await cyber.edit("`Qadağan olunmuş istifadəçilər siyahıdan silindi...`")	
 	
 	
-
 	
-Help = CmdHelp('undelete')
-Help.add_command('undelete', None, 'Bir qrupda silinmiş 5 mesajı göndərər')
+Help = CmdHelp('cybermisc')
+Help.add_command('undelete', None, 'Bir qrupda silinmiş 5 mesajı göndərər.')
+Help.add_command('unbanall', None, 'Qrupda qadağan edilmiş bütün istifadəçilərin qadağasını silər.')
 Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanmışdır.')
-Help.add()  
-
+Help.add() 
