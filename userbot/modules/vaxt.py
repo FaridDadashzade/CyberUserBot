@@ -1,38 +1,31 @@
-import time
-from userbot.events import register as r
-from userbot.cmdhelp import CmdHelp as c
-from telethon import events
+# Copyright (C) 2021 Farid Dadashzade.
+#
+# All rights reserved.
+
+from asyncio import sleep
+
+from telethon.errors import rpcbaseerrors
+
+from userbot.cmdhelp import CmdHelp as c 
+from userbot import BOTLOG, BOTLOG_CHATID, bot
+from userbot.events import register as cyber
 
 
-@r(outgoing=True, pattern="^.sreply (.*)$")
-async def _(q):
-    if q.get_reply_message():
-        vaxt_ = int(q.pattern_match.group(1))
-        reply_ = await q.get_reply_message()
-        text_ = reply_.text
 
-        smsg = await q.client.send_message(q.chat_id, text_)
-        await q.edit("`Mesaj {vaxt} saniyə içində özünü yox edəcək.`".format(vaxt=vaxt_))
+@cyber(outgoing=True, pattern=r"^\.smsg")
+async def selfdestruct(destroy):
+    message = destroy.text
+    counter = int(message[4:6])
+    text = str(destroy.text[6:])
+    await destroy.delete()
+    cyber = await destroy.client.send_message(destroy.chat_id, text)
+    await sleep(counter)
+    await cyber.delete()
 
-        time.sleep(vaxt_)
-        await smsg.delete()
+    if BOTLOG:
+        await destroy.client.send_message(BOTLOG_CHATID,
+                                          "`Özünü məhv edən mesaj göndərildi və silindi...`")
 
-@r(outgoing=True, pattern="^.smsg (.*) ?(\w*)$")
-async def _(q):
-    text_ = q.pattern_match.group().split()
-    vaxt_ = text_[1]
-    msg_ = " "
-    text_.remove(text_[0])
-    text_.remove(text_[0])
-    for i in text_:
-        msg_+=i+" "
-    smsg = await q.client.send_message(q.chat_id, msg_)
-    await q.edit("`Mesaj {vaxt} saniyə içində özünü yox edəcək.`".format(vaxt=vaxt_))
-    time.sleep(int(vaxt_))
-    await smsg.delete()
-
-c('mesaj').add_command(
-    "sreply", "<mesaja_cavab_ver + vaxt>", "Cavab verdiyiniz mesaj qeyd etdiyiniz saniyə sonra özünü məhv edər. Nümunə: `.sreply 12`"
-    ).add_command(
-    "smsg", "<vaxt> <yazı>", "Yazdığınız söz qeyd etdiyiniz saniyə sonra özünü məhv edər. Nümunə: `.smsg 12 Salam`"
-    ).add()
+CmdHelp('mesaj').add_command(
+    'smsg', '<vaxt + mesaj', 'Yazdığınız mesajı qeyd etdiyiniz vaxt ərzində silər.'
+).add()
