@@ -6,7 +6,7 @@ from asyncio import sleep
 
 from telethon.errors import rpcbaseerrors
 
-from userbot.cmdhelp import CmdHelp as c 
+from userbot.cmdhelp import CmdHelp
 from userbot import BOTLOG, BOTLOG_CHATID, bot
 from userbot.events import register as cyber
 
