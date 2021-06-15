@@ -31,8 +31,8 @@ ALIVE_STR = [
     "C Y B Σ R **{cybersahib}** üçün aktivdir...",
     "**{cybersahib}** üçün C Y B Σ R aktivdir!",
     "C Y B Σ R: **{cybersahib}** üçün fəaliyyət göstərirəm...",
-    "C Y B Σ R **{cybersahib}** üçün işləyir..",
-    "**{cybersahib}** C Y B Σ R daima aktivdir",
+    "C Y B Σ R **{cybersahib}** üçün işləyir...",
+    "**{cybersahib}** C Y B Σ R daima aktivdir...",
     "✨ `C Y B Σ R` **{cybersahib}**-in `əmirlərinə hazırdır...`",
     "⛈️ **{cybersahib}** `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
 ]
@@ -244,7 +244,7 @@ async def FotoDegistir (foto):
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
-LOGS.info("Botunuz işləyir! Hər-hansısa bir söhbətə .alive yazaeaq test edin."
+LOGS.info("Botunuz işləyir! Hər-hansısa bir söhbətə .alive yazaraq test edin."
           " Köməyə ehtiyacınız olarsa, dəstək qrupumuza gəlin t.me/TheCyberSupport")
 LOGS.info(f"Version: C Y B Σ R {CYBER_VERSION}")
 
