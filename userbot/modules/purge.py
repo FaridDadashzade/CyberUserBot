@@ -113,21 +113,6 @@ async def editer(edit):
         await edit.client.send_message(BOTLOG_CHATID,
                                        "Mesaj düzəltmə sorğusu uğurla edildi")
 
-
-@register(outgoing=True, pattern="^.sd")
-async def selfdestruct(destroy):
-    """ .sd  """
-    message = destroy.text
-    counter = int(message[4:6])
-    text = str(destroy.text[6:])
-    await destroy.delete()
-    smsg = await destroy.client.send_message(destroy.chat_id, text)
-    await sleep(counter)
-    await smsg.delete()
-    if BOTLOG:
-        await destroy.client.send_message(BOTLOG_CHATID,
-                                          "sd sorğusu uğurla başa çatdı")
-
 CmdHelp('purge').add_command(
     'purge', None, 'Hədəflənən cavabdan başlayaraq bütün mesajları təmizləyər.'
 ).add_command(
