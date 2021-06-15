@@ -80,7 +80,7 @@ def register(**args):
                     if len(eventtext)<10:
                         text += f"\n**⚙ Əmr:** {eventtext}\n"
                     text += "\n🔸️ İstəsəniz bunu bizə bildirə bilərsiniz."
-                    text += f"Sadəcə bu mesajı {link} göndərin.\n"
+                    text += f" Sadəcə bu mesajı {link} göndərin.\n"
                     text += "Xəta və tarix xaricində heç bir şey qeyd edilmir.\n"
 
                     ftext = "========== XEBERDARLIQ =========="
