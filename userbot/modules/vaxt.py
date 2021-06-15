@@ -12,7 +12,7 @@ from userbot.events import register as cyber
 
 
 
-@cyber(outgoing=True, pattern=r"^\.smsg")
+@cyber(outgoing=True, pattern=r"^\.sd")
 async def selfdestruct(destroy):
     message = destroy.text
     counter = int(message[4:6])
@@ -27,5 +27,5 @@ async def selfdestruct(destroy):
                                           "`Özünü məhv edən mesaj göndərildi və silindi...`")
 
 CmdHelp('mesaj').add_command(
-    'smsg', '<vaxt + mesaj', 'Yazdığınız mesajı qeyd etdiyiniz vaxt ərzində silər.'
+    'sd', '<vaxt + mesaj>', 'Yazdığınız mesajı qeyd etdiyiniz vaxt ərzində silər.'
 ).add()
