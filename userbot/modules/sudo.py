@@ -42,7 +42,7 @@ async def addsudo(event):
         yenisudo = f"{cybersudo} {cybert}"
     else:
         yenisudo = f"{cybert}"
-    await event.edit("İstifadəçi sudo olaraq qeyd edildi!\n C Y B Σ R yenidən başladılır...")
+    await event.edit("İstifadəçi sudo olaraq qeyd edildi!\nC Y B Σ R yenidən başladılır...")
     heroku_var[cyber] = yenisudo
 
 
