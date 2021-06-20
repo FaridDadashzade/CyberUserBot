@@ -50,7 +50,7 @@ async def main(event):
     await event.edit("`Profil şəkliniz tənzimləndi...`")
   while True:
     await saatpp(event)
-    await event.client(UploadProfilePhotoRequest(await event.client.upload_file("sonpp.jpg")))
+    await event.client(UploadProfilePhotoRequest(await event.client.upload_file("cyber.jpg")))
     await asyncio.sleep(60) 
     await event.client(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=1)))
 
