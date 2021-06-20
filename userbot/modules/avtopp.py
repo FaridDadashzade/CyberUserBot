@@ -1,24 +1,20 @@
-from userbot import CYBER_VERSION
+import os
+import time
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl import functions 
 from telethon.tl.types import InputMessagesFilterDocument 
-from userbot.events import register 
-import requests 
-import time 
-from PIL import Image 
+import requests
 import datetime 
 from PIL import Image, ImageDraw, ImageFont 
-import os 
 import asyncio 
 import random 
 from time import sleep
-import os
 from telethon.tl.functions.photos import (DeletePhotosRequest, GetUserPhotosRequest, UploadProfilePhotoRequest)
 from telethon.tl.types import InputPhoto, MessageMediaPhoto, User, Chat, Channel
-import os
+
 async def get_font_file(client, channel_id):
     font_file_message_s = await client.get_messages(
         entity=channel_id,
@@ -35,23 +31,23 @@ async def saatpp(event):
             photo = await event.client.download_media(message=replymsg.photo)
             foto = Image.open(photo)
             current_time = datetime.datetime.now().strftime("%H:%M") 
-            f = await get_font_file(event.client, "@FontDunyasi")
+            f = await get_font_file(event.client, "@cyberfonts")
             new = foto.resize((500,500)) 
-            new.save("sonpp.jpg") 
-            img = Image.open("sonpp.jpg") 
+            new.save("cyber.jpg") 
+            img = Image.open("cyber.jpg") 
             drawn_text = ImageDraw.Draw(img) 
             fnt = ImageFont.truetype(f, 65) 
             size = drawn_text.multiline_textsize(current_time, font=fnt) 
             drawn_text.text(((img.width - size[0]) / 2, (img.height - size[1])),
                        current_time, font=fnt, fill=(255, 255, 255))
-            img.save("sonpp.jpg")
+            img.save("cyber.jpg")
 
 @register(outgoing=True, pattern="^.avtopp$")
 async def main(event):
   if not event.is_reply:
-    return await event.edit('`Bir fotoya yanıt verin!`')
+    return await event.edit('`Bir şəkilə cavab verin!`')
   else:
-    await event.edit("`pp tənzimləndi..`")
+    await event.edit("`Profil şəkliniz tənzimləndi...`")
   while True:
     await saatpp(event)
     await event.client(UploadProfilePhotoRequest(await event.client.upload_file("sonpp.jpg")))
@@ -60,5 +56,5 @@ async def main(event):
 
 
 CmdHelp('avtopp').add_command(
-    'avtopp', None, ' Yanıt verilən fotonu AutoPP edir. '
+    'avtopp', None, 'Cavab verdiyiniz şəkili AutoPP edər. '
 ).add()
