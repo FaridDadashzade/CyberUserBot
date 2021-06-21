@@ -1352,6 +1352,8 @@ CmdHelp('admin').add_command(
         'pin', '<yanıtlama>', 'Yanıt verdiyiniz mesajı sabitləyər.'
     ).add_command(
         'setgpic', '<yanıtlama>', 'Qrup şəklinu dəyişdirər.'
+    ).add_command(
+        'gkick', '<istifadəçi adı/cavab>', 'Bir istifadəçini olduğunuz bütün qruplardan atar.'
     ).add()
 
 CmdHelp('cadmin').add_command(
@@ -1372,5 +1374,7 @@ CmdHelp('cadmin').add_command(
         'cgban', '<istifadəçi adı/cavab>', 'Birini dünya miqyasında ban edər.'
     ).add_command(
         'cungban', '<istifadəçi adı/cavab>', 'İstifadəçinin dünya miqyasında olan qadağasını ləğv edər.'
+    ).add_command(
+        'cgkick', '<istifadəçi adı/cavab>', 'Bir istifadəçini olduğunuz bütün qruplardan atar.'
     ).add()
 
