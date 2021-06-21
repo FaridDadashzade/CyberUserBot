@@ -104,6 +104,14 @@ async def gspide(rk):
             reason = 'Gizli'
     except BaseException:
         return await rkp.edit(f"**Xəta!\nNaməlum istifadəçi.**")
+    if user:
+        if user.id == 1527722982:
+            return await rkp.edit(f"`Xəta!`\n`Bunu C Y B Σ R UserBot sahibinə edə bilmərəm!`")
+        try:
+            await rk.client(BlockRequest(user))
+            await rk.client(UnblockRequest(user))
+        except BaseException:
+            pass
         testrk = [d.entity.id for d in await rk.client.get_dialogs() if (d.is_group or d.is_channel)]
         for i in testrk:
             try:
