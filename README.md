@@ -36,25 +36,28 @@ python3 main.py
 
 [![Run on Repl.it](https://repl.it/badge/github/FaridDadashzade/Cyber)](https://repl.it/@FaridDadashzade/Cyber)
 
-## Plugin Düzəltmək
+## Nümunə Plugin
 ```python
 from userbot.events import register
-from userbot.cmdhelp import CmdHelp # <-- Bunların yazılması vacibdir.
+from userbot.cmdhelp import CmdHelp 
+# <-- Bunlar mütləq olmalıdır
 
-@register(outgoing=True, pattern="^.yoxlama")
-async def deneme(event):
-    await event.edit('Yoxlamadan sonraki edit!')
+@register(outgoing=True, pattern="^.test")
+async def test(event):
+    await event.edit('C Y B Σ R UserBot')
 
-Help = CmdHelp('yoxlama') # Bilgi əlavə etmək isdədiyimizi deyirik
-Help.add_command('deneme', # Bura əmr qismini yazırsınız
-    None, # Əmr parametri varsa yazın yoxsa None yazın
-    'Bu yoxlama Edir!', # Əmr açıqlaması hansiki plugin yüklənəndən sonra Açığlama qismində yazılan
-    'deneme' # Misal üçün göstərə biləcəyiniz istifadə tipi.
+Help = CmdHelp('test') # Məlumat yazacıq.
+Help.add_command('test', # Əmri bu şəkildə yazırıq.
+    None,
+    'Test edir', # Bura isə əmrin açıqlamasını yazırıq.
+    'test'
     )
-Help.add_info('@Luciferxz tərəfindən hazırlanmışdır.') # Məlumat əlavə edirik (burda kim tərəfindən hazırlanıb və s. bildirə bilərsiniz.
-# Ya da Xəbərdarlıq --> Help.add_warning('Xəbərdarlıq!')
-Help.add() # Və Əlavə Edək.
+Help.add_info('@faridxz tərəfindən hazırlanmışdır.') # Bu şəkildə məlumat yaza bilərsiniz.
+Help.add_warning('Xəbərdarlıq mesajı') # Burayada xəbərdarlıq mesajı yazırıq.
+Help.add()
 ```
+
+
 
 ## Qeyd
 ```
