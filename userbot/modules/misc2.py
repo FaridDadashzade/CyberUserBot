@@ -89,7 +89,7 @@ async def get_users(event):
             )
             s = s + 1
             await cyber.edit(
-                f"**C Y B Σ R**\n\n`{s}` istifadəçi əlavə edildi.\n`{f}` istifafəçini əlavə etmək olmadı\n\n**Xəta:** `{error}`"
+                f"**C Y B Σ R**\n\n`{s}` istifadəçi əlavə edildi.\n`{f}` istifadəçini əlavə etmək olmadı\n\n**Xəta:** `{error}`"
             )
         except Exception as e:
             error = str(e)
