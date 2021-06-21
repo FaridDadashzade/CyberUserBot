@@ -26,7 +26,7 @@ import logging
 
 import asyncio
 from userbot.events import register
-from userbot import BOTLOG_CHATID, BOTLOG
+from userbot import BOTLOG_CHATID, BOTLOG, SUDO_ID, SUDO_VERSION
 
 
 async def get_user_from_event(event):
@@ -75,7 +75,8 @@ except BaseException:
     client2 = client3 = None
 
 
-@register(outgoing=True, pattern=r"^\.gkick(?: |$)(.*)")
+@register(outgoing=True, disable_errors=True, pattern=r"^\.gkick(?: |$)(.*)")
+@register(incoming=True, from_users=SUDO_ID, pattern="^.cgkick$")
 async def gspide(rk):
     lazy = rk
     sender = await lazy.get_sender()
