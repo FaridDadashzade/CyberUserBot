@@ -24,7 +24,7 @@ cybersudo = os.environ.get("SUDO_ID", None)
 @register(outgoing=True,
           pattern=r"^.addsudo")
 async def addsudo(event):
-    await event.edit("[C Y B Σ R]\n İstifadəçi sudo olaraq qeyd edilir...")
+    await event.edit("[C Y B Σ R]\nİstifadəçi sudo olaraq qeyd edilir...")
     cyber = "SUDO_ID"
     if HEROKU_APPNAME is not None:
         app = Heroku.app(HEROKU_APPNAME)
