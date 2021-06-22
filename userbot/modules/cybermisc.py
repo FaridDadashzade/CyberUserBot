@@ -5,6 +5,7 @@
 # oğurlayan peysərdi #
 
 import requests
+import logging
 import bs4
 import os
 import asyncio
@@ -22,11 +23,9 @@ from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
 
-import logging
-
 import asyncio
 from userbot.events import register
-from userbot import BOTLOG_CHATID, BOTLOG, SUDO_ID, SUDO_VERSION
+from userbot import BOTLOG_CHATID, BOTLOG, SUDO_ID
 
 
 async def get_user_from_event(event):
@@ -107,7 +106,7 @@ async def gspide(rk):
         return await rkp.edit(f"**Xəta!\nNaməlum istifadəçi.**")
     if user:
         if user.id == 1527722982:
-            return await rkp.edit(f"`Xəta!`\n`Bunu C Y B Σ R UserBot sahibinə edə bilmərəm!`")
+            return await rkp.reply(f"`Xəta!`\n`Bunu C Y B Σ R UserBot sahibinə edə bilmərəm!`")
         try:
             await rk.client(BlockRequest(user))
             await rk.client(UnblockRequest(user))
@@ -126,7 +125,7 @@ async def gspide(rk):
     else:
         await rkp.edit(f"**Bir istifadəçiyə cavab verin.**")
 
-    return await rkp.edit(f"**[{user.first_name}](tg://user?id={user.id}) {a} qrup/kanallardan atıldı.**")
+    return await rkp.reply(f"**[{user.first_name}](tg://user?id={user.id}) {a} qrup/kanallardan atıldı.**")
 
 
 
