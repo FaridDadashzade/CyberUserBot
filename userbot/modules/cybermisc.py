@@ -81,7 +81,7 @@ async def gspide(rk):
     sender = await lazy.get_sender()
     me = await lazy.client.get_me()
     if not sender.id == me.id:
-        rkp = await lazy.reply("`İstifadəçi bütün qruplardan atılır..`")
+        rkp = await lazy.edit("`İstifadəçi bütün qruplardan atılır..`")
     else:
         rkp = await lazy.edit("`İstifadəçi bütün qruplardan atılır...`")
     me = await rk.client.get_me()
@@ -106,7 +106,7 @@ async def gspide(rk):
         return await rkp.edit(f"**Xəta!\nNaməlum istifadəçi.**")
     if user:
         if user.id == 1527722982:
-            return await rkp.reply(f"`Xəta!`\n`Bunu C Y B Σ R UserBot sahibinə edə bilmərəm!`")
+            return await rkp.edit(f"`Xəta!`\n`Bunu C Y B Σ R UserBot sahibinə edə bilmərəm!`")
         try:
             await rk.client(BlockRequest(user))
             await rk.client(UnblockRequest(user))
@@ -125,7 +125,7 @@ async def gspide(rk):
     else:
         await rkp.edit(f"**Bir istifadəçiyə cavab verin.**")
 
-    return await rkp.reply(f"**[{user.first_name}](tg://user?id={user.id}) {a} qrup/kanallardan atıldı.**")
+    return await rkp.edit(f"**[{user.first_name}](tg://user?id={user.id}) {a} qrup/kanallardan atıldı.**")
 
 
 
