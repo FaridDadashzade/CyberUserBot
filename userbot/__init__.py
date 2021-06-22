@@ -68,6 +68,9 @@ SUDO_VERSION = "v1.0"
 GIT_REPONAME = os.environ.get("GIT_REPO_NAME") or None
 GITHUB_ACCESSTOKEN = os.environ.get("GITHUB_ACCESS_TOKEN") or None
 
+# test
+GLOBAL = os.environ.get("ABUSE", None)
+
 # API KEY və API HASH
 API_KEY = os.environ.get("API_KEY", None)
 API_HASH = os.environ.get("API_HASH", None)
