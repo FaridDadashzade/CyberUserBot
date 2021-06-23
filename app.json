@@ -188,10 +188,6 @@
       "description": "Google Drive kimlik doğrulama verilerini JSON yapısı olarak girin.",
       "required": false
     },
-    "LYDIA_API_KEY": {
-      "description": "Bu modülün çalışması için CoffeeHouse API'sine ihtiyacı var. 'https://coffeehouse.intellivoid.info/dashboard' Buradan alabilirsiniz.",
-      "required": false
-    },
     "WEATHER_DEFCITY": {
       "description": "UserBot'un hava durumu modülü için varsayılan şehri ayarlayın.",
       "required": false
