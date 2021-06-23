@@ -6,7 +6,7 @@
 
 # Asena UserBot - Yusuf Usta
 
-from userbot import CMD_HELP, ASYNC_POOL, tgbot, SPOTIFY_DC, G_DRIVE_CLIENT_ID, lastfm, LYDIA_API_KEY, YOUTUBE_API_KEY, OPEN_WEATHER_MAP_APPID, AUTO_PP, REM_BG_API_KEY, OCR_SPACE_API_KEY, PM_AUTO_BAN, BOTLOG_CHATID, CYBER_VERSION
+from userbot import CMD_HELP, ASYNC_POOL, tgbot, SPOTIFY_DC, G_DRIVE_CLIENT_ID, lastfm, YOUTUBE_API_KEY, OPEN_WEATHER_MAP_APPID, AUTO_PP, REM_BG_API_KEY, OCR_SPACE_API_KEY, PM_AUTO_BAN, BOTLOG_CHATID, CYBER_VERSION
 from userbot.events import register
 from telethon import version
 from platform import python_version
@@ -43,7 +43,6 @@ async def durums(event):
 **GDrive:** `{durum(G_DRIVE_CLIENT_ID)}`
 **LastFm:** `{durum(lastfm)}`
 **YouTube ApiKey:** `{durum(YOUTUBE_API_KEY)}`
-**Lydia:** `{durum(LYDIA_API_KEY)}`
 **OpenWeather:** `{durum(OPEN_WEATHER_MAP_APPID)}`
 **AutoPP:** `{durum(AUTO_PP)}`
 **RemoveBG:** `{durum(REM_BG_API_KEY)}`
@@ -55,6 +54,6 @@ async def durums(event):
 **{LANG['OK']} ✅**
     """)
 
-CmdHelp('durum').add_command(
-    'durum', None, 'Eklenen Apiler ve sürümleri gösterir.'
+CmdHelp('status').add_command(
+    'status', None, 'Əlavə olunan apileri və versiyonları göstərir.'
 ).add()
