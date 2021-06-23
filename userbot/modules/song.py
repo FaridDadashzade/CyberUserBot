@@ -29,6 +29,7 @@ LANG = get_value("song")
 
 # ████████████████████████████████ #
 
+
 @register(outgoing=True, pattern="^.deez(\d*|)(?: |$)(.*)")
 async def deezl(event):
     if event.fwd_from:
@@ -73,7 +74,7 @@ async def deezl(event):
 
 
 
-@register(outgoing=True, pattern="^.song(?: |$)(.*)")
+@register(outgoing=True, disable_errors=True, pattern="^.song(?: |$)(.*)")
 async def turanebot(cyber):
     if cyber.fwd_from:
         return
@@ -141,6 +142,7 @@ async def songpl(event):
     subprocess.check_output(f"rm -rf {klasor}/*.mp3",shell=True)
     os.system(f"rm -rf {klasor}/*.pl")
     subprocess.check_output(f"rm -rf {klasor}/*.pl",shell=True)
+
 
 CmdHelp('song').add_command(
     'deez', '<musiqi adı/youtube/spotify/soundcloud>', 'Birçox saytdan musiqini axtarıb, yükləyər.'
