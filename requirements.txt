@@ -45,7 +45,6 @@ telethon>=1.21.1
 telethon-session-sqlalchemy>=0.2.6
 urbandict>=0.5
 wikipedia>=1.4.0
-coffeehouse
 spotify_token
 twitter_scraper
 chromedriver-autoinstaller
