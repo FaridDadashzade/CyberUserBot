@@ -1,10 +1,4 @@
-# Copyright (C) 2020 Yusuf Usta.
-#
-# Licensed under the  GPL-3.0 License;
-# you may not use this file except in compliance with the License.
-#
-
-# TheCyberUserBot - Luciferxz
+# CYBERUSERBOT
 
 from userbot import CMD_HELP
 from userbot.events import register
@@ -96,7 +90,7 @@ async def cevir(event):
         await event.edit(f"`{LANG['UPLOADING_GIF']}`")
 
         try:
-            await event.client.send_file(event.chat_id, "out.gif",reply_to=rep_msg, caption=LANG['WITH_ASENA_GIF'])
+            await event.client.send_file(event.chat_id, "out.gif",reply_to=rep_msg, caption=LANG['WITH_CYBER_GIF'])
         except:
             await event.edit(LANG['ERROR'])
             await event.delete()
@@ -123,7 +117,7 @@ async def cevir(event):
             await event.client.send_file(event.chat_id, "out.mp3",reply_to=rep_msg, caption='@TheCyberUserBot ilə səsə çevrildi.')
         except:
             os.remove(video)
-            return await event.edit('`Sese çevirilemedi!`')
+            return await event.edit('`Səsə çevirmək olmadı!`')
 
         await event.delete()
         os.remove("out.mp3")
@@ -132,10 +126,11 @@ async def cevir(event):
         await event.edit(LANG['INVALID_COMMAND'])
         return
 
-CmdHelp('cevir').add_command(
-    'çevir foto', '<cavab>', 'Stiikeri şəkilə çevirər.'
+
+    CmdHelp('cevir').add_command(
+    'çevir foto', '<cavab>', 'Stikeri şəkilə çevirər.'
 ).add_command(
-    'çevir gif', '<cavab>', 'Videoyu gifə çevirər.'
+    'çevir gif', '<cavab>', 'Videonu gifə çevirər.'
 ).add_command(
     'çevir ses', '<çocuk/robot/earrape/hızlı/parazit/yankı>', 'Səsə effekt verər.'
 ).add_command(
