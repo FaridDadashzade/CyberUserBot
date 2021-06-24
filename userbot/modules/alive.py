@@ -51,7 +51,7 @@ async def get_readable_time(seconds: int) -> str:
 
 
 
-@register(outgoing=True, pattern=r"^\.salive(?: |$)(.*)")
+@register(outgoing=True, disable_errors=True, pattern=r"^\.salive(?: |$)(.*)")
 async def salive(alive):
     user = await bot.get_me()
     islememuddeti = await get_readable_time((time.time() - StartTime))
@@ -61,7 +61,7 @@ async def salive(alive):
         f"┣[ 🧭 **Botun işləmə müddəti:** `{islememuddeti}`\n"
         f"┣[ 👤 **Mənim sahibim:** `{DEFAULTUSER}`\n"
         f"┣[ 🐍 **Python:** `3.8.6`\n"
-        f"┣[ ⚙️ **Telethon:** `1.17.4`\n"
+        f"┣[ ⚙️ **Telethon:** `1.21.1`\n"
         f"┣[ 👁‍🗨 **İstifadəçi adı:** @{user.username}\n"
         f"┣[ 🗄 **Branch:** `Master`\n"
         f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
