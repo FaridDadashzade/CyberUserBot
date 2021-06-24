@@ -21,6 +21,7 @@ def register(**args):
     pattern = args.get('pattern', None)
     disable_edited = args.get('disable_edited', False)
     groups_only = args.get('groups_only', False)
+    insecure = args.get("insecure", False)
     trigger_on_fwd = args.get('trigger_on_fwd', False)
     trigger_on_inline = args.get('trigger_on_inline', False)
     disable_errors = args.get('disable_errors', False)
@@ -35,6 +36,9 @@ def register(**args):
 
     if "groups_only" in args:
         del args['groups_only']
+    
+    if "insecure" in args:
+        del args["insecure"]  
 
     if "disable_errors" in args:
         del args['disable_errors']
