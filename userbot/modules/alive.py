@@ -1,6 +1,4 @@
-# Copyright 2021 (C) Farid Dadashzade
-#
-# Thanks: https://github.com/gamerfuckerofficial/CheemsBot
+# Copyright 2021 (C) CYBERUSERBOT
 
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
@@ -20,11 +18,11 @@ async def salive(alive):
     """ C Y B Σ R USERBOT """
     logo = ALIVE_LOGO
     output = ("**✦ C Y B Σ R USERBOT ✦** \n"
-             f"**✦ Telethon: 1.17.4** \n"
-             f"**✦ Python: 3.8.6** \n"
-             f"**✦ Sahibim: {DEFAULTUSER}** \n"
-             f"**✦ C Y B Σ R Version: {CYBER_VERSION}** \n"
-             f"**✦ Branch: Master**")
+             f"**✦ Telethon**: `1.17.4` \n"
+             f"**✦ Python**: `3.8.6` \n"
+             f"**✦ Sahibim**: `{DEFAULTUSER}` \n"
+             f"**✦ C Y B Σ R Version**: `{CYBER_VERSION}` \n"
+             f"**✦ Branch**: `Master`")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
