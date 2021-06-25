@@ -42,4 +42,10 @@ CmdHelp('tags').add_command(
     'tagall', '<səbəb>', 'Bir mesajda 150 istifadəçini etiketləyər (Maksimum 150)'
 ).add_command(
     'admin', '<səbəb>', 'Qrupdaki adminləri bir mesajda etiketləyər.'
+).add_command(
+    'tag', '<səbəb>', 'Qrupdaki istifadəçiləri bir-bir etiketləyər. (Maksimum 500)'
+).add_command(
+    'alladmin', '<səbəb>', 'Qrupdaki adminləri bir mesajda etiketləyər.'
+).add_command(
+    'restart', None, 'Tag etməni dayandırar.'
 ).add()
