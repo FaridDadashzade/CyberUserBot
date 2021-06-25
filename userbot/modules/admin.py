@@ -1311,11 +1311,11 @@ async def get_bots(show):
         remove("botlist.txt")
 
 CmdHelp('admin').add_command(
-        'promote', '<kullanıcı adı/yanıtlama> <özel isim (isteğe bağlı)>', 'Qrupdaki istifadəçiyə admin olmaq haqqı verər'
+        'promote', '<istifadəçi adı/cavab> <özəl başlıq>', 'Qrupdaki istifadəçiyə admin olmaq haqqı verər'
     ).add_command(
-        'demote', '<kullanıcı adı/yanıtlama>', 'Qrupdaki istifadəçinin admin haqqını alar.'
+        'demote', '<istifadəçi adı/cavab>', 'Qrupdaki istifadəçinin admin haqqını alar.'
     ).add_command(
-        'ban', '<kullanıcı adı/yanıtlama> <nedeni (isteğe bağlı)>', 'Qrupdaki istifadəçini susdurar, adminlərdə də işləyər.'
+        'ban', '<istifadəçi adı/cavab> <səbəb>', 'Qrupdaki istifadəçini susdurar, adminlərdə də işləyər.'
     ).add_command(
         'unban', '<kullanıcı adı/yanıtlama>', 'Sohbetteki kişinin yasağını kaldırır.'
     ).add_command(
@@ -1331,29 +1331,27 @@ CmdHelp('admin').add_command(
     ).add_command(
         'bots', None, 'Bir gruptaki silinmiş hesapları arar. Gruptan silinen hesapları kaldırmak için .zombies clean komutunu kullanın.'
     ).add_command(
-        'users veya .users', '<kullanıcı adı> <kullanıcı adı/yanıtlama>', 'Sohbetteki tüm (veya sorgulanan) kullanıcıları alır.'
+        'users və ya .users', '<istifadəçi adı> <cavab>', 'Söhbətdəki bütün istifadəçiləri göstərər.'
     ).add_command(
-        'setgppic', '<yanıtlanan resim>', 'Grubun resmini değiştirir.'
+        'setgppic', '<şəkilə cavab>', 'Qrupun şəklini dəyişdirər.'
     ).add_command(
-        'warn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcıyı uyarır.'
+        'unwarn', '<istifadəçi adı/cavablama> <səbəb>', 'Göstərdiyiniz istifadəçinin xəbərdarlığını qaldırar.'
     ).add_command(
-        'unwarn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Göstərdiyiniz istifadəçinin xəbərdarlığını qaldırar.'
-    ).add_command(
-        'warn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Göstərdiyiniz istifadəçini xəbərdar edər.'
+        'warn', '<istifadəçi adı/cavablama> <səbəb>', 'Göstərdiyiniz istifadəçini xəbərdar edər.'
     ).add_command(
         'usersdel', None, 'Qrup içərisində silinən hesabları göstərər.'
     ).add_command(
-        'ekle', '<kullanıcı ad(lar)ı>', 'Qrupa adam əlavə edər'
+        'elave', '<istifadəçi ad(lar)ı>', 'Qeyd etdiyiniz istifadəçini qrupa əlavə edər'
     ).add_command(
         'gban', '<kullanıcı adı/yanıtlama>', 'İstifadəçini qlobal olaraq qadağan edər.'
     ).add_command(
         'ungban', '<kullanıcı adı/yanıtlama>', 'İstifadəçinin qlobal qadağasını qaldırar.'
     ).add_command(
-        'pin', '<yanıtlama>', 'Yanıt verdiyiniz mesajı sabitləyər.'
+        'pin', '<cavab>', 'Yanıt verdiyiniz mesajı sabitləyər.'
     ).add_command(
-        'setgpic', '<yanıtlama>', 'Qrup şəklinu dəyişdirər.'
+        'setgpic', '<cavab>', 'Qrup şəklini dəyişdirər.'
     ).add_command(
-        'gkick', '<istifadəçi adı/cavab>', 'Bir istifadəçini olduğunuz bütün qruplardan atar.'
+        'gkick', '<istifadəçi adı/cavab>', 'Bir istifadəçini olduğunuz bütün qruplardan və kanallardan ban etmədən çıxarar.'
     ).add()
 
 CmdHelp('cadmin').add_command(
@@ -1377,4 +1375,3 @@ CmdHelp('cadmin').add_command(
     ).add_command(
         'cgkick', '<istifadəçi adı/cavab>', 'Bir istifadəçini olduğunuz bütün qruplardan atar.'
     ).add()
-
