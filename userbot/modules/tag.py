@@ -1,7 +1,8 @@
 """
 CYBERUSERBOT 
-LUCIFERXZ
+FARIDXZ
 """
+
 from telethon.tl.types import ChannelParticipantsAdmins as cp
 from userbot import CMD_HELP, bot
 from userbot.events import register
@@ -50,10 +51,3 @@ async def _(cyber):
 		a_+=1
 		await cyber.client.send_message(cyber.chat_id, "[{}](tg://user?id={}) {}".format(i.first_name, i.id, seasons))
 		sleep(1)
-
-Help = CmdHelp('tag')
-Help.add_command('tag <səbəb>', None, 'Qrupdakı istifadəçiləri tag edər. ')
-Help.add_command('alladmin <səbəb>', None, 'Bütün adminləri tag edər.')
-Help.add_command('restart', None, 'Tag etməni dayandırar.')
-Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanıb.')
-Help.add()	
