@@ -4,10 +4,9 @@
 # you may not use this file except in compliance with the License.
 #
 
-# TheCyberUserBot - Luciferxz
-#
+# CyberUserBot - FaridDadashzade
 
-""" AFK ile ilgili komutları içeren UserBot modülü """
+""" CYBERUSERBOT """
 
 from random import randint
 from asyncio import sleep
@@ -329,5 +328,5 @@ async def type_afk_is_not_true(notafk):
 CmdHelp('afk').add_command(
     'afk', 
     '<İstəyə bağlı bir səbəb>', 
-    'AFK olduğunuzu gösterir. Kim size pm atarsa ya da sizi etiketlerse sizin AFK olduğunuzu ve belirlediğiniz sebebi gösterir. Herhangi bir yere mesaj yazdığınızda AFK modu kapanır.'
+    'AFK olduğunuzu göstərər. Kim sizə şəxsidən yazsa ya da sizi tag edərsə sizin AFK olduğunuzu göstərər.'
     ).add()
