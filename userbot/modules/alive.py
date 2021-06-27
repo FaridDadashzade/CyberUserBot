@@ -102,9 +102,9 @@ async def jarvisalive(jarvis):
         reply_user = await jarvis.client.get_entity(reply.from_id)
         ren = reply_user.id
         if jarvis.sender_id == 1527722982:
-            xitab = "Sahibim"
-        else:
             xitab = "Jarvis"
+        else:
+            xitab = "Sahibim"
         if ren == MYID:
             Version = str(CYBER_VERSION.replace("v","")) 
             await jarvis.reply(f"`{xitab}` **C Y B Σ R aktivdir..**\n **C Y B Σ R:** `{CYBER_VERSION}`")
