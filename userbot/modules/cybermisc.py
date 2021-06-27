@@ -5,6 +5,7 @@
 # oğurlayan peysərdi #
 
 import requests
+import datetime
 import logging
 import bs4
 import os
@@ -13,6 +14,7 @@ import time
 import html
 from telethon import *
 from telethon import events
+from telethon import utils
 from telethon.tl import functions
 from datetime import datetime
 from userbot.cmdhelp import CmdHelp
@@ -20,10 +22,10 @@ from userbot import bot
 from telethon.tl.types import UserStatusEmpty, UserStatusLastMonth, UserStatusLastWeek, UserStatusOffline, UserStatusOnline, UserStatusRecently, ChatBannedRights, ChannelParticipantsKicked
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
+from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.types import MessageEntityMentionName
 
-
-import asyncio
+from asyncio import sleep
 from userbot.events import register
 from userbot import BOTLOG_CHATID, BOTLOG, SUDO_ID
 
@@ -201,12 +203,51 @@ async def _(cyber):
             p += 1
         except BaseException:
             pass
-    await cyber.edit("`Qadağan olunmuş istifadəçilər siyahıdan silindi...`")	
+    await cyber.edit("`Qadağan olunmuş istifadəçilər siyahıdan silindi...`")
 	
 	
+ 
+@register(outgoing=True, pattern="^.sendbot (.*)")
+async def sendbot(cyber):
+    if cyber.fwd_from:
+        return
+    chat = str(cyber.pattern_match.group(1).split(' ', 1)[0])
+    link = str(cyber.pattern_match.group(1).split(' ', 1)[1])
+    if not link:
+        return await cyber.edit("`Bağışlayın, heçnə tapa bilmədim.`")
+     
+    botid = await cyber.client.get_entity(chat)
+    await cyber.edit("```Hazırlanır...```")
+    async with bot.conversation(chat) as conv:
+          try:     
+              response = conv.wait_event(events.NewMessage(incoming=True,from_users=botid))
+              msg = await bot.send_message(chat, link)
+              response = await response
+              await bot.send_read_acknowledge(conv.chat_id)
+          except YouBlockedUserError: 
+              await cyber.reply(f"`Xahiş edirəm` {chat} `-u blokdan çıxarın və yenidən yoxlayın.`")
+              return
+          except :
+              await cyber.edit("`Belə bir bot yoxdur :(`")
+              await sleep(2)
+              return await cyber.delete()
+         
+          await cyber.edit(f"`Göndərilən mesaj` : {link}"
+                               f"\n`Kimə` : {chat}")
+          await bot.send_message(cyber.chat_id, response.message)
+          await bot.send_read_acknowledge(cyber.chat_id)
+          """ prosesi yerine yetirdikden sonra silmesi ucun """
+          await cyber.client.delete_messages(conv.chat_id,
+                                                [msg.id, response.id])
+
+
+Help = CmdHelp('SendBot')
+Help.add_command('sendbot', '<@botun-istifadeci-adi> <mesaj>', 'Yazdığınız əmri qeyd etdiyiniz bota göndərər və botun cavabını atar')
+Help.add()	
+		
 	
 Help = CmdHelp('cybermisc')
 Help.add_command('undelete', None, 'Bir qrupda silinmiş 5 mesajı göndərər.')
 Help.add_command('unbanall', None, 'Qrupda qadağan edilmiş bütün istifadəçilərin qadağasını silər.')
 Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanmışdır.')
-Help.add() 
+Help.add()
