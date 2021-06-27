@@ -240,14 +240,11 @@ async def sendbot(cyber):
           await cyber.client.delete_messages(conv.chat_id,
                                                 [msg.id, response.id])
 
-
-Help = CmdHelp('SendBot')
-Help.add_command('sendbot', '<@botun-istifadeci-adi> <mesaj>', 'Yazdığınız əmri qeyd etdiyiniz bota göndərər və botun cavabını atar')
-Help.add()	
 		
 	
 Help = CmdHelp('cybermisc')
 Help.add_command('undelete', None, 'Bir qrupda silinmiş 5 mesajı göndərər.')
 Help.add_command('unbanall', None, 'Qrupda qadağan edilmiş bütün istifadəçilərin qadağasını silər.')
+Help.add_command('sendbot', '<@botun-istifadeci-adi> <mesaj>', 'Yazdığınız əmri qeyd etdiyiniz bota göndərər və botun cavabını atar')
 Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanmışdır.')
 Help.add()
