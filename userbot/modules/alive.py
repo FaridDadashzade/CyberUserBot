@@ -13,6 +13,9 @@ from userbot import (
     ALIVE_NAME,
     CYBER_VERSION,
     StartTime,
+    JARVIS,
+    WHITELIST,
+    MYID,
     bot,
 )
 
@@ -45,7 +48,7 @@ async def get_readable_time(seconds: int) -> str:
         up_time += time_list.pop() + ", "
 
     time_list.reverse()
-    up_time += ":".join(time_list)
+    up_time += "ㅤ".join(time_list)
 
     return up_time
 
@@ -84,9 +87,33 @@ async def salive(alive):
     else:
         await alive.edit(kecid)
         await asyncio.sleep(100)
-        await alive.delete()            
+        await alive.delete()
         
+
         
+@register(incoming=True, from_users=WHITELIST, pattern="^.wlive$")
+@register(incoming=True, from_users=JARVIS, pattern="^.alive$")
+async def jarvisalive(jarvis):
+    if jarvis.fwd_from:
+        return
+    if jarvis.is_reply:
+        reply = await jarvis.get_reply_message()
+        replytext = reply.text
+        reply_user = await jarvis.client.get_entity(reply.from_id)
+        ren = reply_user.id
+        if jarvis.sender_id == 1527722982:
+            xitab = "Sahibim"
+        else:
+            xitab = "Jarvis"
+        if ren == MYID:
+            Version = str(CYBER_VERSION.replace("v","")) 
+            await jarvis.reply(f"`{xitab}` **C Y B Σ R aktivdir..**\n **C Y B Σ R:** `{CYBER_VERSION}`")
+        else:
+            return
+    else:
+        return 
+      
+               
 Help = CmdHelp('salive')
 Help.add_command('salive', None, 'Gif-li alive mesajı')
 Help.add_info('@TheCyberUserBot üçün hazırlanmışdır.')
