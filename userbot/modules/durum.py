@@ -1,10 +1,6 @@
-# Copyright (C) 2020 Yusuf Usta.
+# Copyright (C) 2021 FaridDadashzade
 #
-# Licensed under the GPL-3.0 License;
-# you may not use this file except in compliance with the License.
-#
-
-# Asena UserBot - Yusuf Usta
+# Cyber UserBot - faridxz
 
 from userbot import CMD_HELP, ASYNC_POOL, tgbot, SPOTIFY_DC, G_DRIVE_CLIENT_ID, lastfm, YOUTUBE_API_KEY, OPEN_WEATHER_MAP_APPID, AUTO_PP, REM_BG_API_KEY, OCR_SPACE_API_KEY, PM_AUTO_BAN, BOTLOG_CHATID, CYBER_VERSION
 from userbot.events import register
