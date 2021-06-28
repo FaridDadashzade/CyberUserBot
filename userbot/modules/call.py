@@ -70,10 +70,9 @@ async def _(c):
     await c.edit(f"`{z}` **istifadəçi çağırıldı...**")
 
 
-CmdHelp('VoiceChat').add_command(
-    'vcbaslat', None, 'Bir qrupda səsli söhbət başladar.'
-).add_command(
-    'vcbagla', None, 'Səsli söhbəti sonlandırar.'
-).add_command(
-    'tagvc', None, 'Qrupdaki istifadəçiləri səsli söhbətə dəvət edər.'
-).add()
+Help = CmdHelp('voicechat')
+Help.add_command('vcbaslat', None, 'Bir qrupda səsli söhbət başladar.')
+Help.add_command('vcbagla', None, 'Səsli söhbəti sonlandırar.')
+Help.add_command('tagvc', None, 'Qrupdaki istifadəçiləri səsli söhbətə dəvət edər.')
+Help.add_info('@TheCyberUserBot')
+Help.add()    
