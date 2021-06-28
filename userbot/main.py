@@ -24,15 +24,8 @@ import re
 import userbot.cmdhelp
 
 ALIVE_STR = [
-    "C Y B Σ R **{cybersahib}** üçün aktivdir!",
+    "`C Y B Σ R sahibinin əmirlərinə hazırdır...`",
     "**{cybersahib}** məni axtarırdın?\nQorxma mən buradayam 😌",
-    "C Y B Σ R **{cybersahib}** üçün aktivdir!",
-    "C Y B Σ R **{cybersahib}** üçün fəaliyyət göstərir!",
-    "C Y B Σ R **{cybersahib}** üçün aktivdir...",
-    "**{cybersahib}** üçün C Y B Σ R aktivdir!",
-    "C Y B Σ R: **{cybersahib}** üçün fəaliyyət göstərirəm...",
-    "C Y B Σ R **{cybersahib}** üçün işləyir...",
-    "**{cybersahib}** C Y B Σ R daima aktivdir...",
     "✨ `C Y B Σ R` **{cybersahib}**-in `əmirlərinə hazırdır...`",
     "⛈️ **{cybersahib}** `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
 ]
