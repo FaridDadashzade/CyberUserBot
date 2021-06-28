@@ -13,6 +13,8 @@ from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
+from telethon.tl.functions.channels import GetFullChannelRequest as getchat
+from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from dotenv import load_dotenv
 from requests import get
 from telethon.tl.functions.channels import JoinChannelRequest
