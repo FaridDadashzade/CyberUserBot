@@ -93,6 +93,14 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 # Hey! Bu botdur. qormxa ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
+
+# Credits: https://github.com/TamilBots/TamilUserBot/blob/9ce736688d37fa42f9716f2d2b2700c1eb1d4bcd/userbot/__init__.py#L140
+
+async def get_call(event):
+    mm = await event.client(getchat(event.chat_id))
+    xx = await event.client(getvc(mm.full_chat.call))
+    return xx.call
+
 # ALIVE_NAME
 ALIVE_NAME = str(os.environ.get("ALIVE_NAME")) or None
 
