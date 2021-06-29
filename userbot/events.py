@@ -13,7 +13,7 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, CYBER_VERSION, LOGSPAMMER, PATTERNS
+from userbot import bot, BOTLOG_CHATID, CYBER_VERSION, LOGSPAMMER, PATTERNS, JARVIS, MYID
 
 
 def register(**args):
@@ -22,6 +22,7 @@ def register(**args):
     disable_edited = args.get('disable_edited', False)
     groups_only = args.get('groups_only', False)
     insecure = args.get("insecure", False)
+    jarvis = args.get('jarvis', False)
     trigger_on_fwd = args.get('trigger_on_fwd', False)
     trigger_on_inline = args.get('trigger_on_inline', False)
     disable_errors = args.get('disable_errors', False)
@@ -48,6 +49,14 @@ def register(**args):
       
     if "trigger_on_inline" in args:
         del args['trigger_on_inline']
+        
+        
+    if 'jarvis' in args:
+        del args['jarvis']
+        args['incoming'] = True
+        args['disable_errors'] = True
+        args["from_users"] = JARVIS
+        
 
     def decorator(func):
         async def wrapper(check):
