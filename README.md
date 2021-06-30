@@ -1,6 +1,6 @@
 ----
 
-<p align="center"><a href="https://t.me/TheCyberUserBot"><img src="https://telegra.ph/file/ec9e0d5efb84ee3cbf5ff.jpg" width="400"></a></p> 
+<p align="center"><a href="https://t.me/TheCyberUserBot"><img src="https://telegra.ph/file/07cb955da8c154a685ef4.jpg" width="400"></a></p> 
 <h1 align="center"><b>C Y B Σ R USΣRBOT 🇦🇿</b></h1>
 </div>
 <p align="center">
@@ -13,7 +13,7 @@
 ## Qurulum
 ### Avtomatik Qurulum
 
-**Android:** Termuxu açın ve bu kodu yapışdırın: `bash <(curl -L https://bit.ly/2SuGkcA)`
+**Android:** Termuxu açın və bu kodu yapışdırın: `bash <(curl -L https://bit.ly/2SuGkcA)`
 
 **iOS:** iSH açın ve bu kodu yapışdırın: `apk update && apk add bash && apk add curl && curl -L -o cyber_installer.sh https://git.io/JYKsg && chmod +x cyber_installer.sh && bash cyber_installer.sh`
 
