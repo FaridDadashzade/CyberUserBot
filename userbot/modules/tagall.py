@@ -16,7 +16,7 @@ async def _(event):
         return
     mentions = event.pattern_match.group(1)
     chat = await event.get_input_chat()
-    async for x in bot.iter_participants(chat, 150):
+    async for x in bot.iter_participants(chat, 100):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
     await event.reply(mentions)
     await event.delete()
