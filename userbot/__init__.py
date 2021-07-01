@@ -109,6 +109,9 @@ ALIVE_NAME = str(os.environ.get("ALIVE_NAME")) or None
 # ALIVE
 ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
 
+# .cyber əmri üçün
+CYBER_HELP_EMOJI = os.environ.get("ICON_HELP", "✦ ")
+
 # Logo
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/74bcd15eee31dc2631b81.mp4"
