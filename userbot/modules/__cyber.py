@@ -7,7 +7,7 @@
 
 from userbot.cmdhelp import CmdHelp
 from userbot import cmdhelp
-from userbot import CMD_HELP
+from userbot import CMD_HELP, CYBER_EMOJI
 from userbot.events import register
 
 # ██████ LANGUAGE CONSTANTS ██████ #
@@ -18,7 +18,7 @@ LANG = get_value("__cyber")
 # ████████████████████████████████ #
 
 @register(outgoing=True, pattern="^.cyber(?: |$)(.*)")
-async def asena(event):
+async def cyber(event):
     """ .cyber əmri üçün """
     args = event.pattern_match.group(1).lower()
     if args:
@@ -31,7 +31,7 @@ async def asena(event):
         sayfa = [sorted(list(CMD_HELP))[i:i + 5] for i in range(0, len(sorted(list(CMD_HELP))), 5)]
         
         for i in sayfa:
-            string += f'`✦ `'
+            string += f'{CYBER_EMOJI} '
             for sira, a in enumerate(i):
                 string += "`" + str(a)
                 if sira == i.index(i[-1]):
