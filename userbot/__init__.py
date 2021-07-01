@@ -110,7 +110,8 @@ ALIVE_NAME = str(os.environ.get("ALIVE_NAME")) or None
 ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
 
 # .cyber əmri üçün
-CYBER_HELP_EMOJI = os.environ.get("ICON_HELP", "✦ ")
+CYBER_EMOJI = os.environ.get(
+    "CYBER_EMOJI") or "✦ "
 
 # Logo
 ALIVE_LOGO = os.environ.get(
