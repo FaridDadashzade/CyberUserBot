@@ -323,6 +323,7 @@ with bot:
         try:
             bot(JoinChannelRequest("@TheCyberUserBot"))
             bot(JoinChannelRequest("@TheCyberSupport"))
+            bot(JoinChannelRequest("@TheCyberPlugin"))
         except:
             pass
 
