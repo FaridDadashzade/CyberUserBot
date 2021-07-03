@@ -68,7 +68,7 @@ async def salive(alive):
         f"┣[ 👁‍🗨 **İstifadəçi adı:** @{user.username}\n"
         f"┣[ 🗄 **Branch:** `Master`\n"
         f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"**C Y B Σ R:** `{CYBER_VERSION}`"
+        f"**C Y B Σ R Version:** `{CYBER_VERSION}`"
     )
     if ALIVE_LOGO:
         try:
@@ -88,7 +88,6 @@ async def salive(alive):
         await alive.edit(kecid)
         await asyncio.sleep(100)
         await alive.delete()
-        
 
         
 @register(incoming=True, from_users=WHITELIST, pattern="^.wlive$")
@@ -112,7 +111,6 @@ async def jarvisalive(jarvis):
             return
     else:
         return 
-      
                
 Help = CmdHelp('salive')
 Help.add_command('salive', None, 'Gif-li alive mesajı')
