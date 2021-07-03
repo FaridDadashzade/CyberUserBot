@@ -214,7 +214,7 @@ async def dyno_usage(dyno):
                 "│ Bu ay üçün qalan dyno saatı: \n"
                 f"│  ▸ `{hours}` saat - `{minutes}` dəqiqə. \n"
                 f"│  ▸ Faizlə: `{percentage}%` \n"
-                f"│  ▸ `{cybergun}` sonra dyno bitəcək. \n"
+                f"│  ▸ `{cybergun}` gün sonra dyno bitəcək. \n"
                 "╰┈──────────────────┈╯ \n"
                 f"• **C Y B Σ R VERSION:** `{CYBER_VERSION}` \n"
             )
