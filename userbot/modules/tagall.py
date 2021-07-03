@@ -39,7 +39,7 @@ async def _(event):
     await event.delete()
 
 CmdHelp('tags').add_command(
-    'tagall', '<səbəb>', 'Bir mesajda 150 istifadəçini etiketləyər (Maksimum 150)'
+    'tagall', '<səbəb>', 'Bir mesajda 100 istifadəçini etiketləyər (Maksimum 100)'
 ).add_command(
     'admin', '<səbəb>', 'Qrupdaki adminləri bir mesajda etiketləyər.'
 ).add_command(
