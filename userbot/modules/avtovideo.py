@@ -78,5 +78,5 @@ async def autovideo(event):
 CmdHelp('autovideo').add_command(
     'autopp', None, 
     'Bu əmr cavab verdiyiniz videonu profil videosu edər və bir saat və ya tarix və ya istədiyiniz bir yazı əlavə edər. Bu saat her dəqiqə dəyişir. ',
-    '.autovideo cyber saat $saat bu da tarih $tarix'
+    '.autovideo cyber saat $saat bu da tarix $tarix'
 ).add()
