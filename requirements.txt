@@ -16,7 +16,6 @@ langdetect
 google_images_download>=2.8.0
 gTTS>=2.1.1
 gTTS-token>=1.1.3
-deep_translator==1.3.2
 hachoir
 httplib2
 humanize
