@@ -306,12 +306,12 @@ async def voicy(event):
     if reply_message.sender.bot:
        await event.edit(LANG['REPLY_TO_MSG'])
        return
-    await event.edit("`Səsə qulaq asılır... Məmmədağa muğagağa...`")
+    await event.edit("`Səsə qulaq asılır...`")
     async with event.client.conversation(chat) as conv:
         try:     
             await event.client.forward_messages(chat, reply_message)
         except YouBlockedUserError:
-            await event.reply(f"`Mmmh deyəsən` {chat} `əngəlləmisən. Xaiş əngəldan çıxar.`")
+            await event.reply(f"`Hmm deyəsən` {chat} `əngəlləmisən. Xaiş əngəldan çıxar.`")
             return
       
         response = conv.wait_event(events.MessageEdited(incoming=True,from_users=259276793))
@@ -375,6 +375,7 @@ async def quotly(event):
             await response.forward_to(event.chat_id)
         await conv.mark_read()
         await conv.cancel_all()
+        
 
 CmdHelp('scrapers_bot').add_command(
     'sangmata', '<cavab>', 'Seçilən istifadəçinin ad keçmişinə baxmaq.'
