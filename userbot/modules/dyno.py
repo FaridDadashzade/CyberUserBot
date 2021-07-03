@@ -186,6 +186,7 @@ async def dyno_usage(dyno):
     minutes_remaining = remaining_quota / 60
     hours = math.floor(minutes_remaining / 60)
     minutes = math.floor(minutes_remaining % 60)
+    cybergun = math.floor(hours / 24) #credits: https://github.com/NinjaTG/MyBot/blob/90ebd06a8fcbdb058ddc4a5c599a179e73290350/bot/modules/usage.py#L50
 
     """ - Current - """
     App = result['apps']
@@ -213,6 +214,7 @@ async def dyno_usage(dyno):
                 "│ Bu ay üçün qalan dyno saatı: \n"
                 f"│  ▸ `{hours}` saat - `{minutes}` dəqiqə. \n"
                 f"│  ▸ Faizlə: `{percentage}%` \n"
+                f"│  ▸ `{cybergun}` sonra dyno bitəcək. \n"
                 "╰┈──────────────────┈╯ \n"
                 f"• **C Y B Σ R VERSION:** `{CYBER_VERSION}` \n"
             )
