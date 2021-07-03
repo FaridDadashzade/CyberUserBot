@@ -64,10 +64,10 @@ if not LANGUAGE in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
     LANGUAGE = "DEFAULT"
     
 # CYBER VERSION
-CYBER_VERSION = "v1.7"
+CYBER_VERSION = "v1.8.1"
 
 # SUDO VERSION
-SUDO_VERSION = "v1.0"
+SUDO_VERSION = "v1.1"
 
 # API KEY və API HASH
 API_KEY = os.environ.get("API_KEY", None)
@@ -94,7 +94,6 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 
 # Hey! Bu botdur. qormxa ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
-
 
 # Credits: https://github.com/TamilBots/TamilUserBot/blob/9ce736688d37fa42f9716f2d2b2700c1eb1d4bcd/userbot/__init__.py#L140
 
