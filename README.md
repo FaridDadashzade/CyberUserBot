@@ -1,16 +1,17 @@
 ----
 
 <p align="center"><a href="https://t.me/TheCyberUserBot"><img src="https://telegra.ph/file/07cb955da8c154a685ef4.jpg" width="400"></a></p> 
-<h1 align="center"><b>C Y B Σ R USΣRBOT 🇦🇿</b></h1>
+<h1 align="center"><b>C Y B Ξ R USΣRBOT 🇦🇿</b></h1>
 </div>
 <p align="center">
-    C Y B Σ R UserBot, Telegram istifadəsini asanlaşdıran bir proyektdir. Müəllif hüquqları MIT Licence ilə qorunur.
+    C Y B Ξ R UserBot, Telegram istifadəsini asanlaşdıran bir proyektdir. Müəllif hüquqları MIT Licence ilə qorunur.
     
 </p>
 
 ----
 
 ## Qurulum
+
 ### Avtomatik Qurulum
 
 **Android:** Termuxu açın və bu kodu yapışdırın: `bash <(curl -L https://bit.ly/2SuGkcA)`
@@ -44,7 +45,7 @@ from userbot.cmdhelp import CmdHelp
 
 @register(outgoing=True, pattern="^.test")
 async def test(event):
-    await event.edit('C Y B Σ R UserBot')
+    await event.edit('C Y B Ξ R UserBot')
 
 Help = CmdHelp('test') # Məlumat yazacıq.
 Help.add_command('test', # Əmri bu şəkildə yazırıq.
@@ -62,7 +63,6 @@ Help.add()
 ## Qeyd
 ```
     UserBot ilə əlaqəli; Telegram hesabınız bağlana bilər.
-    Bu bir açıq qaynaqlı proyektdir, CYBER Sahibləri və Adminləri olaraq heç bir cavabdehlik daşımırıq.
-    CYBER quraraq bu cavabdehlikləri qəbul etmiş sayılırsınız.
+    Bu bir açıq qaynaqlı proyektdir, CYBΞR Sahibləri və Adminləri olaraq heç bir cavabdehlik daşımırıq.
+    CYBΞR quraraq bu cavabdehlikləri qəbul etmiş sayılırsınız.
 ```
-
