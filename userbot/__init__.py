@@ -114,7 +114,7 @@ CYBER_EMOJI = os.environ.get(
 
 # Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/74bcd15eee31dc2631b81.mp4"
+    "ALIVE_LOGO") or "https://telegra.ph/file/05ee7fb37bf56396e7cef.mp4"
 
 # Zip modulu üçün
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY") or "./zips"
