@@ -58,3 +58,4 @@ cairosvg
 imagedown
 pyaztro
 markdown
+sqlalchemy-json
