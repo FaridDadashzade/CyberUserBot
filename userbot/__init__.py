@@ -127,6 +127,9 @@ HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
 HEROKU_APPNAME = os.environ.get("HEROKU_APPNAME", None)
 HEROKU_APIKEY = os.environ.get("HEROKU_APIKEY", None)
 
+# ChatBot
+RANDOM_STUFF_API_KEY = os.environ.get("RANDOM_STUFF_API_KEY", None)
+
 # Guncelleme ucun
 UPSTREAM_REPO_URL = "https://github.com/FaridDadashzade/CyberUserBot.git"
 
