@@ -57,5 +57,3 @@ emoji-country-flag
 cairosvg
 imagedown
 pyaztro
-markdown
-sqlalchemy-json
