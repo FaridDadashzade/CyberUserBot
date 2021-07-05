@@ -2,7 +2,7 @@ import asyncio
 import os
 
 from userbot.helpers.format import md_to_text, paste_message
-from userbot.data import _sudousers_list
+from userbot.helpers.data import _sudousers_list
 
 
 async def edit_or_reply(
