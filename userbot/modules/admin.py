@@ -109,6 +109,7 @@ async def ekle(event):
                     continue
                 await event.edit(f'`{user_id} qrupa əlavə edildi!`')
 
+
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
 @register(incoming=True, from_users=SUDO_ID, pattern="^.cgban(?: |$)(.*)")
 async def gbanspider(gspdr):
@@ -286,10 +287,10 @@ async def promote(promt):
         await promt.edit(NO_ADMIN)
         return
 
-    new_rights = ChatAdminRights(add_admins=True,
-                                 invite_users=True,
+    new_rights = ChatAdminRights(invite_users=True,
                                  change_info=True,
                                  ban_users=True,
+                                 manage_call=True,
                                  delete_messages=True,
                                  pin_messages=True)
 
@@ -317,7 +318,7 @@ async def promote(promt):
     # Yetkilendirme işi başarılı olursa günlüğe belirtelim
     if BOTLOG:
         await promt.client.send_message(
-            BOTLOG_CHATID, "#YETKI\n"
+            BOTLOG_CHATID, "#ADMIN\n"
             f"ISTIFADƏÇİ: [{user.first_name}](tg://user?id={user.id})\n"
             f"QRUP: {promt.chat.title}(`{promt.chat_id}`)")
 
