@@ -65,41 +65,41 @@ Help.add()
 
 def m_(fayl_adi, name, siyahi):
 	f = open(f"./cyberuserbot{fayl_adi}.py", "x")
-	f.write("""from userbot.events import register
+	f.write("""from telethon import events
+import asyncio
+from userbot.events import register
 from userbot.cmdhelp import CmdHelp
-from telethon import events
 import random
 import os
 
-IFACILAR = [{siyahi}]
-IFACI = (IFACILAR[0])
+IFACI = [{siyahi}]
 
 @register(outgoing=True, pattern="^.{name}$")
-async def _(cyber):
-    musiqi = random.choice(IFACILAR)
-    await cyber.edit("`"+IFACILAR+" axtarıram...`")
+async def cybermusic(cyber):
+    
+    
+    await cyber.edit("`Sizin üçün təsadüfi bir "+IFACI+" musiqisi axtarıram...`")
 
     try:
-        try:
-            sonuclar = await cyber.client.inline_query('deezermusicbot '+IFACI+' '+musiqi)
+        results = await cyber.client.inline_query('deezermusicbot '+IFACI+')
         except:
             await cyber.edit("`Bağışlayın, botdan cavab ala bilmədim!`")
             return
 
-        true_but_false = True
-        while true_but_false == True:
-            rast = random.choice(sonuclar)
+        netice = False
+        while netice is False:
+            rast = random.choice(results)
             if rast.description == IFACI:
                 await cyber.edit("`Musiqi yüklənir! Biraz gözləyin...`")
-                indir = await rast.download_media()
+                yukle = await rast.download_media()
                 await cyber.edit("`Yüklənmə tamamlandı! Fayl göndərilir...`")
-                await cyber.client.send_file(cyber.chat_id, indir, caption="@TheCyberUserbot Sənin üçün `"+rast.description+" - "+rast.title+"` Seçdi\\n\\nXoş dinləmələr :)")
+                await cyber.client.send_file(cyber.chat_id, yukle, caption="@TheCyberUserbot Sənin üçün `"+rast.description+" - "+rast.title+"` Seçdi\\n\\nXoş dinləmələr :)")
                 await event.delete()
-                os.remove(indir)
-                true_but_false=False
+                os.remove(yukle)
+                netice = True
 
     except:
-        cyber.edit("Musiqini tapa bilmədim!")
+        cyber.edit("Bağışlayın axtardığınız musiqini tapa bilmədim!")
         return
 
 Help = CmdHelp("cyberuserbot{fayl_adi}")
