@@ -81,7 +81,7 @@ async def cybermusic(cyber):
     await cyber.edit("`Sizin üçün təsadüfi bir "+IFACI+" musiqisi axtarıram...`")
 
     try:
-        results = await cyber.client.inline_query('deezermusicbot '+IFACI+')
+        results = await cyber.client.inline_query('deezermusicbot', '+IFACI+')
         except:
             await cyber.edit("`Bağışlayın, botdan cavab ala bilmədim!`")
             return
