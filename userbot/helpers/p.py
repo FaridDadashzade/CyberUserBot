@@ -82,25 +82,21 @@ async def cybermusic(cyber):
 
     try:
         results = await cyber.client.inline_query('deezermusicbot', '+IFACI+')
-        except:
+    except:
             await cyber.edit("`Bağışlayın, botdan cavab ala bilmədim!`")
             return
 
-        netice = False
-        while netice is False:
+    netice = False
+    while netice is False:
             rast = random.choice(results)
             if rast.description == IFACI:
-                await cyber.edit("`Musiqi yüklənir! Biraz gözləyin...`")
+                await cyber.edit("`Musiqi yüklənir!\nBiraz gözləyin...`")
                 yukle = await rast.download_media()
-                await cyber.edit("`Yüklənmə tamamlandı! Fayl göndərilir...`")
-                await cyber.client.send_file(cyber.chat_id, yukle, caption="@TheCyberUserbot Sənin üçün `"+rast.description+" - "+rast.title+"` Seçdi\\n\\nXoş dinləmələr :)")
+                await cyber.edit("`Yüklənmə tamamlandı!\nFayl göndərilir...`")
+                await cyber.client.send_file(cyber.chat_id, yukle, caption="@TheCyberUserbot sizin üçün `"+rast.description+" - "+rast.title+"` musiqisini seçdi\n\nXoş dinləmələr :)")
                 await event.delete()
                 os.remove(yukle)
                 netice = True
-
-    except:
-        cyber.edit("Bağışlayın axtardığınız musiqini tapa bilmədim!")
-        return
 
 Help = CmdHelp("cyberuserbot{fayl_adi}")
 Help.add_command("{name}", None, "Bu Plugin @TheCyberUserBot Tərəfindən Hazırlanmışdır..")
