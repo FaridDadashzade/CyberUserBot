@@ -2,7 +2,7 @@
 #
 # Cyber UserBot - faridxz
 
-from userbot import CMD_HELP, ASYNC_POOL, tgbot, SPOTIFY_DC, G_DRIVE_CLIENT_ID, lastfm, YOUTUBE_API_KEY, OPEN_WEATHER_MAP_APPID, AUTO_PP, REM_BG_API_KEY, OCR_SPACE_API_KEY, PM_AUTO_BAN, BOTLOG_CHATID, CYBER_VERSION
+from userbot import CMD_HELP, ASYNC_POOL, tgbot, SUDO_ID, SPOTIFY_DC, G_DRIVE_CLIENT_ID, lastfm, YOUTUBE_API_KEY, OPEN_WEATHER_MAP_APPID, AUTO_PP, REM_BG_API_KEY, OCR_SPACE_API_KEY, PM_AUTO_BAN, BOTLOG_CHATID, CYBER_VERSION
 from userbot.events import register
 from telethon import version
 from platform import python_version
@@ -30,12 +30,13 @@ async def durums(event):
     await event.edit(f"""
 **Python {LANG['VERSION']}:** `{python_version()}`
 **TeleThon {LANG['VERSION']}:** `{version.__version__}` 
-**Cyber {LANG['VERSION']}:** `{CYBER_VERSION}`
+**C Y B Ξ R {LANG['VERSION']}:** `{CYBER_VERSION}`
 
 **{LANG['PLUGIN_COUNT']}:** `{len(CMD_HELP)}`
 
 **Inline Bot:** `{durum(tgbot)}`
 **Spotify:** `{durum(SPOTIFY_DC)}`
+**Sudo:** `{durum(SUDO_ID)}`
 **GDrive:** `{durum(G_DRIVE_CLIENT_ID)}`
 **LastFm:** `{durum(lastfm)}`
 **YouTube ApiKey:** `{durum(YOUTUBE_API_KEY)}`
@@ -51,5 +52,5 @@ async def durums(event):
     """)
 
 CmdHelp('status').add_command(
-    'status', None, 'Əlavə olunan apileri və versiyonları göstərir.'
+    'status', None, 'Əlavə olunan apiləri və versiyonları göstərir.'
 ).add()
