@@ -15,7 +15,7 @@ LANG = get_value("liste")
 
 # ████████████████████████████████ #
 
-@register(outgoing=True, pattern="^.list ?(gmute|gban)?")
+@register(outgoing=True, pattern="^.siyahi ?(gmute|gban)?")
 async def liste(event):
     liste = event.pattern_match.group(1)
     try:
@@ -63,6 +63,6 @@ async def liste(event):
         else:
             await event.edit(LANG['GMUTE_LIST'] % mesaj)
 
-CmdHelp('list').add_command(
-    'list', '<gmute/gban>', 'Gbanladığınız ya da Gmutelədiyiniz istifadəçiləri göstərər.'
+CmdHelp('siyahi').add_command(
+    'siyahi', '<gmute/gban>', 'Gbanladığınız və ya Gmutelədiyiniz istifadəçiləri göstərər.'
 ).add()
