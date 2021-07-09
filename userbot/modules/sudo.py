@@ -44,7 +44,7 @@ async def sudoelave(event):
         yenisudo = f"{cybersudo} {cybert}"
     else:
         yenisudo = f"{cybert}"
-    await event.edit("İstifadəçi sudo olaraq qeyd edildi!\nC Y B Σ R yenidən başladılır...")
+    await event.edit("İstifadəçi sudo olaraq qeyd edildi!\nC Y B Ξ R yenidən başladılır...")
     heroku_var[cyber] = yenisudo
     
 
@@ -71,7 +71,7 @@ async def sudosil(event):
       xxx = xx.replace(",", "")
       hazir = xxx.replace("'", "")
       heroku_var["SUDO_ID"] = hazir
-      await event.edit(f"`{ad}` adlı istifadəçini icazəsi alındı.\nC Y B Ξ R yenidən başladılır...")
+      await event.edit(f"`{ad}` adlı istifadəçinin icazəsi alındı.\nC Y B Ξ R yenidən başladılır...")
     else:
       await event.edit(f"Bağışlayın, `{ad}` istifadəçi sudo olaraq qeyd olunmayıb!")
     if heroku_var["SUDO_ID"] == None:
