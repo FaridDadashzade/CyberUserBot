@@ -14,7 +14,7 @@ from userbot import (
     CYBER_VERSION,
     StartTime,
     JARVIS,
-    WHITELIST,
+    SUPPORT,
     MYID,
     bot,
 )
@@ -60,14 +60,14 @@ async def salive(alive):
     islememuddeti = await get_readable_time((time.time() - StartTime))
     kecid = (
         f"**✦ C Y B Σ R USERBOT ✦** \n"
-        f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        f"┏━━━━━━━━━━━━━━━━━━━━━━\n"
         f"┣[ 🧭 **Botun işləmə müddəti:** `{islememuddeti}`\n"
         f"┣[ 👤 **Mənim sahibim:** `{DEFAULTUSER}`\n"
         f"┣[ 🐍 **Python:** `3.8.6`\n"
         f"┣[ ⚙️ **Telethon:** `1.21.1`\n"
         f"┣[ 👁‍🗨 **İstifadəçi adı:** @{user.username}\n"
         f"┣[ 🗄 **Branch:** `Master`\n"
-        f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        f"┗━━━━━━━━━━━━━━━━━━━━━━\n"
         f"**C Y B Σ R Version:** `{CYBER_VERSION}`"
     )
     if ALIVE_LOGO:
@@ -90,7 +90,7 @@ async def salive(alive):
         await alive.delete()
 
         
-@register(incoming=True, from_users=WHITELIST, pattern="^.wlive$")
+@register(incoming=True, from_users=SUPPORT, pattern="^.wlive$")
 @register(incoming=True, from_users=JARVIS, pattern="^.alive$")
 async def jarvisalive(jarvis):
     if jarvis.fwd_from:
@@ -106,7 +106,7 @@ async def jarvisalive(jarvis):
             xitab = "Sahibim"
         if ren == MYID:
             Version = str(CYBER_VERSION.replace("v","")) 
-            await jarvis.reply(f"`{xitab}` **C Y B Σ R aktivdir..**\n**C Y B Σ R Version:** `{CYBER_VERSION}`")
+            await jarvis.reply(f"`{xitab}` **C Y B Ξ R aktivdir...**\n**C Y B Ξ R Version:** `{CYBER_VERSION}`")
         else:
             return
     else:
