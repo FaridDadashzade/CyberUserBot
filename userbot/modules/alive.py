@@ -17,7 +17,7 @@ from userbot import (
     SUPPORT,
     MYID,
     ALIVE_TEXT
-    bot,
+    bot
 )
 
 from userbot.events import register
