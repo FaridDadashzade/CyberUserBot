@@ -112,6 +112,10 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
 CYBER_EMOJI = os.environ.get(
     "CYBER_EMOJI") or "✦ "
 
+# for .salive command
+ALIVE_TEXT = os.environ.get(
+    "ALIVE_TEXT") or "✦ C Y B Ξ R USERBOT ✦ "
+
 # Logo
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/c3e75eccaeb7f56dfae89.mp4"
