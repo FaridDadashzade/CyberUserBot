@@ -16,7 +16,7 @@ from userbot import (
     JARVIS,
     SUPPORT,
     MYID,
-    ALIVE_TEXT
+    ALIVE_TEXT,
     bot
 )
 
