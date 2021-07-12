@@ -16,6 +16,7 @@ from userbot import (
     JARVIS,
     SUPPORT,
     MYID,
+    ALIVE_TEXT
     bot,
 )
 
@@ -59,7 +60,7 @@ async def salive(alive):
     user = await bot.get_me()
     islememuddeti = await get_readable_time((time.time() - StartTime))
     kecid = (
-        f"**✦ C Y B Σ R USERBOT ✦** \n"
+        f"**{ALIVE_TEXT}** \n"
         f"┏━━━━━━━━━━━━━━━━━━━━━━\n"
         f"┣[ 🧭 **Botun işləmə müddəti:** `{islememuddeti}`\n"
         f"┣[ 👤 **Mənim sahibim:** `{DEFAULTUSER}`\n"
@@ -68,7 +69,7 @@ async def salive(alive):
         f"┣[ 👁‍🗨 **İstifadəçi adı:** @{user.username}\n"
         f"┣[ 🗄 **Branch:** `Master`\n"
         f"┗━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"**C Y B Σ R Version:** `{CYBER_VERSION}`"
+        f"**C Y B Ξ R Version:** `{CYBER_VERSION}`"
     )
     if ALIVE_LOGO:
         try:
@@ -114,5 +115,4 @@ async def jarvisalive(jarvis):
                
 Help = CmdHelp('salive')
 Help.add_command('salive', None, 'Gif-li alive mesajı')
-Help.add_info('@TheCyberUserBot üçün hazırlanmışdır.')
-Help.add()                
+Help.add()
