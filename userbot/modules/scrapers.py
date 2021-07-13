@@ -617,7 +617,7 @@ async def imdb(e):
 
 @register(outgoing=True, pattern=r"^.trt(?: |$)([\s\S]*)")
 async def translateme(trans):
-    """ .trt """
+    """ .trt"""
     if trans.fwd_from:
         return
 
@@ -629,13 +629,13 @@ async def translateme(trans):
 
     if not message:
         return await trans.edit(
-            "`Tərcümə edə bilməyim üçün mənə bir mətn verin.`")
+            "`Mənə bir mətn ver!`")
 
     await trans.edit("**Tərcümə edilir...**")
     translator = Translator()
     try:
         reply_text = translator.translate(deEmojify(message),
-                                          dest=TRT_LANG)
+                                          lang_tgt=TRT_LANG)
     except ValueError:
         return await trans.edit(
             "**Xətalı dil kodu, xahiş edirəm düzgün dil kodu seçin **`.lang tts/trt <dil kodu>`**.**"
@@ -653,7 +653,7 @@ async def translateme(trans):
     if BOTLOG:
         await trans.client.send_message(
             BOTLOG_CHATID,
-            f"`{message} sözü {source_lan} 'ə tərcümə edildi.`")
+            f"`{message} sözü {reply_text} sözünə tərcümə edildi.`")
 
 
 
