@@ -617,7 +617,7 @@ async def imdb(e):
 
 @register(outgoing=True, pattern=r"^.trt(?: |$)([\s\S]*)")
 async def translateme(trans):
-    """ .trt komutu verilen metni Google Çeviri kullanarak çevirir. """
+    """ .trt """
     if trans.fwd_from:
         return
 
@@ -629,31 +629,31 @@ async def translateme(trans):
 
     if not message:
         return await trans.edit(
-            "`Tərcümə edə bilməyim üçün mənə bir mətn ver!`")
+            "`Tərcümə edə bilməyim üçün mənə bir mətn verin.`")
 
-    await trans.edit("Tərcümə edilir...")
-    translator = google_translator()
+    await trans.edit("**Tərcümə edilir...**")
+    translator = Translator()
     try:
         reply_text = translator.translate(deEmojify(message),
-                                          lang_tgt=TRT_LANG)
+                                          dest=TRT_LANG)
     except ValueError:
         return await trans.edit(
-            "**xətalı dil kodu, düzgün dil kodu seçin **`.lang tts/trt <dil kodu>`**.**"
+            "**Xətalı dil kodu, xahiş edirəm düzgün dil kodu seçin **`.lang tts/trt <dil kodu>`**.**"
         )
 
     try:
         source_lan = translator.detect(deEmojify(message))[1].title()
     except:
-        source_lan = "(Google bu mesajı çevirə bilmədi...)"
+        source_lan = "(Google bu mesajı tərcümə edə bilmədi)"
 
-    reply_text = f"🌐 Bu dildən: **{source_lan}**\n🇦🇿 Bu dilə: **{LANGUAGES.get(TRT_LANG).title()}**\n\n{reply_text}"
+    reply_text = f"Bu dildən: **{source_lan}**\nBu dilə: **{LANGUAGES.get(TRT_LANG).title()}**\n\n{reply_text}"
 
     await trans.edit(reply_text)
     
     if BOTLOG:
         await trans.client.send_message(
             BOTLOG_CHATID,
-            f"`{message} sözü tərcümə modulu ilə {reply_text} 'ə çevirildi.`")
+            f"`{message} sözü {source_lan} 'ə tərcümə edildi.`")
 
 
 
