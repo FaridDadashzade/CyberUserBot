@@ -635,7 +635,7 @@ async def translateme(trans):
     translator = Translator()
     try:
         reply_text = translator.translate(deEmojify(message),
-                                          lang_tgt=TRT_LANG)
+                                          dest=TRT_LANG)
     except ValueError:
         return await trans.edit(
             "**Xətalı dil kodu, xahiş edirəm düzgün dil kodu seçin **`.lang tts/trt <dil kodu>`**.**"
