@@ -617,44 +617,34 @@ async def imdb(e):
 
 @register(outgoing=True, pattern=r"^.trt(?: |$)([\s\S]*)")
 async def translateme(trans):
-    """ .trt"""
-    if trans.fwd_from:
+    """.trt"""
+    translator = Translator()
+    textx = await trans.get_reply_message()
+    message = trans.pattern_match.group(1)
+    if message:
+        pass
+    elif textx:
+        message = textx.text
+    else:
+        await trans.edit("`Tərcümə edə bilməyim üçün mənə bir mətn ver!`")
         return
 
-    if trans.is_reply and not trans.pattern_match.group(1):
-        message = await trans.get_reply_message()
-        message = str(message.message)
-    else:
-        message = str(trans.pattern_match.group(1))
-
-    if not message:
-        return await trans.edit(
-            "`Mənə bir mətn ver!`")
-
-    await trans.edit("**Tərcümə edilir...**")
-    translator = Translator()
     try:
-        reply_text = translator.translate(deEmojify(message),
-                                          dest=TRT_LANG)
+        reply_text = translator.translate(deEmojify(message), dest=TRT_LANG)
     except ValueError:
-        return await trans.edit(
-            "**Xətalı dil kodu, xahiş edirəm düzgün dil kodu seçin **`.lang tts/trt <dil kodu>`**.**"
-        )
+        await trans.edit("Səhv dil kodu.")
+        return
 
-    try:
-        source_lan = translator.detect(deEmojify(message))[1].title()
-    except:
-        source_lan = "(Google bu mesajı tərcümə edə bilmədi)"
-
-    reply_text = f"Bu dildən: **{source_lan}**\nBu dilə: **{LANGUAGES.get(TRT_LANG).title()}**\n\n{reply_text}"
+    source_lan = LANGUAGES[f'{reply_text.src.lower()}']
+    transl_lan = LANGUAGES[f'{reply_text.dest.lower()}']
+    reply_text = f"Bu dildən:**{source_lan.title()}**\nBu dilə:**{transl_lan.title()}:**\n\n{reply_text.text}"
 
     await trans.edit(reply_text)
-    
     if BOTLOG:
         await trans.client.send_message(
             BOTLOG_CHATID,
-            f"`{message} sözü {reply_text} sözünə tərcümə edildi.`")
-
+            f"{source_lan.title()} sözü {transl_lan.title()} tərcümə edildi.",
+        )
 
 
 @register(pattern=".lang (trt|tts) (.*)", outgoing=True)
