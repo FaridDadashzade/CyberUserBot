@@ -1,13 +1,6 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2021 CYBERUSERBOT.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
-# TheCyberUserBot - Luciferxz
-
-
-""" Internet ile alakalı bilgileri edinmek için kullanılan UserBot modülüdür. """
+# CYBERUSERBOT - FARIDXZ
 
 from datetime import datetime
 
@@ -26,7 +19,7 @@ LANG = get_value("www")
 
 @register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
-    """ .speed komutu sunucu hızını tespit etmek için SpeedTest kullanır. """
+    """ CYBER """
     await spd.edit(LANG['SPEED'])
     test = Speedtest()
 
@@ -80,16 +73,8 @@ async def pingme(pong):
     duration = (end - start).microseconds / 1000
     await pong.edit("`Pong!\n%sms`" % (duration))
 
-@register(outgoing=True, pattern="^.ping$")
-async def pingme(pong):
-    """ .ping komutu userbotun ping değerini herhangi bir sohbette gösterebilir.  """
-    start = datetime.now()
-    await pong.edit("`Pong!`")
-    end = datetime.now()
-    duration = (end - start).microseconds / 1000
-    await pong.edit("`Pong!\n%sms`" % (duration))
 
-@register(incoming=True, from_users=JARVIS, pattern="^C Y B Σ R Ping Ölç!$")
+@register(incoming=True, jarvis=True, pattern="^C Y B Σ R Ping Ölç!$")
 async def jarvisping(ups):
     if ups.is_reply:
         reply = await ups.get_reply_message()
