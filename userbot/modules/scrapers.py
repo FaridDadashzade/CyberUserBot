@@ -637,7 +637,7 @@ async def translateme(trans):
 
     source_lan = LANGUAGES[f'{reply_text.src.lower()}']
     transl_lan = LANGUAGES[f'{reply_text.dest.lower()}']
-    reply_text = f"Bu dildən:**{source_lan.title()}**\nBu dilə:**{transl_lan.title()}:**\n\n{reply_text.text}"
+    reply_text = f"Bu dildən:**{source_lan.title()}**\nBu dilə:**{transl_lan.title()}**\n\n{reply_text.text}"
 
     await trans.edit(reply_text)
     if BOTLOG:
@@ -646,7 +646,7 @@ async def translateme(trans):
             f"{source_lan.title()} sözü {transl_lan.title()} tərcümə edildi.",
         )
 
-
+        
 @register(pattern=".lang (trt|tts) (.*)", outgoing=True)
 async def lang(value):
     """ .lang komutu birkaç modül için varsayılan dili değiştirir. """
@@ -681,6 +681,7 @@ async def lang(value):
             BOTLOG_CHATID,
             f"`{scraper} modulu üçün default dil {LANG.title()} dilinə çevirildi.`")
 
+        
 @register(outgoing=True, pattern="^.yt (.*)")
 async def _(event):
     try:
