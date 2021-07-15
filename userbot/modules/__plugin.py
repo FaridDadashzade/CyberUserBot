@@ -1,10 +1,6 @@
-# Copyright (C) 2020 Yusuf Usta.
+# Copyright (C) 2021 CYBERUSERBOT
 #
-# Licensed under the  GPL-3.0 License;
-# you may not use this file except in compliance with the License.
-#
-
-# TheCyberUserBot - Luciferxz
+# CYBERUSERBOT - FARIDXZ
 
 import re
 import os
@@ -127,6 +123,29 @@ async def plist(event):
         await event.edit(yuklenen)
     else:
         await event.edit(LANG["TEMP_PLUGIN"])
+        
+@register(incoming=True, jarvis=True, pattern="^Plugin siyahısı gətirilir")
+async def jarvisplist(ups):
+    if ups.is_reply:
+        reply = await ups.get_reply_message()
+        reply_user = await ups.client.get_entity(reply.from_id)
+        ren = reply_user.id
+        if ren == MYID:
+            usp = await ups.reply(LANG["PLIST_CHECKING"])
+            yuklenen = f"{LANG['PLIST']}\n\n"
+            async for plugin in ups.client.iter_messages(PLUGIN_CHANNEL_ID, filter=InputMessagesFilterDocument):
+                try:
+                    dosyaismi = plugin.file.name.split(".")[1]
+                except:
+                    continue
+
+                if dosyaismi == "py":
+                    yuklenen += f"☑ {plugin.file.name}\n"
+            await usp.edit(yuklenen)
+        else:
+            await usp.edit(LANG["TEMP_PLUGIN"])
+    else:
+        return        
 
 @register(outgoing=True, pattern="^.pinstall")
 async def pins(event):
