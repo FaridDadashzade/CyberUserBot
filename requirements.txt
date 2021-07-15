@@ -12,7 +12,6 @@ google-api-python-client
 google-auth-oauthlib
 googletrans==4.0.0-rc1
 google-trans-new
-gsearch
 langdetect
 google_images_download>=2.8.0
 gTTS>=2.1.1
