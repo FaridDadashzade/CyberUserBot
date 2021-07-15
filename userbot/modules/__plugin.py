@@ -9,7 +9,7 @@ import importlib
 import time
 import traceback
 
-from userbot import CMD_HELP, bot, tgbot, PLUGIN_CHANNEL_ID, PATTERNS
+from userbot import CMD_HELP, bot, tgbot, PLUGIN_CHANNEL_ID, PATTERNS, MYID
 from userbot.events import register
 from userbot.main import extractCommands
 import userbot.cmdhelp
