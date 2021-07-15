@@ -181,6 +181,9 @@ WEATHER_DEFCITY = os.environ.get("WEATHER_DEFCITY", None)
 ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
 ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
+# SECURITY
+DANGERCONFIGS = get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/bl_configs.json').json()
+
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
