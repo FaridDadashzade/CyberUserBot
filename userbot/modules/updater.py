@@ -174,7 +174,7 @@ async def upstream(ups):
         execle(sys.executable, *args, environ)
         return
     
-@register(incoming=True, from_users=JARVIS, disable_errors=True, pattern="^\.update(?: |$)(.*)")
+@register(incoming=True, jarvis=True, disable_errors=True, pattern="^\.update(?: |$)(.*)")
 async def jarvis_update(ups):
     conf = ups.pattern_match.group(1)
     if ups.is_reply:
