@@ -54,7 +54,6 @@ def register(**args):
     if 'jarvis' in args:
         del args['jarvis']
         args['incoming'] = True
-        args['disable_errors'] = True
         args["from_users"] = JARVIS
         
 
