@@ -24,9 +24,9 @@ import re
 import userbot.cmdhelp
 
 ALIVE_STR = [
-    "`C Y B Σ R sahibinin əmirlərinə hazırdır...`",
+    "`C Y B Ξ R sahibinin əmirlərinə hazırdır...`",
     "**{cybersahib}** məni axtarırdın?\nQorxma mən buradayam 😌",
-    "✨ `C Y B Σ R` **{cybersahib}**-in `əmirlərinə hazırdır...`",
+    "✨ `C Y B Ξ R` **{cybersahib}**-in `əmirlərinə hazırdır...`",
     "⛈️ **{cybersahib}** `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
 ]
 
@@ -67,7 +67,7 @@ AFKSTR = [
     "Hey, sahibim hal-hazırda burada deyil..\nqayıtdığında sizinlə əlaqə saxlayacaqdır.",
 ]
 
-UNAPPROVED_MSG = ("`Salam,` {mention} `! Bu bir avtomatik mesajdır. Narahat olma.\n\n`"
+UNAPPROVED_MSG = ("`Salam,` {mention} `!\nBu bir avtomatik mesajdır. Narahat olma.\n\n`"
                   "`Sahibim sənə PM yazma icazəsi verməyib. `"
                   "`Zəhmət olmasa sahibimin aktiv olmasını gözləyin, o bəzən PM yazmağa icazə verər.\n\n`"
                   "`Bildiyim qədəri ilə o beynini itirib insanlara PM icazəsi vermir.`")
@@ -146,8 +146,10 @@ def extractCommands(file):
 try:
     bot.start()
     idim = bot.get_me().id
-    cyberbl = requests.get('https://raw.githubusercontent.com/FaridDadashzade/CyberUserBot/master/cyberbl.json').json()
+    cyberbl = requests.get('https://raw.githubusercontent.com/FaridDadashzade/deploy/main/cyberbl.json').json()
     if idim in cyberbl:
+        bot.send_message("me", f"`C Y B Ξ R adminləri tərəfindən botdan istifadə haqqınız alındı.`")
+        LOGS.error("C Y B Ξ R adminləri tərəfindən botunuz dayandırıldı.")
         bot.disconnect()
 
     
@@ -239,7 +241,7 @@ for module_name in ALL_MODULES:
 
 LOGS.info("Botunuz işləyir! Hər-hansısa bir söhbətə .alive yazaraq test edin."
           " Köməyə ehtiyacınız olarsa, dəstək qrupumuza gəlin t.me/TheCyberSupport")
-LOGS.info(f"Version: C Y B Σ R {CYBER_VERSION}")
+LOGS.info(f"Version: C Y B Ξ R {CYBER_VERSION}")
 
 """
 if len(argv) not in (1, 3, 4):
