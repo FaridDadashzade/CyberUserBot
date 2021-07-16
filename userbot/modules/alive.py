@@ -2,12 +2,11 @@
 #
 # Farid Dadashzade - CyberUserBot
 
+import time
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 from shutil import which
 from os import remove
-import time
-
 from userbot import (
     ALIVE_LOGO,
     ALIVE_NAME,
@@ -22,6 +21,15 @@ from userbot import (
 
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp
+from telethon.tl.types import (
+    MessageEntityBold,
+    MessageEntityCode,
+    MessageEntityItalic,
+    MessageEntityPre,
+    MessageEntityTextUrl,
+    MessageEntityUnderline,
+)
+
 
 
 # ================= CYBER =================
