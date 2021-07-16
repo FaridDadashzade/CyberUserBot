@@ -57,4 +57,3 @@ emoji-country-flag
 cairosvg
 imagedown
 pyaztro
-gingerit
