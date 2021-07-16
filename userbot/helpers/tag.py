@@ -1,9 +1,7 @@
 # CYBERUSERBOT
 #
 
-
-
-import re
+import re, os
 from random import choice
 import logging
 
@@ -33,6 +31,27 @@ PARSED_ENTITIES = (
 )
 
 
+#------------------ CYBERUSERBOT -------------------#
+
+MATCHERS = [
+    (DEFAULT_URL_RE, parse_url_match),
+    (get_tag_parser("**", MessageEntityBold)),
+    (get_tag_parser("__", MessageEntityItalic)),
+    (get_tag_parser("```", partial(MessageEntityPre, language=""))),
+    (get_tag_parser("`", MessageEntityCode)),
+    (get_tag_parser("--", MessageEntityUnderline)),
+    (re.compile(r"\+\+(.+?)\+\+"), parse_aesthetics),
+    (re.compile(r"([^/\w]|^)(/?(r/\w+))"), parse_subreddit),
+    (re.compile(r"(?<!\w)(~{2})(?!~~)(.+?)(?<!~)\1(?!\w)"), parse_strikethrough),
+]
+
+
+def get_tag_parser(tag, entity):
+    def tag_parser(m):
+        return m.group(1), entity(offset=m.start(), length=len(m.group(1)))
+
+    tag = re.escape(tag)
+    return re.compile(tag + r"(.+?)" + tag, re.DOTALL), tag_parser
 
 
 async def tag(event):
