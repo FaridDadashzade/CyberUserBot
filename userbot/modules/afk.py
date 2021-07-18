@@ -1,9 +1,5 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2021 CyberUserBot.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-
 # CyberUserBot - FaridDadashzade
 
 """ CYBERUSERBOT """
@@ -14,7 +10,7 @@ from asyncio import sleep
 from telethon.events import StopPropagation
 
 from userbot import (AFKREASON, COUNT_MSG, CMD_HELP, ISAFK, BOTLOG,
-                     BOTLOG_CHATID, USERS, PM_AUTO_BAN, SON_GORULME)
+                     BOTLOG_CHATID, USERS, PM_AUTO_BAN, SON_GORULME, MYID, JARVIS)
 from userbot.events import register
 from userbot.main import PLUGIN_MESAJLAR
 from time import time
@@ -295,7 +291,35 @@ async def set_afk(afk_e):
     ISAFK = True
     raise StopPropagation
 
-
+    
+ @register(incoming=True, jarvis=True, pattern="^.afk(?: |$)(.*)", disable_errors=True)
+async def asistanafk(ups):
+    global ISAFK
+    global AFKREASON
+    global SON_GORULME
+    string = ups.pattern_match.group(1)
+    if ups.is_reply:
+        reply = await ups.get_reply_message()
+        reply_user = await ups.client.get_entity(reply.from_id)
+        ren = reply_user.id
+        if ren == MYID:
+            if string:
+                AFKREASON = string
+                await ups.reply(f"{LANG['IM_AFK']}\
+                \n{LANG['REASON']}: `{string}`")
+            else:
+                await ups.reply(LANG['IM_AFK'])
+            SON_GORULME = time()
+            if BOTLOG:
+                await ups.client.send_message(BOTLOG_CHATID, "#AFK\nJarvis tərəfindən afk oldunuz.")
+            ISAFK = True
+            raise StopPropagation
+        else:
+            return
+    else:
+        return   
+    
+    
 @register(outgoing=True)
 async def type_afk_is_not_true(notafk):
     """ Bu kısım bir yere bir şey yazdığınızda sizi AFK modundan çıkarmaya yarar. """
