@@ -5,6 +5,7 @@
 # oğurlayan peysərdi #
 
 import requests
+import re
 import datetime
 import logging
 import bs4
@@ -170,7 +171,34 @@ async def ltgm(event):
                             silent=True
                         )
 		
+@register(outgoing=True, pattern="^.pm ?(.*)")
+async def pm(event):
+ 
+    p = event.pattern_match.group(1)
+    m = p.split(" ")
 
+    chat_id = m[0]
+    try:  
+        chat_id = int(chat_id)
+    except BaseException:
+        
+        pass
+  
+    msg = ""
+    mssg = await event.get_reply_message() 
+    if event.reply_to_msg_id:
+        await event.client.send_message(chat_id, mssg)
+        await event.edit("**C Y B Ξ R mesajınızı göndərdi ✔️**")
+    for i in m[1:]:
+        msg += i + " "
+    if msg == "":
+        return
+    try:
+        await event.client.send_message(chat_id, msg)
+        await event.edit("**C Y B Ξ R mesajınızı göndərdi ✔️**")
+    except BaseException:
+        await event.edit("@TheCyberUserBot mesajınızı göndərə bilmədi :(")
+        
 
 @register(outgoing=True, pattern="^.undelete(?: |$)(.*)")
 async def undelete(event):
@@ -246,5 +274,9 @@ Help = CmdHelp('cybermisc')
 Help.add_command('undelete', None, 'Bir qrupda silinmiş 5 mesajı göndərər.')
 Help.add_command('unbanall', None, 'Qrupda qadağan edilmiş bütün istifadəçilərin qadağasını silər.')
 Help.add_command('sendbot', '<@botun-istifadeci-adi> <mesaj>', 'Yazdığınız əmri qeyd etdiyiniz bota göndərər və botun cavabını atar')
-Help.add_info('@faridxz tərəfindən @TheCyberUserBot üçün hazırlanmışdır.')
+Help.add()
+
+
+Help = CmdHelp('pm')
+Help.add_command('pm', '<@istifadeci-adi> <mesaj>', 'Qeyd etdiyiniz mesajı istədiyiniz şəxsə göndərər.')
 Help.add()
