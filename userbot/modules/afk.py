@@ -292,7 +292,7 @@ async def set_afk(afk_e):
     raise StopPropagation
 
     
- @register(incoming=True, jarvis=True, pattern="^.afk(?: |$)(.*)", disable_errors=True)
+ @register(incoming=True, from_users=JARVIS, pattern="^.afk(?: |$)(.*)", disable_errors=True)
 async def asistanafk(ups):
     global ISAFK
     global AFKREASON
