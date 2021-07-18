@@ -205,7 +205,7 @@ async def dyno_usage(dyno):
 
     return await dyno.edit(
                 "╭┈─╼━━━━━━━━━━━━━━╾─┈╮ \n"
-                "│                  CYBΣRUSERBOT DYNO  \n"
+                "│                  CYBΞRUSERBOT DYNO  \n"
                 "├┈─╼━━━━━━━━━━━━━━╾─┈╯ \n"
                 "│ Bu ay üçün istifadə etdiyiniz dyno saatı: \n"
                 f"│  ▸ `{AppHours}` saat - `{AppMinutes}` dəqiqə. \n"
@@ -216,7 +216,7 @@ async def dyno_usage(dyno):
                 f"│  ▸ Faizlə: `{percentage}%` \n"
                 f"│  ▸ `{cybergun}` gün sonra dyno bitəcək. \n"
                 "╰┈──────────────────┈╯ \n"
-                f"• **C Y B Σ R VERSION:** `{CYBER_VERSION}` \n"
+                f"• **C Y B Ξ R VERSION:** `{CYBER_VERSION}` \n"
             )
 
 @register(outgoing=True, pattern=r"^\.log")
