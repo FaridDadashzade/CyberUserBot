@@ -10,7 +10,7 @@ from asyncio import sleep
 from telethon.events import StopPropagation
 
 from userbot import (AFKREASON, COUNT_MSG, CMD_HELP, ISAFK, BOTLOG,
-                     BOTLOG_CHATID, USERS, PM_AUTO_BAN, SON_GORULME, MYID, JARVIS)
+                     BOTLOG_CHATID, USERS, PM_AUTO_BAN, SON_GORULME)
 from userbot.events import register
 from userbot.main import PLUGIN_MESAJLAR
 from time import time
@@ -292,7 +292,7 @@ async def set_afk(afk_e):
     raise StopPropagation
 
     
- @register(incoming=True, from_users=JARVIS, pattern="^.afk(?: |$)(.*)", disable_errors=True)
+@register(incoming=True, from_users=JARVIS, pattern="^.afk(?: |$)(.*)", disable_errors=True)
 async def asistanafk(ups):
     global ISAFK
     global AFKREASON
