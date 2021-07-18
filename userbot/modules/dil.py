@@ -1,10 +1,6 @@
-# Copyright (C) 2020 Yusuf Usta.
+# Copyright (C) 2021
 #
-# Licensed under the  GPL-3.0 License;
-# you may not use this file except in compliance with the License.
-#
-
-# TheCyberUserBot - Luciferxz
+# CYBERUSERBOT - FARIDXZ
 
 from userbot.cmdhelp import CmdHelp
 from userbot import PLUGIN_CHANNEL_ID, CMD_HELP
@@ -21,7 +17,7 @@ async def dil(event):
 
     komut = event.pattern_match.group(1)
     if search(r"y[uü]kle|install", komut):
-        await event.edit("`Dil dosyası yüklenir...`")
+        await event.edit("`Dil faylı yüklenir...`")
         if event.is_reply:
             reply = await event.get_reply_message()
             dosya = await reply.download_media()
@@ -62,9 +58,9 @@ async def dil(event):
             await event.edit(
                 f"**Dil: **`{dosya['LANGUAGE']}`\n"
                 f"**Dil Kodu: **`{dosya['LANGCODE']}`\n"
-                f"**Çevirmen: **`{dosya['AUTHOR']}`\n"
+                f"**Tərcümə edən: **`{dosya['AUTHOR']}`\n"
 
-                f"\n\n`Dil dosyasını yüklemek üçün` `.dil yükle` `yazın`"
+                f"\n\n`Dil faylını yükləmək üçün` `.lang yükle` `yazın`"
             )
         else:
             await event.edit("**Lütfen bir dil dosyasına yanıt verin!**")
@@ -72,7 +68,7 @@ async def dil(event):
         await event.edit(
             f"**Dil: **`{LANGUAGE_JSON['LANGUAGE']}`\n"
             f"**Dil Kodu: **`{LANGUAGE_JSON['LANGCODE']}`\n"
-            f"**Çeviren: **`{LANGUAGE_JSON ['AUTHOR']}`\n"
+            f"**Tərcümə edən: **`{LANGUAGE_JSON ['AUTHOR']}`\n"
 
             f"\n\nDiger diller üçün @CyberDil kanalına baxın"
         )
