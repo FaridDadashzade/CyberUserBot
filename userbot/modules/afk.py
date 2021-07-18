@@ -14,6 +14,7 @@ from userbot import (AFKREASON, COUNT_MSG, CMD_HELP, ISAFK, BOTLOG,
 from userbot.events import register
 from userbot.main import PLUGIN_MESAJLAR
 from time import time
+from userbot import JARVIS, MYID
 from userbot.cmdhelp import CmdHelp
 
 # ██████ LANGUAGE CONSTANTS ██████ #
