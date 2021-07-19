@@ -2,7 +2,7 @@
     "__CYBERJSON__": true,
     "LANGUAGE": "Azərbaycanca",
     "LANGCODE": "az",
-    "AUTHOR": "t.me/Luciferxz",
+    "AUTHOR": "t.me/faridxz",
     "STRINGS": {
         "__plugin": {
             "REPLY_FOR_PORT": "`Zəhmət olmasa Plugin-Port üçün bir fayla cavab yazın`",
@@ -30,12 +30,12 @@
             "ALREADY_DELETED": "`Plugin faylı artıq silinib.`",
             "NOT_FOUND_PLUGIN": "`Belə bir plugin bəlkə var idi, bəlkədə yox. Ancaq hazırda olmadığı dəqiqdir.`",
             "PLUG_DELETED": "`Plugin uğurla silindi!` **Tətbiq ediləcək əməliyyatlar üçün yenidən başlatmağınız lazımdır.**",
-            "CYBER_PLUGIN_CAPTION": "Bu [C Y B Σ R](https://t.me/TheCyberUserBot) pluginidir."
+            "CYBER_PLUGIN_CAPTION": "Bu [C Y B Ξ R](https://t.me/TheCyberUserBot) pluginidir."
         },
         
         "__cyber": {
-            "NEED_PLUGIN": "Zəhmət olmasa bir C Y B Σ R modulu adı qeyd edin.",
-            "NEED_MODULE": "Zəhmət olmasa hansı C Y B Σ R modulu üçün kömək istədiyinizi qeyd edin!\nİstifadəsi: .cyber <modul adı>"
+            "NEED_PLUGIN": "Zəhmət olmasa bir C Y B Ξ R modulu adı qeyd edin.",
+            "NEED_MODULE": "C Y B Ξ R USERBOT \n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡\nİstifadəsi: .cyber <modul adı>"
         },
 
         "__helpme": {
@@ -361,12 +361,12 @@
             "SLEEP_DESC": "İstifadə qaydası: `.sleep [saniyə]`",
             "SLEEPING": "`Xoruldayaraq yatıram...`",
             "GOODMORNIN_YALL": "`Sabahınız xeyir!`",
-            "GOODBYE_MFRS": "`Görüşənədək... *Windows XP söndürlmə səsi*`",
+            "GOODBYE_MFRS": "`Görüşənədək... *Windows XP söndürülmə səsi*`",
             "RESTARTING": "`Bot yenidən qoşulur..`",
             "SUPPORT_GROUP": "[Buradan](http://t.me/TheCyberUserBot) Dəstək qrupumuza çata bilərsiniz.",
             "CREATOR": "Bu bot \n[Farid](https://t.me/Luciferxz) tərəfindən hazırlanmışdır. \n",
-            "README": "[C Y B Σ R README.md](https://github.com/FaridDadashzade/CyberUserBot/blob/main/README.md)",
-            "REPO": "[C Y B Σ R Repo](github.com/FaridDadashzade/cyberuserbot)",
+            "README": "[C Y B Ξ R README.md](https://github.com/FaridDadashzade/CyberUserBot/blob/main/README.md)",
+            "REPO": "[C Y B Ξ R Repo](github.com/FaridDadashzade/cyberuserbot)",
             "CHECK_LOGS": "`Tapılmış Mesaj üçün istifadəçi qeydlərini yoxlayın!`"
         },
 
@@ -587,18 +587,18 @@
             "NOT_FOUND": "qovluğu tapa bilmədi",
             "GIT_ERROR": "Git xətası!",
             "NOT_GIT": "qovluğlu bir git reposu kimi görünmür. \nAncaq botu .update now əmri ilə zorla yeniləməklə bu problemi həll edə bilərsiniz.",
-            "INVALID_BRANCH": "**[C Y B Σ R Güncəlləyici]:**` Düşünürəm ki, C Y B Σ R botunuzu dəyişdirdiniz və öz filialınızdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nXahiş edirəm rəsmi repodan C Y B Σ R Botunu istifadə edin.`",
-            "UPDATE": "\n`C Y B Σ R` **ən güncəl versiyadadır!** `Branch:` **{}**\n",
-            "WAS_UPDATE": "**{} üçün yeni güncəlləmə mövcuddur!\n\nDəyişikliklər:**\n`{}`",
+            "INVALID_BRANCH": "**[C Y B Ξ R Güncəlləyici]:**` Düşünürəm ki, C Y B Σ R botunuzu dəyişdirdiniz və öz filialınızdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nXahiş edirəm rəsmi repodan C Y B Σ R Botunu istifadə edin.`",
+            "UPDATE": "\n`✨ C Y B Ξ R` **ən güncəl versiyadadır!**\n\n`Branch:` **{}**\n",
+            "WAS_UPDATE": "C Y B Ξ R\n\n**{} üçün yeni güncəlləmə mövcuddur!\n\nDəyişikliklər:**\n`{}`",
             "BIG": "`Dəyişikliklərin siyahısı çox böyükdür, ona bir fayl kimi baxmalısınız.`",
             "DO_UPDATE": "`Güncəllənməni etmək üçün \".update now\" komandasını istifadə edin.`",
             "FORCE_UPDATE": "`Cari sabit istifadəçi bot kodu zorla sinxronizasiya olunur...`",
-            "UPDATING": "`🔄 C Y B Σ R yenilənir...`",
-	    "INVALID_APPNAME": "**C Y B Σ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🛠️**Xəta:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
+            "UPDATING": "`🔄 C Y B Ξ R yenilənir...`",
+	    "INVALID_APPNAME": "**C Y B Ξ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🛠️**Xəta:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
 	    "INVALID_HEROKU": "{}\n`Heroku dəyişənləri səhv və ya müəyyənləşdirilmişdir.`",
-            "HEROKU_UPDATING": "**C Y B Σ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇦🇿**Status:** __Güncəllənir...\n Bu müddət maksimum 10 dəqiqə çəkir.__",
+            "HEROKU_UPDATING": "**C Y B Ξ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇦🇿**Status:** __Güncəllənir...\n Bu müddət maksimum 10 dəqiqə çəkir.__",
             "ERRORS": "Qarşılaşdığımız səhflər bunlardır",
-            "SUCCESSFULLY": "**C Y B Σ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇦🇿**Status:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
+            "SUCCESSFULLY": "**C Y B Ξ R UPDATER**\n▬▬▬▬▬▬▬▬▬\n\n🇦🇿**Status:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
         },
 
         "upload_download": {
