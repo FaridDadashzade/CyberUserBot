@@ -396,7 +396,34 @@ f13font = [
     "𝕐",
     "ℤ",
 ]
-
+f14font = [
+    "𝗔",
+    "𝗕",
+    "𝗖",
+    "𝗗",
+    "𝗘",
+    "𝗙",
+    "𝗚",
+    "𝗛",
+    "𝗜",
+    "𝗝",
+    "𝗞",
+    "𝗟",
+    "𝗠",
+    "𝗡",
+    "𝗢",
+    "𝗣",
+    "𝗤",
+    "𝗥",
+    "𝗦",
+    "𝗧",
+    "𝗨",
+    "𝗩",
+    "𝗪",
+    "𝗫",
+    "𝗬",
+    "𝗭",
+]
 
 @register(outgoing=True, pattern="^.font1(?: |$)(.*)")
 async def fonta(event):
@@ -632,7 +659,25 @@ async def fontz(event):
     await event.edit(string)
 
 
+    
+@register(outgoing=True, pattern="^.font14(?: |$)(.*)")
+async def fontz(event):
 
+    args = event.pattern_match.group(1)
+    if not args:
+        get = await event.get_reply_message()
+        args = get.text
+    if not args:
+        await event.edit("`Hey, mətni tərcümə edə bilmirəm. Bir mesaja cavab olaraq istifadə edin...`")
+        return
+    string = "  ".join(args).lower()
+    for normiecharacter in string:
+        if normiecharacter in normiefont:
+            f14character = f14font[normiefont.index(normiecharacter)]
+            string = string.replace(normiecharacter, f14character)
+    await event.edit(string)
+
+    
 CmdHelp('fontlar').add_command(
     '千ㄖ几ㄒ 1', None, ' .font1 yazı'
 ).add_command(
@@ -659,4 +704,6 @@ CmdHelp('fontlar').add_command(
     'ꊰꄲꋊ꓄ 12', None, ' .font12 yazı'
 ).add_command(
     '𝔽𝕆ℕ𝕋 13', None, ' .font13 yazı'
+).add_command(
+    'font14', None, ' .font14 yazı'
 ).add()
