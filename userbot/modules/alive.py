@@ -9,7 +9,6 @@ from shutil import which
 from os import remove
 from userbot import (
     ALIVE_LOGO,
-    ALIVE_NAME,
     CYBER_VERSION,
     StartTime,
     JARVIS,
@@ -29,12 +28,6 @@ from telethon.tl.types import (
     MessageEntityTextUrl,
     MessageEntityUnderline,
 )
-
-
-
-# ================= CYBER =================
-DEFAULTUSER = str(ALIVE_NAME)
-# ============================================
 
 
 async def get_readable_time(seconds: int) -> str:
@@ -67,13 +60,16 @@ async def get_readable_time(seconds: int) -> str:
 async def salive(alive):
     user = await bot.get_me()
     islememuddeti = await get_readable_time((time.time() - StartTime))
+    #uid = user.id
+    #cyber_m = uid.id
+    #cyber_mention = f"{user.first_name}](tg://user?id={cyber_m})"
     kecid = (
         f"**{ALIVE_TEXT}** \n"
         f"┏━━━━━━━━━━━━━━━━━━━━━━\n"
         f"┣[ 🧭 **Botun işləmə müddəti:** `{islememuddeti}`\n"
-        f"┣[ 👤 **Mənim sahibim:** `{DEFAULTUSER}`\n"
+        f"┣[ 👤 **Mənim sahibim:** `{user.first_name}`\n"
         f"┣[ 🐍 **Python:** `3.8.6`\n"
-        f"┣[ ⚙️ **Telethon:** `1.21.1`\n"
+        f"┣[ ⚙️ **Telethon:** `1.23.0`\n"
         f"┣[ 👁‍🗨 **İstifadəçi adı:** @{user.username}\n"
         f"┣[ 🗄 **Branch:** `Master`\n"
         f"┗━━━━━━━━━━━━━━━━━━━━━━\n"
