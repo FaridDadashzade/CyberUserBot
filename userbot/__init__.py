@@ -108,12 +108,6 @@ async def get_call(event):
     xx = await event.client(getvc(mm.full_chat.call))
     return xx.call
 
-# ALIVE_NAME
-ALIVE_NAME = str(os.environ.get("ALIVE_NAME")) or None
-
-# ALIVE
-ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
-
 # .cyber əmri üçün
 CYBER_EMOJI = os.environ.get(
     "CYBER_EMOJI") or "✦ "
