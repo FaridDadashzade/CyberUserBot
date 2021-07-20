@@ -69,6 +69,11 @@ CYBER_VERSION = "v1.8.1"
 # SUDO VERSION
 SUDO_VERSION = "v1.1"
 
+# for mention
+CYBER_USERNAME = bot.me.first_name
+cyber_m = bot.uid
+cyber_mention = f"[{CYBER_USERNAME}](tg://user?id={cyber_m})"
+
 # API KEY və API HASH
 API_KEY = os.environ.get("API_KEY", None)
 API_HASH = os.environ.get("API_HASH", None)
