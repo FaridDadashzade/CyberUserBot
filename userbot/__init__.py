@@ -345,8 +345,8 @@ with bot:
     moduller = CMD_HELP
     me = bot.get_me()
     uid = me.id
-    cyber_m = me.id
-    cyber_mention = f"[{}](tg://user?id={cyber_m})"
+    # cyber_m = me.id
+    # cyber_mention = f"[{}](tg://user?id={cyber_m})"
 
     try:
         @tgbot.on(NewMessage(pattern='/start'))
