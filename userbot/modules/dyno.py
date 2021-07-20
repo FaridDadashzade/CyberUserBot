@@ -15,7 +15,8 @@ from userbot import (
     WHITELIST,
     MYID,
     BOTLOG_CHATID,
-    CYBER_VERSION
+    CYBER_VERSION,
+    bot
 )
 
 from userbot.events import register
@@ -161,6 +162,7 @@ async def jarvissetvar(ups):
 async def dyno_usage(dyno):
     """Bu qisimdə bot istifadə edilmiş dynonu əldə etməyə çalışır"""
     await dyno.edit("`Zəhmət Olmasa Gözləyin...`")
+    istifadeci = await bot.get_me()
     useragent = ('Mozilla/5.0 (Linux; Android 10; SM-G975F) '
                  'AppleWebKit/537.36 (KHTML, like Gecko) '
                  'Chrome/80.0.3987.149 Mobile Safari/537.36'
@@ -205,7 +207,7 @@ async def dyno_usage(dyno):
 
     return await dyno.edit(
                 "╭┈─╼━━━━━━━━━━━━━━╾─┈╮ \n"
-                "│                  CYBΞRUSERBOT DYNO  \n"
+                "│                  **CYBΞRUSERBOT DYNO**  \n"
                 "├┈─╼━━━━━━━━━━━━━━╾─┈╯ \n"
                 "│ Bu ay üçün istifadə etdiyiniz dyno saatı: \n"
                 f"│  ▸ `{AppHours}` saat - `{AppMinutes}` dəqiqə. \n"
@@ -216,7 +218,7 @@ async def dyno_usage(dyno):
                 f"│  ▸ Faizlə: `{percentage}%` \n"
                 f"│  ▸ `{cybergun}` gün sonra dyno bitəcək. \n"
                 "╰┈──────────────────┈╯ \n"
-                f"• **C Y B Ξ R VERSION:** `{CYBER_VERSION}` \n"
+                f"🧞‍♂️ **Sahibim:** `{istifadeci.first_name}` \n"
             )
 
 @register(outgoing=True, pattern=r"^\.log")
