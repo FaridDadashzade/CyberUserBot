@@ -3,8 +3,6 @@
 # CyberUserBot - faridxz
 #
 
-""" UserBot hazırlanışı. """
-
 import os
 import time
 from re import compile
@@ -77,6 +75,14 @@ try:
     SUDO_ID = set(int(x) for x in os.environ.get("SUDO_ID", "").split())
 except ValueError:
     raise Exception("SUDO_ID qeyd etməmisiniz!")
+    
+"""
+sudos = SUDO_ID
+if sudos:
+    is_sudo = "True"
+else:
+    is_sudo = "False"
+"""
 
 SILINEN_PLUGIN = {}
 # StringSession
