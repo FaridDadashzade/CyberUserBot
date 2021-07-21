@@ -26,8 +26,8 @@ import userbot.cmdhelp
 
 ALIVE_STR = [
     "`C Y B Ξ R **{mention}**-un əmirlərinə hazırdır...`",
-    "`Hey **{mention}** narahat olma C Y B Ξ R əla işləyir...`"
-    "🧞‍♂ C Y B Ξ R is working..."
+    "`Hey **{mention}** narahat olma C Y B Ξ R əla işləyir...`",
+    "🧞‍♂ C Y B Ξ R is working...",
     "✨ `C Y B Ξ R` **{mention}**-in `əmirlərinə hazırdır...`",
     "⛈️ **{mention}** `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
 ]
