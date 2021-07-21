@@ -25,9 +25,8 @@ import userbot.cmdhelp
 
 ALIVE_STR = [
     "`C Y B Ξ R sahibinin əmirlərinə hazırdır...`",
-    "**{cybersahib}** məni axtarırdın?\nQorxma mən buradayam 😌",
-    "✨ `C Y B Ξ R` **{cybersahib}**-in `əmirlərinə hazırdır...`",
-    "⛈️ **{cybersahib}** `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
+    "✨ `C Y B Ξ R` **{mention}**-in `əmirlərinə hazırdır...`",
+    "⛈️ **{mention}** `əlimdən gələnin ən yaxşısını etməyə hazıram...`",
 ]
 
 KICKME_STR = [
